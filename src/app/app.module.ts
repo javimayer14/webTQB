@@ -22,7 +22,19 @@ import { PricingComponent } from './pages/pricing/pricing.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MiembrosComponent } from './pages/miembros/miembros.component';
+import { ProyectosEvaluadosComponent } from './pages/proyectos-evaluados/proyectos-evaluados.component';
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule,
+    OwlModule,
+    FontAwesomeModule,
+  ],
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -40,16 +52,13 @@ import { FooterComponent } from './shared/footer/footer.component';
     PricingComponent,
     FaqComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    QuienesSomosComponent,
+    MiembrosComponent,
+    ProyectosEvaluadosComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CarouselModule,
-    OwlModule
-  ],
+
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

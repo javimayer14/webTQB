@@ -12,11 +12,11 @@ body {
 }
 
 a {
-  color: #106eea;
+  //color: #106eea;
 }
 
 a:hover {
-  color: #3b8af2;
+  //color: #3b8af2;
   text-decoration: none;
 }
 
@@ -63,7 +63,7 @@ section {
 }
 
 .section-title h3 span {
-  color: #106eea;
+  //color: #106eea;
 }
 
 .section-title p {
@@ -75,4 +75,17 @@ section {
   .section-title p {
     width: 50%;
   }
+}
+
+//Fuentes
+
+@font-face {
+  font-family: "Gotham Rounded";
+  src: local("Gotham Rounded"),
+    url(./assets/fonts/GothamRnd-Book.otf) format("truetype");
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: local("Gotham Book"),
+    url(./assets/fonts/Gotham-Book.otf) format("truetype");
 }
