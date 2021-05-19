@@ -3,16 +3,15 @@
 # Footer
 --------------------------------------------------------------*/
 #footer {
-	background: #fff;
+	background: #191919;
 	padding: 0 0 30px 0;
-	color: #444444;
+	color: #fff;
 	font-size: 14px;
-	background: #f1f6fe;
   }
   
   #footer .footer-newsletter {
 	padding: 50px 0;
-	background: #f1f6fe;
+	background: #191919;
 	text-align: center;
 	font-size: 15px;
   }
@@ -27,7 +26,7 @@
   
   #footer .footer-newsletter form {
 	margin-top: 30px;
-	background: #fff;
+	background: #191919;
 	padding: 6px 10px;
 	position: relative;
 	border-radius: 4px;
@@ -63,7 +62,7 @@
   
   #footer .footer-top {
 	padding: 60px 0 30px 0;
-	background: #fff;
+	background: #191919;
   }
   
   #footer .footer-top .footer-contact {
@@ -100,7 +99,12 @@
   
   #footer .footer-top .footer-links {
 	margin-bottom: 30px;
-  }
+	}
+	
+	#footer .footer-top .footer-links p {
+	font-size: 10px;
+	color:#777
+		}
   
   #footer .footer-top .footer-links ul {
 	list-style: none;

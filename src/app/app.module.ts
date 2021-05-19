@@ -26,6 +26,7 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MiembrosComponent } from './pages/miembros/miembros.component';
 import { ProyectosEvaluadosComponent } from './pages/proyectos-evaluados/proyectos-evaluados.component';
+import { PresentarProyectoComponent } from './pages/presentar-proyecto/presentar-proyecto.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -56,6 +57,7 @@ import { ProyectosEvaluadosComponent } from './pages/proyectos-evaluados/proyect
     QuienesSomosComponent,
     MiembrosComponent,
     ProyectosEvaluadosComponent,
+    PresentarProyectoComponent,
   ],
 
   providers: [],
