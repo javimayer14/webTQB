@@ -29,6 +29,13 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+//color buttons
+
+.btn-secundary{
+background-color: #191919;
+color: #FFF
+}
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -161,12 +168,21 @@ section {
     width: 50%;
   }
 }
+//presentar proyecto
+#presentar-proyecto .text{
+  text-align: left
+}
 //Contacto
 #contact{
   background-color: #EBEBEB
 }
 
-#contact .form{
+//footer
+.footer {
+  background-color: #191919
+}
+
+#contact {
   background-color: #FFF
 
 }
