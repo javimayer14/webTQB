@@ -2,6 +2,7 @@
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact .info-box {
 	color: #444444;
 	text-align: center;
@@ -27,7 +28,7 @@
   .contact .info-box p {
 	padding: 0;
 	line-height: 24px;
-	font-size: 14px;
+	font-size: 12px;
 	margin-bottom: 0;
   }
   
@@ -105,13 +106,27 @@
   }
   
   .contact .php-email-form button[type="submit"] {
-	background: #106eea;
+	background:#2a38be;
 	border: 0;
 	padding: 10px 30px;
 	color: #fff;
 	transition: 0.4s;
 	border-radius: 4px;
-  }
+	}
+	
+	#contact{
+		background-color: #EBEBEB
+	}
+
+	.form{
+		background-color: #FFF;
+		border-radius: 2%;
+	}
+
+	.contact p{
+		text-align: center;
+	}
+
   
   .contact .php-email-form button[type="submit"]:hover {
 	background: #3b8af2;

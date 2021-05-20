@@ -1,5 +1,5 @@
 .main {
-  background-color: #000000;
+  background-color: #191919;
   padding: 50px;
 }
 .squares {
@@ -14,13 +14,21 @@
   justify-content: center;
   align-items: center;
   margin: 10px 5px;
-  background-color: #111;
+  background-color: #191919;
   z-index: 2;
   .title {
     color: aliceblue;
     font-size: 120px;
     text-align: center;
   }
+
+  .number {
+    color: #000cf6;
+    font-size: 120px;
+    text-align: center;
+  }
+
+
   .subtitle {
     color: aliceblue;
     font-size: 20px;
@@ -41,7 +49,7 @@
   display: grid;
   img {
     justify-self: center;
-    min-height: 215px;
+    min-height: 180px;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -70,8 +78,10 @@
 }
 
 .main-title {
-  font-size: 42px;
   color: #ffffff;
   text-align: center;
-  font-family: "Gotham Rounded", sans-serif;
+  font-family: "Gotham Book", sans-serif;
+  margin: 15px;
+  font-size: 32px;
+  font-weight: 700;
 }
