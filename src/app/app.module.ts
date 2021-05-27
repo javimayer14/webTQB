@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +29,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MiembrosComponent } from './pages/miembros/miembros.component';
 import { ProyectosEvaluadosComponent } from './pages/proyectos-evaluados/proyectos-evaluados.component';
 import { PresentarProyectoComponent } from './pages/presentar-proyecto/presentar-proyecto.component';
+//import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -35,6 +40,8 @@ import { PresentarProyectoComponent } from './pages/presentar-proyecto/presentar
     CarouselModule,
     OwlModule,
     FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -58,9 +65,11 @@ import { PresentarProyectoComponent } from './pages/presentar-proyecto/presentar
     MiembrosComponent,
     ProyectosEvaluadosComponent,
     PresentarProyectoComponent,
+    HomeComponent,
+    LoginComponent,
   ],
 
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
