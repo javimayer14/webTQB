@@ -1,6 +1,16 @@
 .main {
   background-color: #191919;
   padding: 50px;
+  padding-top: 140px;
+  @media (max-width: 700px) {
+    padding-top: 200px;
+  }
+  @media (max-width: 600px) {
+    padding-top: 200px;
+  }
+  @media (max-width: 400px) {
+    padding-top: 275px;
+  }
 }
 .squares {
   position: relative;
@@ -27,7 +37,6 @@
     font-size: 120px;
     text-align: center;
   }
-
 
   .subtitle {
     color: aliceblue;
@@ -84,4 +93,24 @@
   margin: 15px;
   font-size: 32px;
   font-weight: 700;
+}
+
+.separatorContainer {
+  background-color: #2a38be;
+  margin: auto;
+  font-size: 15pt;
+  opacity: 1;
+  position: absolute;
+  top: -100px;
+  left: 5%;
+  right: 5%;
+  p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+  }
 }

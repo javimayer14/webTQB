@@ -1,0 +1,40 @@
+<div class="main">
+  <p class="main-title">¿Por qué ser miembro?</p>
+  <br />
+  <div class="row justify-content-md-center">
+    <div
+      *ngFor="let blueCard of blueCards"
+      class="col-md-6 col-lg-2 align-self-center"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <app-blue-card
+        [title]="blueCard.title"
+        [subtitle]="blueCard.subtitle"
+      ></app-blue-card>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+      <app-blue-icon logo="logo1.png">
+        Contenidos clave <br />
+        sobre inversiones <br />y negocios
+      </app-blue-icon>
+    </div>
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+      <app-blue-icon logo="logo2.png">
+        Debates <br />
+        en grupos de Whatsapp <br />
+        y Telegram
+      </app-blue-icon>
+    </div>
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
+      <app-blue-icon logo="logo3.png">
+        Reuniones virtuales <br />
+        para ampliar conocimiento <br />
+        y conocer oportunidades
+      </app-blue-icon>
+    </div>
+  </div>
+</div>

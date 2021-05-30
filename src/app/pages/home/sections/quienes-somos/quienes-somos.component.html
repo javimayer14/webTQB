@@ -1,0 +1,48 @@
+<section id="quienes-somos-1" class="quienes-somos-1">
+  <div class="container" data-aos="fade-up">
+    <p class="title">
+      Somos una <span style="color: #2a38be">Comunidad de inversores</span>
+    </p>
+    <p class="subtitle">
+      Nos movemos. Nos conectamos. Compartimos. Invertimos.
+    </p>
+    <div class="body">
+      <p>
+        Creamos los puentes para facilitarte la conexión horizontal y
+        colaborativa entre los miembros.
+      </p>
+      <p>
+        Impulsamos el movimiento entre pares para nutrir la toma de decisión de
+        cada uno y alcanzar el éxito compartido.
+      </p>
+      <p>Lo hacemos a traves de dos pilares fundamentales:</p>
+    </div>
+  </div>
+</section>
+<section id="quienes-somos-2" class="quienes-somos-2">
+  <div class="container" data-aos="fade-up">
+    <div class="image">
+      <div style="justify-content: center">
+        <div
+          class="row"
+          style="justify-content: center; margin-bottom: 25px"
+          data-aos="fade-up"
+        >
+          <app-services-card
+            *ngFor="let service of services"
+            [title]="service.title"
+            [text]="service.text"
+            [icon]="service.icon"
+          ></app-services-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="square">
+    <p>
+      ¿Qué hubiera sido de Warren Buffet sin Charlie Mugner para diseñar su
+      modelo de inversión y transformarse en uno de los mejores inversores del
+      mundo?
+    </p>
+  </div>
+</section>

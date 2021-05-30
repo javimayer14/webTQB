@@ -1,63 +1,20 @@
-<section id="featured-services" class="featured-services">
-  <div class="row" style="justify-content: center" data-aos="fade-up">
-    <div
-      class="
-        card-service
-        col-md-6 col-lg-6
-        d-flex
-        align-items-stretch
-        mb-5 mb-lg-0
-      "
-    >
-      <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
-          <div class="col-3">
-            <div class="icon">
-              <i class="fa fa-usb" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="col-4">
-            <h4 class="title" style="font-size: 32px">
-              <a href="">Conexión</a>
-            </h4>
-          </div>
+<div class="card-service col-md-6 col-lg-6 d-flex mb-5 mb-lg-0">
+  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-3">
+        <div class="icon">
+          <i [class]="icon" aria-hidden="true"></i>
         </div>
-
-        <p class="description">
-          El mundo de los negocios presenta oportunidades. ¿Quienes la
-          aprovechan? Los que están conectados y saben lo que pasa. Los que
-          están con quienes tienen que estar.
-        </p>
+      </div>
+      <div class="col-4">
+        <h4 class="title" style="font-size: 32px">
+          <a href="">{{ title }}</a>
+        </h4>
       </div>
     </div>
 
-    <div
-      class="
-        card-service
-        col-md-6 col-lg-6
-        d-flex
-        align-items-stretch
-        mb-5 mb-lg-0
-      "
-    >
-      <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-        <div class="row">
-          <div class="col-3">
-            <div class="icon"><i class="bi bi-arrow-left-right"></i></div>
-          </div>
-          <div class="col-4">
-            <h4 class="title" style="font-size: 32px">
-              <a href="">Movimiento</a>
-            </h4>
-          </div>
-        </div>
-
-        <p class="description">
-          ¿Quienes están mejor conectados? Los que no paran de moverse. Moverte
-          permite aumentar la calidad de los vínculos, llevándote a estar dónde
-          hay que estar.
-        </p>
-      </div>
-    </div>
+    <p class="description">
+      {{ text }}
+    </p>
   </div>
-</section>
+</div>

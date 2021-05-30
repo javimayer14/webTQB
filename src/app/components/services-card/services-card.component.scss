@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
-.featured-services .icon-box {
+.icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -12,7 +12,7 @@
   z-index: 1;
 }
 
-.featured-services .icon-box::before {
+.icon-box::before {
   content: "";
   position: absolute;
   background: #cbe0fb;
@@ -24,45 +24,45 @@
   z-index: -1;
 }
 
-.featured-services .icon-box:hover::before {
+.icon-box:hover::before {
   background: #2a38be;
   top: 0;
   border-radius: 0px;
 }
 
-.featured-services .icon {
+.icon {
   margin-bottom: 15px;
 }
 
-.featured-services .icon i {
+.icon i {
   font-size: 48px;
   line-height: 1;
   color: #2a38be;
   transition: all 0.3s ease-in-out;
 }
 
-.featured-services .title {
+.title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.featured-services .title a {
+.title a {
   color: #111;
 }
 
-.featured-services .description {
+.description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
 }
 
-.featured-services .icon-box:hover .title a,
-.featured-services .icon-box:hover .description {
+.icon-box:hover .title a,
+.icon-box:hover .description {
   color: #fff;
 }
 
-.featured-services .icon-box:hover .icon i {
+.icon-box:hover .icon i {
   color: #fff;
 }
 
@@ -98,6 +98,8 @@
   z-index: 1;
 }
 
-.card-service{
+.card-service {
   max-width: 450px;
+  min-height: 235px;
+  margin-bottom: 75px;
 }

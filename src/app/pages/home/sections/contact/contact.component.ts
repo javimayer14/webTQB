@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { AuthService } from '../../services/user/auth.service';
+import { AuthService } from '../../../../services/user/auth.service';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 

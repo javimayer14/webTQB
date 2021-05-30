@@ -1,12 +1,12 @@
 <header id="header" class="fixed-top" (scroll)="onWindowScroll($event)">
   <div class="">
-    <div class="row justify-content-around">
-      <div class="col-2">
+    <div class="row justify-content-between">
+      <div class="col-4">
         <img src="assets/img/logo.png" />
       </div>
 
-      <div class="col-2">
-        <nav class="nav-menu d-none d-lg-block ">
+      <div class="col-4">
+        <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li class="active">WikiBridge</li>
             <li>Blog</li>
@@ -14,14 +14,13 @@
           </ul>
         </nav>
       </div>
-      <div class="col-2">
+      <div class="col-4">
         <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li class="active">
-              <nav>
-                <a routerLink="login" href="#">Ingresar</a>
-              </nav>
-              <button class="btn btn-primary btn-sm">Quiero ser miembro</button>
+              <button routerLink="login" class="btn btn-primary btn-sm">
+                Ingresar
+              </button>
             </li>
             <li>Ingresar</li>
           </ul>
