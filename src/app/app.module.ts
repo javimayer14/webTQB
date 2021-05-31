@@ -46,7 +46,6 @@ import { PrimengModule } from './primeng/primeng.module';
     ClientsComponent,
     ServicesComponent,
     TestimonialsComponent,
-
     PortfolioComponent,
     TeamComponent,
     PricingComponent,

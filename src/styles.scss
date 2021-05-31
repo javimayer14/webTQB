@@ -31,9 +31,9 @@ h6 {
 
 //color buttons
 
-.btn-secundary{
-background-color: #191919;
-color: #FFF
+.btn-secundary {
+  background-color: #191919;
+  color: #fff;
 }
 
 section {
@@ -42,7 +42,6 @@ section {
 }
 
 .section-bg {
-
 }
 
 .section-title {
@@ -79,8 +78,6 @@ section {
 }
 
 .team {
- 
-
 }
 
 .team .member {
@@ -146,7 +143,6 @@ section {
   font-weight: 400;
   color: #aaaaaa;
   text-align: left;
-
 }
 
 .team .member .member-info p {
@@ -160,7 +156,7 @@ section {
   opacity: 1;
   bottom: 15px;
 }
-.footer-card{
+.footer-card {
   margin: 15px;
 }
 @media (min-width: 1024px) {
@@ -169,12 +165,12 @@ section {
   }
 }
 //presentar proyecto
-#presentar-proyecto .text{
-  text-align: left
+#presentar-proyecto .text {
+  text-align: left;
 }
 //footer
 .footer {
-  background-color: #191919
+  background-color: #191919;
 }
 
 //Fuentes
@@ -188,4 +184,9 @@ section {
   font-family: "Gotham Book";
   src: local("Gotham Book"),
     url(./assets/fonts/Gotham-Book.otf) format("truetype");
+}
+
+.p-sidebar-right {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #fff !important;
 }

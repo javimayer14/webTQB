@@ -22,10 +22,17 @@
                 Ingresar
               </button>
             </li>
-            <li>Ingresar</li>
+            <li>
+              <button class="btn btn-primary btn-sm" (click)="display = true">
+                Sidebar
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
 </header>
+<p-sidebar styleClass="sidebar" [(visible)]="display" position="right" [ngStyle]="{backgroundColor:'var(--blue-500)'}">
+  <div class="sidebar">CONTENT</div>
+</p-sidebar>
