@@ -36,30 +36,21 @@ import { LoginComponent } from './pages/login/login.component';
 import { PagesModule } from './pages/pages.module';
 import { ComponentsModule } from './components/components.module';
 import { SharedModule } from './shared/shared.module';
+import { PrimengModule } from './primeng/primeng.module';
 @NgModule({
   declarations: [
     AppComponent,
-    //NavbarComponent,
-    //HeroComponent,
-    //ServicesCardComponent,
     AboutComponent,
     SkillsComponent,
     CountsComponent,
     ClientsComponent,
     ServicesComponent,
     TestimonialsComponent,
-    //TopbarComponent,
+
     PortfolioComponent,
     TeamComponent,
     PricingComponent,
     FaqComponent,
-    //ContactComponent,
-    //FooterComponent,
-    //QuienesSomosComponent,
-    //MiembrosComponent,
-    //ProyectosEvaluadosComponent,
-    //PresentarProyectoComponent,
-    //HomeComponent,
     LoginComponent,
   ],
   imports: [
@@ -74,6 +65,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     PagesModule,
     ComponentsModule,
+    PrimengModule,
   ],
 
   providers: [],
