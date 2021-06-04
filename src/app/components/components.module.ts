@@ -4,6 +4,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { ServicesCardComponent } from './services-card/services-card.component';
 import { BlueIconComponent } from './blue-icon/blue-icon.component';
 import { BlueCardComponent } from './blue-card/blue-card.component';
+import { ServicesCard2Component } from './services-card2/services-card2.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { BlueCardComponent } from './blue-card/blue-card.component';
     ServicesCardComponent,
     BlueIconComponent,
     BlueCardComponent,
+    ServicesCard2Component,
   ],
   imports: [CommonModule],
   exports: [
@@ -18,6 +20,7 @@ import { BlueCardComponent } from './blue-card/blue-card.component';
     ServicesCardComponent,
     BlueCardComponent,
     BlueIconComponent,
+    ServicesCard2Component
   ],
 })
 export class ComponentsModule {}

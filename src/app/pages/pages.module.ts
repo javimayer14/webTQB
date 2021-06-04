@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { PresentarProyectoComponent } from './home/sections/presentar-proyecto/presentar-proyecto.component';
+import { FixFlipComponent } from './home/sections/fix-flip/fix-flip.component';
+import { FuncionamientoComponent } from './home/sections/funcionamiento/funcionamiento.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { PresentarProyectoComponent } from './home/sections/presentar-proyecto/p
     ProyectosEvaluadosComponent,
     ContactComponent,
     PresentarProyectoComponent,
+    FixFlipComponent,
+    FuncionamientoComponent,
   ],
   imports: [
     CommonModule,

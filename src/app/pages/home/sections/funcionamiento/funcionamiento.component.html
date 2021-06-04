@@ -1,0 +1,41 @@
+<div class="main">
+  <p class="main-title">¿Cómo funciona?</p>
+  <p class="subtitle">
+    La comunidad consigue las propiedades, negocia el precio de compra para
+    luego financiar y ejecutar el negocio.
+  </p>
+  <div
+    class="row"
+    style="justify-content: center; margin-bottom: 25px"
+    data-aos="fade-up"
+  >
+    <app-services-card2
+      *ngFor="let item of items"
+      [title]="item.title"
+      [text]="item.text"
+      [icon]="item.icon"
+    ></app-services-card2>
+  </div>
+
+  <p class="main-title">¿En qué invertimos?</p>
+  <div class="row justify-content-md-center">
+    <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
+      <app-blue-icon logo="logo1.png">
+        Casas que necesitan ser reestructuradas
+      </app-blue-icon>
+    </div>
+    <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
+      <app-blue-icon logo="logo2.png">
+        Casas de remate en la corte o bancos
+      </app-blue-icon>
+    </div>
+    <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
+      <app-blue-icon logo="logo3.png"> Bank Landing </app-blue-icon>
+    </div>
+    <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
+      <app-blue-icon logo="logo1.png">
+        Edificios de apartamentos comerciales
+      </app-blue-icon>
+    </div>
+  </div>
+</div>
