@@ -19,6 +19,7 @@ import { TestInversorComponent } from './test-inversor/test-inversor.component';
 
 import { PrimengModule } from '../primeng/primeng.module';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { CommandmentsComponent } from './commandments/commandments.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     FuncionamientoComponent,
     TestInversorComponent,
     ProjectDetailComponent,
+    CommandmentsComponent,
 
   ],
   imports: [

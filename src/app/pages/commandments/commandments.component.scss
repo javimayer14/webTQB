@@ -1,0 +1,63 @@
+.title {
+    text-align: center;
+    font-family: "Gotham Book", sans-serif;
+    margin: 15px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    font-family: "Gotham Book", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .body {
+    font-family: "Gotham Book", sans-serif;
+    font-size: 19px;
+    text-align: center;
+    opacity: 1;
+
+
+  }
+  
+  .square {
+    background-color: #2a38be;
+    margin: auto;
+    font-size: 15pt;
+    opacity: 1;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    p {
+      width: 60%;
+      margin: auto;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      color: #ffffff;
+      @media (min-width: 700px) {
+        padding: 30px;
+      }
+    }
+  }
+  
+  .quienes-somos-2 {
+    background: url("/assets/img/1x/todos.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+.commandments{
+//     background-image: url('/assets/img/1x/Proyectos_Arco.png');
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-position: bottom center;
+// }  
+background-color: #AAAAAA
+}
+h1{
+    padding: 15px;
+}
