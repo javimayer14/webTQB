@@ -18,6 +18,7 @@ import { FuncionamientoComponent } from './home/sections/funcionamiento/funciona
 import { TestInversorComponent } from './test-inversor/test-inversor.component';
 
 import { PrimengModule } from '../primeng/primeng.module';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PrimengModule } from '../primeng/primeng.module';
     FixFlipComponent,
     FuncionamientoComponent,
     TestInversorComponent,
+    ProjectDetailComponent,
 
   ],
   imports: [

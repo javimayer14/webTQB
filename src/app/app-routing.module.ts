@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TestInversorComponent } from './pages/test-inversor/test-inversor.component';
+import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'testInversor',
     component: TestInversorComponent,
+  },
+  {
+    path: 'projectDetail',
+    component: ProjectDetailComponent,
   },
   {
     path: 'login',
