@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { PresentarProyectoComponent } from './home/sections/presentar-proyecto/presentar-proyecto.component';
 import { FixFlipComponent } from './home/sections/fix-flip/fix-flip.component';
 import { FuncionamientoComponent } from './home/sections/funcionamiento/funcionamiento.component';
+import { TestInversorComponent } from './test-inversor/test-inversor.component';
+
+import { PrimengModule } from '../primeng/primeng.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { FuncionamientoComponent } from './home/sections/funcionamiento/funciona
     PresentarProyectoComponent,
     FixFlipComponent,
     FuncionamientoComponent,
+    TestInversorComponent,
+
   ],
   imports: [
     CommonModule,
@@ -36,6 +41,7 @@ import { FuncionamientoComponent } from './home/sections/funcionamiento/funciona
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    PrimengModule
   ],
   exports: [HomeComponent],
 })

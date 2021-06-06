@@ -1,0 +1,65 @@
+.section-title h3 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Gotham Book", sans-serif;
+
+  padding-top: 5vh;
+}
+
+.test {
+  background-color: black;
+  button {
+    text-align: center;
+    margin: 5px;
+  }
+}
+.product-item {
+  background-color: black;
+  .product-item-content {
+    margin: 0.3rem;
+
+    padding: 2rem 0;
+  }
+}
+.question-title {
+  text-align: center;
+  color: #ffffff;
+  margin: 40px;
+  font-family: "Gotham Book", sans-serif;
+  padding-bottom: 40pt;
+  font-size: 28pt;
+  text-align: center;
+  margin: 5px;
+}
+
+.options {
+  color: #ffffff;
+  @media (max-width: 769px) {
+    text-align: center;
+  }
+}
+
+.row {
+  margin: 0;
+}
+
+.main {
+  height: 60vh;
+}
+.test {
+  min-height: 60vh;
+}
+.numbers {
+  padding-top: 15vh;
+}
+
+.btn {
+  background-color: #2a38be;
+  padding: 10px 25px;
+  margin: 40px;
+  font-family: "Gotham Book", sans-serif;
+
+  text-align: center;
+  margin: 5px;
+}

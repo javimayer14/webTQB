@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { HostListener } from '@angular/core';
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,7 @@ import { HostListener } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   display = false;
+  @Input('visible') visible;
   constructor() {}
 
   ngOnInit(): void {}
