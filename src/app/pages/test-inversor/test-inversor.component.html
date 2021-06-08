@@ -12,7 +12,7 @@
     <button class="btn btn-primary" (click)="test = true">Comenzar</button>
   </div>
 </div>
-<div class="test" *ngIf="test">
+<div class="test" *ngIf="test && !ending">
   <div class="numbers row justify-content-md-center">
     <button
       pButton
@@ -72,7 +72,9 @@
             <div class="row justify-content-center">
               <button
                 class="btn btn-primary btn-sm"
-                (click)="pageActual = pageActual + 1"
+                (click)="
+                  pageActual == 9 ? endTest() : (pageActual = pageActual + 1)
+                "
                 [disabled]="!this['q' + pageActual]"
               >
                 {{ pageActual == 9 ? "Finalizar" : "Siguiente" }}
@@ -83,4 +85,38 @@
       </div>
     </ng-template>
   </p-carousel>
+</div>
+
+<div class="test" *ngIf="test && ending">
+  <div class="row justify-content-center">
+    <div *ngIf="aguila">
+      <img class="img-result" src="assets/img/test/Test_Aguila.png" />
+    </div>
+    <div *ngIf="buho">
+      <img class="img-result" src="assets/img/test/Test_Bhuo.png" />
+    </div>
+    <div *ngIf="lobo">
+      <img class="img-result" src="assets/img/test/Test_Lobo.png" />
+    </div>
+    <div *ngIf="oso">
+      <img class="img-result" src="assets/img/test/Test_Oso.png" />
+    </div>
+    <div *ngIf="puma">
+      <img class="img-result" src="assets/img/test/Test_Puma.png" />
+    </div>
+  </div>
+
+  <div class="barValue row justify-content-center">
+    <div class="col-3 col-md-2" style="text-align: right">
+      <label>Conservador</label>
+    </div>
+    <div class="col-6 col-md-5">
+      <p-progressBar [value]="75" [showValue]="false"></p-progressBar>
+    </div>
+    <div class="col-3 col-md-2">
+      <label>Arriesgado</label>
+    </div>
+  </div>
+
+  <p class="description">{{description}}</p>
 </div>
