@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TestInversorComponent } from './pages/test-inversor/test-inversor.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
+import { CommandmentsComponent } from './pages/commandments/commandments.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
+    path: 'commandments',
+    component: CommandmentsComponent,
+  },
+  {
     path: 'footer',
     component: FooterComponent,
   },
@@ -33,4 +38,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
