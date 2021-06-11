@@ -5,7 +5,6 @@ import { ServicesCardComponent } from './services-card/services-card.component';
 import { BlueIconComponent } from './blue-icon/blue-icon.component';
 import { BlueCardComponent } from './blue-card/blue-card.component';
 import { ServicesCard2Component } from './services-card2/services-card2.component';
-import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
     BlueIconComponent,
     BlueCardComponent,
     ServicesCard2Component,
-    WikiBridgeComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -25,4 +23,4 @@ import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
     ServicesCard2Component
   ],
 })
-export class ComponentsModule {}
+export class ComponentsModule { }

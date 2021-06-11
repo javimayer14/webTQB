@@ -6,12 +6,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { TestInversorComponent } from './pages/test-inversor/test-inversor.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { CommandmentsComponent } from './pages/commandments/commandments.component';
-<<<<<<< HEAD
-import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component'
-=======
 import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component';
->>>>>>> feature/wiki-bridge
-
 const routes: Routes = [
   {
     path: '',
