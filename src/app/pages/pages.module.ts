@@ -20,6 +20,7 @@ import { TestInversorComponent } from './test-inversor/test-inversor.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { CommandmentsComponent } from './commandments/commandments.component';
+import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CommandmentsComponent } from './commandments/commandments.component';
     TestInversorComponent,
     ProjectDetailComponent,
     CommandmentsComponent,
+    WikiBridgeComponent,
 
   ],
   imports: [
