@@ -1,15 +1,14 @@
 <header id="header" class="fixed-top" [ngClass]="{visible:visible}" (scroll)="onWindowScroll($event)">
   <div class="">
     <div class="row justify-content-between">
-      <div class="col-4">
+      <div class="col-4 text-center">
         <img src="assets/img/logo.png" [routerLink]="['/']" />
       </div>
 
-      <div class="col-4">
-        <nav class="nav-menu d-none d-lg-block">
+      <div class="col-4 ">
+        <nav class="nav-menu d-none d-lg-block text-center">
           <ul>
-            <li class="active">WikiBridge</li>
-            <li>Blog</li>
+            <li class="active" routerLink="wiki">WikiBridge</li>
             <li routerLink="commandments">10 Mandamientos</li>
           </ul>
         </nav>
