@@ -6,6 +6,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { TestInversorComponent } from './pages/test-inversor/test-inversor.component';
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { CommandmentsComponent } from './pages/commandments/commandments.component';
+import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'footer',
     component: FooterComponent,
+  },
+  {
+    path: 'wiki',
+    component: WikiBridgeComponent,
   },
 ];
 
