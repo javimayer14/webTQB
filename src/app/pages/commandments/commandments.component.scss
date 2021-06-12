@@ -4,6 +4,7 @@
     margin: 15px;
     font-size: 32px;
     font-weight: 700;
+    color: #ffffff;
   }
   
   .subtitle {
@@ -18,8 +19,10 @@
     font-size: 19px;
     text-align: center;
     opacity: 1;
+  }
 
-
+  .seccion-description {
+    color: #ffffff;
   }
   
   .square {
@@ -51,13 +54,19 @@
     background-size: cover;
   }
 .commandments{
-//     background-image: url('/assets/img/1x/Proyectos_Arco.png');
-//     background-repeat: no-repeat;
+     background-image: url('/assets/img/1x/Proyectos_Arco.png');
+     background-repeat: no-repeat;
+
+     
+     
 //     background-attachment: fixed;
 //     background-position: bottom center;
 // }  
-background-color: #CCC
+background-color: #FFF
 }
+
+
+
 h1{
     padding: 15px;
 }
@@ -72,7 +81,7 @@ h1{
 
 .carousel-item .number {
   font-size: 100px;
-  padding: 70px;
+  padding: 90px;
 }
 
 .carousel-item p {
@@ -101,6 +110,27 @@ span .carousel-control-next-icon {
   background-color: black
 }
 .carousel-indicators .active{
-  background-color:  #2a38be;
+  background-color:  #FFF;
 
+}
+@media screen and (max-width: 1512px) { /* Specific to this particular image */
+  .commandments {
+    background-image: url('/assets/img/1x/');
+    background-color: #DDD;
+
+  }
+  .title {
+    color: #111;
+  }
+  .seccion-description {
+    color: #111;
+  }
+ 
+  .carousel-item .number {
+    font-size: 50px;
+    padding: 40px;
+  }
+  .carousel-item h1 {
+    font-size: 25px;
+  }
 }
