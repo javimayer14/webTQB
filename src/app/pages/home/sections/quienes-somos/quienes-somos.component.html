@@ -23,26 +23,50 @@
   <div class="container" data-aos="fade-up">
     <div class="image">
       <div style="justify-content: center">
-        <div
-          class="row"
-          style="justify-content: center; margin-bottom: 25px"
-          data-aos="fade-up"
-        >
-          <app-services-card
-            *ngFor="let service of services"
-            [title]="service.title"
-            [text]="service.text"
-            [icon]="service.icon"
-          ></app-services-card>
+        <div class="row" style="justify-content: center; margin-bottom: 25px" data-aos="fade-up">
+          <app-services-card *ngFor="let service of services" [title]="service.title" [text]="service.text"
+            [icon]="service.icon"></app-services-card>
         </div>
       </div>
     </div>
   </div>
-  <div class="square">
-    <p>
-      ¿Qué hubiera sido de Warren Buffet sin Charlie Mugner para diseñar su
-      modelo de inversión y transformarse en uno de los mejores inversores del
-      mundo?
-    </p>
+  <div class="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p class="text-center">
+            ¿Qué hubiera sido de Warren Buffet
+            sin Charlie Mugner para diseñar su modelo de inversión
+            y transformarse en uno de los mejores
+            inversores del mundo?
+          </p>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <p class="text-center">Steve Wozniak fue un aliado clave de Steve Jobs para potenciar todas sus ideas en los
+            productos de Apple.
+            La sinergia fue la protagonista del imperio tecnológico que conocemos hoy
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="text-center">¿Existiría el Rockefeller Center si no fuera por Henry Flager?
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="text-center">La visión estratégica de negocio aportada por Henry fue fundamental para que John
+            Rockefeller se transforme
+            en uno de los mayores empresarios de la historia y le deje las bases a su familia para continuar con su
+            legado
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
