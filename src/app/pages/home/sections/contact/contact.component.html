@@ -28,12 +28,12 @@
                 name="name"
                 class="form-control"
                 id="name"
-                name="name"
                 placeholder="*Nombre"
                 data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars"
                 [(ngModel)]="generateUserForm.name"
               />
+              <div *ngIf="wrongName" class="error">Se requiere nombre</div>
 
               <div class="validate"></div>
             </div>
@@ -46,9 +46,12 @@
                 placeholder="*Apellido"
                 data-rule="lastName"
                 data-msg="Please enter a valid email"
-                name="lastname"
                 [(ngModel)]="generateUserForm.lastName"
               />
+              <div *ngIf="wrongLastName" class="error">
+                Se requiere apellido
+              </div>
+
               <div class="validate"></div>
             </div>
           </div>
@@ -61,7 +64,6 @@
                 id="email"
                 placeholder="*E-mail"
                 data-rule="email"
-                name="email"
                 data-msg="Please enter a valid email"
                 [(ngModel)]="generateUserForm.email"
               />
@@ -89,6 +91,7 @@
                   </div>
                 </ng-template>
               </p-dropdown>
+              <div *ngIf="wrongCountry" class="error">Se requiere apellido</div>
             </div>
           </div>
           <div class="form-row">
