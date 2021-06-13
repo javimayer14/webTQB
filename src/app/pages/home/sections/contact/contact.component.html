@@ -28,6 +28,7 @@
                 name="name"
                 class="form-control"
                 id="name"
+                name="name"
                 placeholder="*Nombre"
                 data-rule="minlen:4"
                 data-msg="Please enter at least 4 chars"
@@ -45,6 +46,7 @@
                 placeholder="*Apellido"
                 data-rule="lastName"
                 data-msg="Please enter a valid email"
+                name="lastname"
                 [(ngModel)]="generateUserForm.lastName"
               />
               <div class="validate"></div>
@@ -59,6 +61,7 @@
                 id="email"
                 placeholder="*E-mail"
                 data-rule="email"
+                name="email"
                 data-msg="Please enter a valid email"
                 [(ngModel)]="generateUserForm.email"
               />
@@ -67,16 +70,17 @@
             </div>
             <div class="col form-group">
               <p-dropdown
-                style="width: 235px"
                 [options]="countries"
                 [(ngModel)]="generateUserForm.country"
                 optionLabel="name"
                 [showClear]="true"
                 placeholder="*País"
+                name="country"
+                (onChange)="codPhone(generateUserForm.country)"
               >
-                <ng-template style="width: 235px" let-country pTemplate="item">
+                <ng-template let-country pTemplate="item">
                   <div class="country-item">
-					  +{{country.code}}
+                    +{{ country.code }}
                     <img
                       [src]="country.flag"
                       style="max-width: 20px; margin-right: 5px"
@@ -89,26 +93,14 @@
           </div>
           <div class="form-row">
             <div class="col form-group">
-              <!-- 
-
-					<input
-					type="text"
-					name="birthDate"
-					class="form-control"
-					id="birthDate"
-					placeholder="Fecha nacimiento"
-					data-rule="minlen:4"
-					data-msg="Please enter at least 4 chars"
-					[(ngModel)]="generateUserForm.birthDate"
-					/>
-					<div class="validate"></div>
-				-->
               <p-calendar
                 placeholder="Fecha de nacimiento"
-                style="width: 235px !important"
                 dateFormat="dd/mm/yy"
                 appendTo="body"
                 [(ngModel)]="generateUserForm.birthDate"
+                name="birthdate"
+                [yearNavigator]="true"
+                yearRange="1900:2030"
               ></p-calendar>
             </div>
             <div class="col form-group">

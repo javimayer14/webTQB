@@ -16,21 +16,6 @@ export class ContactComponent implements OnInit {
   wrongEmail = false;
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
   data: Observable<any>;
-  constructor(
-    private router: Router,
-    public http: HttpClient,
-    public authService: AuthService,
-    private countriesService: CountriesService
-  ) {}
-
-  private agregarAutorizacionHeader() {
-    let token = this.authService.token;
-    if (token != null) {
-      return this.httpHeaders.append('Authorization', 'Bearer ' + token);
-    }
-    return this.httpHeaders;
-  }
-
   generateUserForm = {
     email: '',
     name: '',
@@ -39,9 +24,23 @@ export class ContactComponent implements OnInit {
     birthDate: '',
     phone: '',
   };
+  constructor(
+    private router: Router,
+    public http: HttpClient,
+    public authService: AuthService,
+    private countriesService: CountriesService
+  ) {}
 
   ngOnInit(): void {
     this.getCountries();
+  }
+
+  private agregarAutorizacionHeader() {
+    let token = this.authService.token;
+    if (token != null) {
+      return this.httpHeaders.append('Authorization', 'Bearer ' + token);
+    }
+    return this.httpHeaders;
   }
 
   public saveDataUsuario(form) {
@@ -81,6 +80,9 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  codPhone(country) {
+    this.generateUserForm.phone = `+ ${country['code']}`;
+  }
   validateEmail(email) {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

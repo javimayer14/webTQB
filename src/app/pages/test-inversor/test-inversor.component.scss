@@ -24,6 +24,7 @@
 }
 .question-title {
   text-align: center;
+  text-align: justify;
   color: #ffffff;
   margin: 40px;
   font-family: "Gotham Book", sans-serif;
@@ -35,6 +36,7 @@
 
 .options {
   color: #ffffff;
+  text-align: justify;
   @media (max-width: 769px) {
     text-align: center;
   }

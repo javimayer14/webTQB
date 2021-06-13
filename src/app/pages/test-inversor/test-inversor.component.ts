@@ -29,34 +29,34 @@ export class TestInversorComponent implements OnInit {
     {
       question: '¿Qué edad tienes?',
       options: [
-        'Entre 18 y 25 años',
-        'Entre 26 y 35 años',
-        'Entre 36 y 55 años',
-        'Mayor de 56 años',
+        'Entre 18 y 25 años.',
+        'Entre 26 y 35 años.',
+        'Entre 36 y 55 años.',
+        'Mayor de 56 años.',
       ],
     },
     {
       question: '¿Cuánto tiempo mantendrías una misma inversión?',
       options: [
-        '6 meses',
-        'Entre 6 y un año',
-        'Entre uno y dos años',
-        'Más de dos años',
+        '6 meses.',
+        'Entre 6 meses y un año.',
+        'Entre uno y dos años.',
+        'Más de dos años.',
       ],
     },
     {
       question: '¿Cuál es el conocimiento que tienes sobre inversiones?',
       options: [
-        'Absolutamente nada',
-        'Nunca realicé una inversión pero conozco cómo funcionan las dinámicas para hacerlo',
-        'Realicé alguna inversión y conozco lo que hay tener en cuenta',
-        'Mayor de Realice varias inversiones y me considero un especialista',
+        'Absolutamente nada.',
+        'Nunca realicé una inversión pero conozco cómo funcionan las dinámicas para hacerlo.',
+        'Realicé alguna inversión y conozco lo que hay tener en cuenta.',
+        'Realicé varias inversiones y me considero un especialista.',
       ],
     },
     {
-      question: '¿Qué buscas al momento de invertir? ',
+      question: '¿Qué buscas al momento de invertir?',
       options: [
-        'Mantener el capital invertido con una rentabilidad mínima',
+        'Mantener el capital invertido con una rentabilidad mínima.',
         'Tener una renta apenas por encima a la de un plazo fijo, aunque esté sujeta a una variación de mercado.',
         'Obtener una ganancia significativa, aceptando posibles pérdidas de capital.',
       ],
@@ -65,31 +65,31 @@ export class TestInversorComponent implements OnInit {
       question:
         'En caso de que el proyecto en el que inverstiste pase un por una situación de stress que cambie algunas condiciones iniciales, ¿qué harías?',
       options: [
-        'Saldría completante del proyecto',
-        'Saldría parcialmente del proyecto',
-        'Mantendría mi posición esperando que mejore',
-        'Invertíria más si se abren oportunidades a mejor precio',
+        'Saldría completante del proyecto.',
+        'Saldría parcialmente del proyecto.',
+        'Mantendría mi posición esperando que mejore.',
+        'Invertíria más si se abren oportunidades a mejor precio.',
       ],
     },
     {
       question:
         '¿Qué porcentaje de tu ahorro/capital disponible estas dispuesto a invertir?',
       options: [
-        'Menos del 10%',
-        'Entre un 10% y un 30%',
-        'Entre un 30% y un 60%',
-        'Más del 60%',
+        'Menos del 10%.',
+        'Entre un 10% y un 30%.',
+        'Entre un 30% y un 60%.',
+        'Más del 60%.',
       ],
     },
     {
       question:
-        'Si tuvieras que elegir el tipo de inversión que mejor te identifique, ¿que elegirías?',
+        'Si tuvieras que elegir el tipo de inversión que mejor te identifique, ¿qué elegirías?',
       options: [
-        'Acciones',
-        'Bonos',
-        'Operaciones Negociables',
-        'Real Estate',
-        'Criptomoneda',
+        'Acciones.',
+        'Bonos.',
+        'Operaciones Negociables.',
+        'Real Estate.',
+        'Criptomoneda.',
       ],
     },
   ];
