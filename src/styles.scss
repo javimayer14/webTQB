@@ -187,10 +187,13 @@ section {
 }
 
 .p-sidebar-right {
-  background: rgba(0, 0, 0, 0.5) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
   color: #fff !important;
 }
 
-.p-progressbar-value{
+.p-progressbar-value {
   background: #2a38be !important;
+}
+.p-dropdown, .p-calendar{
+  width: 235px;
 }

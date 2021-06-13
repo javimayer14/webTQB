@@ -10,7 +10,7 @@ $width: 215px;
 }
 .layer1 span {
   color: #fff;
-  background: #000cf6;
+  background: #2a38be;
 }
 .squares {
   position: relative;
@@ -19,7 +19,7 @@ $width: 215px;
 .square {
   width: $width;
   height: 300px;
-  border: 1px solid blue;
+  border: 1px solid #2a38be;
 
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@ $width: 215px;
   }
 
   .number {
-    color: #000cf6;
+    color: #2a38be;
     font-size: 120px;
     text-align: center;
   }
@@ -48,7 +48,7 @@ $width: 215px;
 .square-1 {
   width: $width;
   height: 300px;
-  border: 1px solid blue;
+  border: 1px solid #2a38be;
   //margin: 5px 10px; /* 10px between elements */
   margin: -10px 20px;
   z-index: 1;

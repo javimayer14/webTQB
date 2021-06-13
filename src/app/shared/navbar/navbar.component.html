@@ -1,14 +1,24 @@
-<header id="header" class="fixed-top" [ngClass]="{visible:visible}" (scroll)="onWindowScroll($event)">
+<header
+  id="header"
+  class="fixed-top"
+  [ngClass]="{ visible: visible }"
+  (scroll)="onWindowScroll($event)"
+>
   <div class="">
-    <div class="row justify-content-between">
+    <div class="row justify-content-between" style="width: 100%">
       <div class="col-4 text-center">
-        <img src="assets/img/logo.png" [routerLink]="['/']" />
+        <img
+          [src]="
+            isNegative ? 'assets/img/logo-negative.png' : 'assets/img/logo.png'
+          "
+          [routerLink]="['/']"
+        />
       </div>
 
-      <div class="col-4 ">
+      <div class="col-4">
         <nav class="nav-menu d-none d-lg-block text-center">
           <ul>
-            <li class="active" routerLink="wiki">WikiBridge</li>
+            <li routerLink="wiki">WikiBridge</li>
             <li routerLink="commandments">10 Mandamientos</li>
           </ul>
         </nav>
@@ -22,7 +32,11 @@
               </button>
             </li>
             <li>
-              <div class="icon" style="font-size: 32px" (click)="display = true">
+              <div
+                class="icon"
+                style="font-size: 32px"
+                (click)="display = true"
+              >
                 <i class="fa fa-bars" aria-hidden="true"></i>
               </div>
             </li>
@@ -32,18 +46,51 @@
     </div>
   </div>
 </header>
-<p-sidebar styleClass="sidebar" [(visible)]="display" position="right" [style]="{ width: '25em' }"
-  [transitionOptions]="'0.20s'" [ngStyle]="{ backgroundColor: 'var(--blue-500)' }">
+<p-sidebar
+  styleClass="sidebar"
+  [(visible)]="display"
+  position="right"
+  [style]="{ width: '25em' }"
+  [transitionOptions]="'0.20s'"
+  [ngStyle]="{ backgroundColor: 'var(--blue-500)' }"
+>
   <ul class="navbar-options">
-    <li>¿Qué es The Quality Bridge?</li>
-    <li   ><a href="#quienes-somos-1">La comunidad: ¿Por qué ser parte?</a></li>
-    <li>Proyectos</li>
-    <li>
-      <a [routerLink]="['/testInversor']">Test: ¿Qué tipo de inversor eres?</a>
+    <li [class.active]="activeFragment === 'quienes-somos-1'">
+      <p [routerLink]="['/']" fragment="quienes-somos-1">
+        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+        ¿Qué es The Quality Bridge?
+      </p>
     </li>
-    <li>Proyectos</li>
-    <li>10 mandamientos del inversor</li>
-    <li>Portal de Contenidos/Blog</li>
-    <li>WikiBridge</li>
+    <li [class.active]="activeFragment === 'miembros'">
+      <p [routerLink]="['/']" fragment="miembros">
+        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+        La comunidad: ¿Por qué ser parte?
+      </p>
+    </li>
+    <li [class.active]="activeFragment === 'proyectos'">
+      <p [routerLink]="['/']" fragment="proyectos">
+        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+        Proyectos
+      </p>
+    </li>
+    <li>
+      <p [routerLink]="['/testInversor']" routerLinkActive="active">
+        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+        Test: ¿Qué tipo de inversor eres?
+      </p>
+    </li>
+    <li [routerLink]="['/commandments']">
+      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      10 mandamientos del inversor
+    </li>
+    <li>
+      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      Portal de Contenidos/Blog
+    </li>
+
+    <li [routerLink]="['/wiki']">
+      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      WikiBridge
+    </li>
   </ul>
 </p-sidebar>

@@ -337,10 +337,11 @@
 }
 
 .navbar-options {
+  list-style-type: none;
   li {
     font-family: "Gotham Book", sans-serif;
     margin: 15px;
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
@@ -350,4 +351,32 @@
   padding-top: 20px;
 }
 
+li {
+  cursor: pointer;
+  &:hover {
+    color: #2a38be;
+  }
+}
 
+.active {
+  color: #2a38be;
+  .arrow-icon {
+    display: inline-flex !important;
+  }
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+.arrow-icon {
+  display: none;
+}

@@ -49,6 +49,8 @@
 }
 .test {
   min-height: 60vh;
+  padding: 5vh 0vh;
+  padding-bottom: 0;
 }
 .numbers {
   padding-top: 15vh;
@@ -84,4 +86,17 @@
   max-width: 800px;
   margin: auto;
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.type-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+  padding-top: 40px;
+}
+
+.question{
+  background-color: #2A38BE;
+  border: unset;
 }

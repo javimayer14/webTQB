@@ -17,11 +17,14 @@
     <button
       pButton
       pRipple
-      *ngFor="let number of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+      *ngFor="let number of [1, 2, 3, 4, 5, 6, 7]"
       type="button"
-      class="p-button-rounded"
-      [ngClass]="{ 'p-button-outlined': number > pageActual }"
-      [disabled]="number > pageActual"
+      class="p-button-rounded question"
+      [ngClass]="{
+        'p-button-outlined': number > pageActual + 1,
+        question: number <= pageActual + 1
+      }"
+      [disabled]="number > pageActual + 1"
       (click)="pageActual = number - 1"
     >
       {{ number }}
@@ -73,11 +76,11 @@
               <button
                 class="btn btn-primary btn-sm"
                 (click)="
-                  pageActual == 9 ? endTest() : (pageActual = pageActual + 1)
+                  pageActual == 6 ? endTest() : (pageActual = pageActual + 1)
                 "
                 [disabled]="!this['q' + pageActual]"
               >
-                {{ pageActual == 9 ? "Finalizar" : "Siguiente" }}
+                {{ pageActual == 6 ? "Finalizar" : "Siguiente" }}
               </button>
             </div>
           </div>
@@ -88,6 +91,7 @@
 </div>
 
 <div class="test" *ngIf="test && ending">
+  <p class="type-title">Tu estilo</p>
   <div class="row justify-content-center">
     <div *ngIf="aguila">
       <img class="img-result" src="assets/img/test/Test_Aguila.png" />
@@ -118,5 +122,6 @@
     </div>
   </div>
 
-  <p class="description">{{description}}</p>
+  <p class="description">{{ description }}</p>
+  <app-shared-test></app-shared-test>
 </div>

@@ -23,9 +23,7 @@ export class TestInversorComponent implements OnInit {
   q5;
   q6;
   q7;
-  q8;
-  q9;
-  q10;
+
   pageActual = 0;
   questions = [
     {
@@ -94,33 +92,6 @@ export class TestInversorComponent implements OnInit {
         'Criptomoneda',
       ],
     },
-    {
-      question: '¿Cuánto tiempo mantendrías una misma inversión?',
-      options: [
-        '6 meses',
-        'Entre 6 y un año',
-        'Entre uno y dos años',
-        'Más de dos años',
-      ],
-    },
-    {
-      question: '¿Qué edad tienes?',
-      options: [
-        'Entre 18 y 25 años',
-        'Entre 26 y 35 años',
-        'Entre 36 y 55 años',
-        'Mayor de 56 años',
-      ],
-    },
-    {
-      question: '¿Cuánto tiempo mantendrías una misma inversión?',
-      options: [
-        '6 meses',
-        'Entre 6 y un año',
-        'Entre uno y dos años',
-        'Más de dos años',
-      ],
-    },
   ];
   constructor() {}
 
@@ -143,7 +114,7 @@ export class TestInversorComponent implements OnInit {
     let pumaCount = 0;
     let osoCount = 0;
     let buhoCount = 0;
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < 7; index++) {
       switch (this['q' + index]) {
         case 1:
           loboCount++;

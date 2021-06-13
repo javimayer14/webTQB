@@ -5,6 +5,9 @@ import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import {DropdownModule} from 'primeng/dropdown';
+import {CalendarModule} from 'primeng/calendar';
 
 @NgModule({
   declarations: [],
@@ -15,6 +18,9 @@ import { ProgressBarModule } from 'primeng/progressbar';
     CarouselModule,
     RadioButtonModule,
     ProgressBarModule,
+    CascadeSelectModule,
+    DropdownModule,
+    CalendarModule
   ],
 })
 export class PrimengModule {}
