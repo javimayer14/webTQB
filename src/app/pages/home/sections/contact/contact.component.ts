@@ -14,6 +14,9 @@ import { CountriesService } from '../../../../services/countries.service';
 export class ContactComponent implements OnInit {
   countries = [];
   wrongEmail = false;
+  wrongLastName = false;
+  wrongName = false;
+  wrongCountry = false;
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
   data: Observable<any>;
   constructor(
@@ -21,7 +24,7 @@ export class ContactComponent implements OnInit {
     public http: HttpClient,
     public authService: AuthService,
     private countriesService: CountriesService
-  ) {}
+  ) { }
 
   private agregarAutorizacionHeader() {
     let token = this.authService.token;
@@ -47,10 +50,9 @@ export class ContactComponent implements OnInit {
   public saveDataUsuario(form) {
     var url = 'http://localhost:8080/api/user';
     let postData = new FormData();
-    this.wrongEmail = false;
-    if (!this.validateEmail(form.value.email)) {
-      this.wrongEmail = true;
-    }
+
+    this.validateForm(form);
+
     this.generateUserForm.email = form.value.email;
     this.generateUserForm.name = form.value.name;
     this.generateUserForm.lastName = form.value.lastName;
@@ -86,4 +88,29 @@ export class ContactComponent implements OnInit {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
+
+
+  validateForm(form) {
+
+    this.wrongEmail = false;
+    this.wrongLastName = false;
+    this.wrongName = false;
+    this.wrongCountry = false;
+
+    if (!this.validateEmail(form.value.email)) {
+      this.wrongEmail = true;
+    }
+    if (form.value.lastName === null || form.value.lastName === '') {
+      this.wrongLastName = true;
+    }
+
+    if (form.value.name === null || form.value.name === '') {
+      this.wrongName = true;
+    }
+    if (form.value.country === null || form.value.country === '') {
+      this.wrongCountry = true;
+    }
+  }
 }
+
+
