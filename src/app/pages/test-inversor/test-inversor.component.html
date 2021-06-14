@@ -1,5 +1,5 @@
-<app-topbar></app-topbar>
-<app-navbar visible="true"></app-navbar>
+<!-- <app-topbar></app-topbar>
+<app-navbar visible="true"></app-navbar> -->
 <div class="main" *ngIf="!test">
   <div class="section-title">
     <h3>Todos tenemos un estilo. ¿Cuál es el tuyo?</h3>
@@ -14,31 +14,16 @@
 </div>
 <div class="test" *ngIf="test && !ending">
   <div class="numbers row justify-content-md-center">
-    <button
-      pButton
-      pRipple
-      *ngFor="let number of [1, 2, 3, 4, 5, 6, 7]"
-      type="button"
-      class="p-button-rounded question"
+    <button pButton pRipple *ngFor="let number of [1, 2, 3, 4, 5, 6, 7]" type="button" class="p-button-rounded question"
       [ngClass]="{
         'p-button-outlined': number > pageActual + 1,
         question: number <= pageActual + 1
-      }"
-      [disabled]="number > pageActual + 1"
-      (click)="pageActual = number - 1"
-    >
+      }" [disabled]="number > pageActual + 1" (click)="pageActual = number - 1">
       {{ number }}
     </button>
   </div>
-  <p-carousel
-    [value]="questions"
-    [page]="pageActual"
-    [showIndicators]="false"
-    [showNavigators]="false"
-    [numVisible]="1"
-    [numScroll]="1"
-    [circular]="false"
-  >
+  <p-carousel [value]="questions" [page]="pageActual" [showIndicators]="false" [showNavigators]="false" [numVisible]="1"
+    [numScroll]="1" [circular]="false">
     <ng-template let-product pTemplate="item">
       <div class="product-item">
         <div class="product-item-content">
@@ -46,25 +31,12 @@
             <h4 class="p-mb-1" class="question-title">
               {{ product.question }}
             </h4>
-            <form
-              #myForm="ngForm"
-              (submit)="templateForm(myForm.value)"
-              novalidate
-            >
+            <form #myForm="ngForm" (submit)="templateForm(myForm.value)" novalidate>
               <div class="row justify-content-center">
-                <div
-                  class="col-12 col-md-2"
-                  *ngFor="let option of product.options; let i = index"
-                >
+                <div class="col-12 col-md-2" *ngFor="let option of product.options; let i = index">
                   <div class="form-check options">
-                    <input
-                      [(ngModel)]="this['q' + pageActual]"
-                      class="form-check-input"
-                      [value]="i + 1"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
+                    <input [(ngModel)]="this['q' + pageActual]" class="form-check-input" [value]="i + 1" type="radio"
+                      name="flexRadioDefault" id="flexRadioDefault1" />
                     <label class="form-check-label" for="flexRadioDefault1">
                       {{ option }}
                     </label>
@@ -72,14 +44,10 @@
                 </div>
               </div>
             </form>
-            <div class="row justify-content-center">
-              <button
-                class="btn btn-primary btn-sm"
-                (click)="
+            <div class="row justify-content-center button-seccion">
+              <button class="btn btn-primary btn-sm" (click)="
                   pageActual == 6 ? endTest() : (pageActual = pageActual + 1)
-                "
-                [disabled]="!this['q' + pageActual]"
-              >
+                " [disabled]="!this['q' + pageActual]">
                 {{ pageActual == 6 ? "Finalizar" : "Siguiente" }}
               </button>
             </div>
