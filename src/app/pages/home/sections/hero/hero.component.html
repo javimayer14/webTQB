@@ -6,22 +6,24 @@
   <i class="fa fa-play label-arrow"></i>
 </div>
 
-<video autoplay muted loop id="myVideo">
-  <source src="assets/videos/hero-video.mp4" type="video/mp4">
+<video autoplay [muted]="true" loop id="myVideo">
+  <source src="assets/videos/hero-video.mp4" type="video/mp4" />
   Your browser does not support HTML5 video.
 </video>
 <div id="hero" class="d-flex align-items-center">
   <!-- <div class="half-circle"></div> -->
   <div class="half-circle-2"></div>
 
-
-  <div class="container" data-aos="zoom-out" data-aos-delay="500" data-aos-offset="200">
+  <div
+    class="container"
+    data-aos="zoom-out"
+    data-aos-delay="500"
+    data-aos-offset="200"
+  >
     <h1>Conectados invertimos mejor</h1>
-    <br>
+    <br />
     <h2>La conexión es la base del éxito. Impulsamos el movimiento.</h2>
-    <h2>
-      Te facilitamos los puentes para que expandas tus oportunidades
-    </h2>
+    <h2>Te facilitamos los puentes para que expandas tus oportunidades</h2>
     <div class="d-flex main-btn">
       <div class="row">
         <div class="col-md-6" [routerLink]="['/']" fragment="contact">
