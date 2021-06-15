@@ -53,12 +53,13 @@
 .carousel{
   background-color: #2a38be;
   align-self: center;
-  height: 100px;
   justify-content: center;
   margin: 100px;
   margin-bottom: 0px;
   margin-top: 0px;
-
+  @media (max-width: 800px) {
+  }
+ 
 
 }
 .carousel-item .number {

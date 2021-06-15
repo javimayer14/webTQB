@@ -48,13 +48,13 @@
                   </div>
                 </ng-template>
               </p-dropdown>
-              <div *ngIf="wrongCountry" class="error">Se requiere telefono</div>
+              <div *ngIf="wrongCountry" class="error">Se requiere Pais de origen</div>
             </div>
           </div>
           <div class="form-row">
             <div class="col form-group">
               <p-calendar placeholder="Fecha de nacimiento" dateFormat="dd/mm/yy" appendTo="body"
-                [(ngModel)]="generateUserForm.birthDate" name="birthdate" [yearNavigator]="true" yearRange="1900:2030">
+                [(ngModel)]="generateUserForm.birthDate" name="birthdate" [yearNavigator]="true" yearRange="1920:2021">
               </p-calendar>
             </div>
             <div class="col form-group">

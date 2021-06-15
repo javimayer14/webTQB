@@ -2,16 +2,9 @@
   <p class="main-title">¿Por qué ser miembro?</p>
   <br />
   <div class="row justify-content-md-center">
-    <div
-      *ngFor="let blueCard of blueCards"
-      class="col-md-6 col-lg-2 align-self-center"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
-      <app-blue-card
-        [title]="blueCard.title"
-        [subtitle]="blueCard.subtitle"
-      ></app-blue-card>
+    <div *ngFor="let blueCard of blueCards" class="col-md-6 col-lg-2 align-self-center" data-aos="fade-up"
+      data-aos-delay="100">
+      <app-blue-card [title]="blueCard.title" [subtitle]="blueCard.subtitle"></app-blue-card>
     </div>
   </div>
   <br />
