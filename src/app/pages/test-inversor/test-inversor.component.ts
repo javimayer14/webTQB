@@ -97,17 +97,6 @@ export class TestInversorComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  templateForm(value: any) {
-    alert(JSON.stringify(value));
-    console.log('Q0', this.q0);
-    console.log('Q1', this.q1);
-    console.log('Q2', this.q2);
-    console.log('Q3', this.q3);
-    console.log('Q4', this.q4);
-    console.log('Q5', this.q5);
-    console.log('Q6', this.q6);
-    console.log('Q7', this.q7);
-  }
   endTest() {
     let loboCount = 0;
     let aguilaCount = 0;
@@ -146,26 +135,32 @@ export class TestInversorComponent implements OnInit {
     switch (maxValue) {
       case 0:
         this.lobo = true;
+        this.barValue = 100;
         this.description =
           'Te gusta meterte en donde hay más riesgo pero sos sigiloso. Con una mirada perspicaz, una vez que estas decidido no hay quien te pare. Tomás riesgo para obtener una gran recomensa';
         break;
       case 1:
         this.aguila = true;
+        this.barValue = 75;
+
         this.description =
           'Tomas la distancia necesaria para evaluar desde lejos y lanzarte rápidamente hacia el foco. Preparas todo para el momento justo. Haces una medición precisa para obtener lo que querés.';
         break;
       case 2:
         this.puma = true;
+        this.barValue = 50;
         this.description =
           'Sabes cuando pasar a la acción y cuando replegarte. Sos agresivo pero cuidadoso y sabes pasar desapercibido si es lo que crees necesario. Tienes tus momentos y estas muy atento al contexto que te rodea';
         break;
       case 3:
         this.oso = true;
+        this.barValue = 25;
         this.description =
           'Encuentras el momento justo para todo. No siempre se necesita estar en acción sino que sabes que los procesos son largos y ya va a llegar el momento. Puedes tolerar no abalazarte sobre una gran oportunidad porque sabes que aparecerán otras. ';
         break;
       case 4:
         this.buho = true;
+        this.barValue = 0;
         this.description =
           'Cuidadoso pero certero. Aprovechas las pocas oportunidades que se presentan porque sabes que son únicas. Cada movimiento es muy pensado. Eres obsesivo por mantener las siutaciones bajo control.';
         break;

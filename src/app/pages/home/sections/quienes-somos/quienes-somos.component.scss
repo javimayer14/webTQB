@@ -42,15 +42,20 @@
 }
 
 .quienes-somos-2 {
-  background: url("/assets/img/1x/todos.png");
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/assets/img/1x/todos.png");
+  //background: url("/assets/img/1x/todos.png");
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-attachment: fixed;
-  background-size: cover;
+  //background-position: bottom center;
+  background-position: top;
+  //background-attachment: fixed;
+
+  //background-size: 100% 65%;
+  @media (max-width: 760px) {
+    background-size: cover;
+  }
 }
 
-
-.carousel{
+.carousel {
   background-color: #2a38be;
   align-self: center;
   height: 100px;
@@ -58,8 +63,6 @@
   margin: 100px;
   margin-bottom: 0px;
   margin-top: 0px;
-
-
 }
 .carousel-item .number {
   font-size: 100px;
@@ -70,15 +73,14 @@
 .carousel-item p {
   font-size: 20px;
   padding: 25px;
-  color:white;
-  align-content: center
+  color: white;
+  align-content: center;
 }
 
 .carousel-item h1 {
   font-size: 65px;
 }
 .carousel-item {
-
 }
 
 .carousel-indicators li {
@@ -87,16 +89,14 @@
   border-radius: 100%;
 }
 .carousel-indicators {
-
   top: 0px;
 }
 
 span .carousel-control-next-icon {
-  background-color: black
+  background-color: black;
 }
-.carousel-indicators .active{
-  background-color:  #FFF;
-
+.carousel-indicators .active {
+  background-color: #fff;
 }
 
 section {

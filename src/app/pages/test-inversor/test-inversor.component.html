@@ -22,7 +22,8 @@
       class="p-button-rounded question"
       [ngClass]="{
         'p-button-outlined': number > pageActual + 1,
-        question: number <= pageActual + 1
+        question: number <= pageActual + 1,
+        actualQuestion: number == pageActual +1
       }"
       [disabled]="number > pageActual + 1"
       (click)="pageActual = number - 1"
@@ -115,7 +116,7 @@
       <label>Conservador</label>
     </div>
     <div class="col-6 col-md-5">
-      <p-progressBar [value]="75" [showValue]="false"></p-progressBar>
+      <p-progressBar [value]="barValue" [showValue]="false"></p-progressBar>
     </div>
     <div class="col-3 col-md-2">
       <label>Arriesgado</label>
