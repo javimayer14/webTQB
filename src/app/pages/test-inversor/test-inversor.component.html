@@ -1,5 +1,5 @@
-<app-topbar></app-topbar>
-<app-navbar visible="true"></app-navbar>
+<!-- <app-topbar></app-topbar>
+<app-navbar visible="true"></app-navbar> -->
 <div class="main" *ngIf="!test">
   <div class="section-title">
     <h3>Todos tenemos un estilo. ¿Cuál es el tuyo?</h3>
@@ -23,7 +23,7 @@
       [ngClass]="{
         'p-button-outlined': number > pageActual + 1,
         question: number <= pageActual + 1,
-        actualQuestion: number == pageActual +1
+        actualQuestion: number == pageActual + 1
       }"
       [disabled]="number > pageActual + 1"
       (click)="pageActual = number - 1"
@@ -73,7 +73,7 @@
                 </div>
               </div>
             </form>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center button-seccion">
               <button
                 class="btn btn-primary btn-sm"
                 (click)="

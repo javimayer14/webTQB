@@ -180,19 +180,24 @@
 @media (max-width: 768px) {
   #footer .copyright,
   #footer .credits {
-    float: none;
+    float: right;
     text-align: center;
-    padding: 2px 0;
+    font-size: 13px;
+    color: #444444;
   }
-}
-.footer-text {
-  align-items: center;
-  justify-content: center;
-}
-img {
-  width: 200px;
-}
 
-.text-quienes-somos {
-  color: #ffffff;
+  @media (max-width: 768px) {
+    #footer .copyright,
+    #footer .credits {
+      float: none;
+      text-align: center;
+      padding: 2px 0;
+    }
+  }
+  .footer-text {
+    text-align: justify;
+  }
+  img {
+    width: 200px;
+  }
 }
