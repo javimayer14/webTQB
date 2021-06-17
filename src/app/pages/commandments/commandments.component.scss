@@ -87,10 +87,10 @@ h1 {
 }
 
 .carousel-item h1 {
-  font-size: 65px;
+  font-size: 55px;
 }
 .carousel-item {
-  height: 600px;
+  height: 700px;
 }
 
 .carousel-indicators li {
@@ -107,25 +107,4 @@ span .carousel-control-next-icon {
 }
 .carousel-indicators .active {
   background-color: #fff;
-}
-@media screen and (max-width: 1512px) {
-  /* Specific to this particular image */
-  .commandments {
-    background-image: url("/assets/img/1x/");
-    background-color: #bbb;
-  }
-  .title {
-    color: #111;
-  }
-  .seccion-description {
-    color: #111;
-  }
-
-  .carousel-item .number {
-    font-size: 50px;
-    padding: 40px;
-  }
-  .carousel-item h1 {
-    font-size: 25px;
-  }
 }
