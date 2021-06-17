@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class NavbarComponent implements OnInit {
   display = false;
   isNegative = false;
-  @Input('visible') visible;
+  @Input('visible') visible = false;
   activeFragment ="";
   constructor(public route: ActivatedRoute) {}
 
