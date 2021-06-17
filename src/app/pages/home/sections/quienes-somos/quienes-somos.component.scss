@@ -62,6 +62,7 @@
   margin: 100px;
   margin-bottom: 0px;
   margin-top: 0px;
+  height: 120px;
   @media (max-width: 800px) {
   }
  
@@ -74,7 +75,7 @@
 }
 
 .carousel-item p {
-  font-size: 20px;
+  font-size: 15px;
   padding: 25px;
   color: white;
   align-content: center;
@@ -104,4 +105,16 @@ span .carousel-control-next-icon {
 
 section {
   padding-top: 140px;
+}
+
+.frase{
+  font-size: 10px;
+}
+
+.prueba{
+  display: flex;
+    align-items: center;
+}
+.carousel-inner p {
+  margin-top: 20px;
 }
