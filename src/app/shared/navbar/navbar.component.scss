@@ -15,7 +15,6 @@
   //padding: 25px 0;
   top: 40px;
   color: #ffffff;
-  //box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 #header.header-scrolled {
@@ -23,6 +22,8 @@
   top: 0;
   padding: 15px;
   color: #222222;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 #header .logo {
@@ -379,4 +380,7 @@ a.nostyle:visited {
 
 .arrow-icon {
   display: none;
+}
+.sombra{
+
 }

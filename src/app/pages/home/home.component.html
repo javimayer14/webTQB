@@ -4,8 +4,8 @@
 <app-quienes-somos></app-quienes-somos>
 <app-miembros></app-miembros>
 <app-proyectos-evaluados></app-proyectos-evaluados>
-<app-contact></app-contact>
-<app-presentar-proyecto></app-presentar-proyecto>
+<app-contact *ngIf="!isAuthenticated"></app-contact >
+<app-presentar-proyecto ></app-presentar-proyecto>
 <!-- <app-funcionamiento></app-funcionamiento> -->
 
 

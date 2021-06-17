@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   titulo: string = "Por favor Sing In !";
   user: User;
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
     this.user = new User();
   }
 
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
 
   logIn(): void {
-    console.log(this.user);
+    console.log("USER: " + this.user);
     if (this.user.username == null || this.user.password == null) {
       swal.fire('Error Login', 'Username o Password vacio', "error");
       return;
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       this.authService.guardarUser(response.access_token);
       this.authService.guardarToken(response.access_token);
       let usuario = this.authService.usuario;
+      this.router.navigate(['/']);
       swal.fire('Login', 'Bienvenido, has iniciado sesion con exito !', "success");
     }, err => {
       if (err.status == 400) {

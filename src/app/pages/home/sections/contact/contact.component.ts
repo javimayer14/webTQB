@@ -67,6 +67,7 @@ export class ContactComponent implements OnInit {
       console.log(data);
 
       console.log(form.value);
+      this.router.navigate(['/login']);
       swal.fire(
         'Generacion usuario',
         'el usuario fue creado con exito',

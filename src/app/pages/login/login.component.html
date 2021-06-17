@@ -2,6 +2,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<app-navbar visible="true"></app-navbar>
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
@@ -14,14 +15,15 @@
 
         <!-- Login Form -->
         <form method="POST">
-            <input name="username" id="username" type="text" class="fadeIn second" placeholder="usuario">
-            <input name="password" id="password" type="password" class="fadeIn third" placeholder="password">
-            <input (click)="logIn();" type="submit" class="fadeIn fourth" value="Log In">
+            <input [(ngModel)]="user.username" name="username" id="username" type="text" class="fadeIn second" placeholder="usuario">
+            <input [(ngModel)]="user.password" name="password" id="password" type="password" class="fadeIn third" placeholder="password">
+            <br>
+            <input (click)="logIn();" type="submit" class="fadeIn fourth submit" value="Log In">
         </form>
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+            <a class="underlineHover" href="#">Cambiar contraseña</a>
         </div>
 
     </div>
