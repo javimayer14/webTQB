@@ -26,9 +26,14 @@
       <div class="col-4">
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-            <li class="active">
+            <li *ngIf="!isAuthenticated" class="active" >
               <button routerLink="login" class="btn btn-primary btn-sm">
                 Ingresar
+              </button>
+            </li>
+            <li *ngIf="isAuthenticated" class="active" >
+              <button (click)="logOut()" class="btn btn-primary btn-sm">
+                Salir
               </button>
             </li>
             <li>

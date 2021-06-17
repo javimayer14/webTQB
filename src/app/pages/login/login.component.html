@@ -14,8 +14,8 @@
 
         <!-- Login Form -->
         <form method="POST">
-            <input name="username" id="username" type="text" class="fadeIn second" placeholder="usuario">
-            <input name="password" id="password" type="password" class="fadeIn third" placeholder="password">
+            <input [(ngModel)]="user.username" name="username" id="username" type="text" class="fadeIn second" placeholder="usuario">
+            <input [(ngModel)]="user.password" name="password" id="password" type="password" class="fadeIn third" placeholder="password">
             <input (click)="logIn();" type="submit" class="fadeIn fourth" value="Log In">
         </form>
 

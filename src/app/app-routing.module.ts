@@ -7,6 +7,8 @@ import { TestInversorComponent } from './pages/test-inversor/test-inversor.compo
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { CommandmentsComponent } from './pages/commandments/commandments.component';
 import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component';
+import { AuthGuard } from './guards/auth-guard.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -18,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'projectDetail',
-    component: ProjectDetailComponent,
+    component: ProjectDetailComponent, canActivate:[AuthGuard]
   },
   {
     path: 'login',
