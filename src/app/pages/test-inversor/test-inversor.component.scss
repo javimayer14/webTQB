@@ -47,7 +47,9 @@
 }
 
 .main {
-  height: 60vh;
+  min-height: 60vh;
+  //background: url("/assets/img/Test_Arco.png") top left;
+
 }
 .test {
   min-height: 60vh;
@@ -97,15 +99,22 @@
   padding-top: 40px;
 }
 
-.question{
-  background-color: #2A38BE;
+.question {
+  background-color: #2a38be;
   border: unset;
 }
-.actualQuestion{
-  
-
-
-.button-seccion{
-  margin: 70px;
+.actualQuestion {
+  .button-seccion {
+    margin: 70px;
+  }
 }
+
+.arco {
+  text-align: center;
+}
+.arco-img {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
 }

@@ -1,22 +1,103 @@
 .info {
-	background-color: #ebebeb;
-	padding: 30px 30px;
-	@media (max-width: 992px) {
-	  margin-bottom: 0;
-	}
-  
-	font-style: italic;
-	font-size: 14px;
-	line-height: 26px;
-	color: #777777;
+  background-color: #ebebeb;
+  padding: 30px 30px;
+  @media (max-width: 992px) {
+    margin-bottom: 0;
   }
-  .img {
-	max-width: 700px;
-	width: 100%;
-  }
-  .btn-primary {
-	width: 100%;
-	max-width: 700px;
-	padding: 20px;
-  }
-  
+
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+.img {
+  max-width: 700px;
+  width: 100%;
+}
+.btn-primary {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.title {
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 42px;
+}
+
+.subtitle {
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+
+  padding-top: 100px;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
+.btn-primary {
+  background: #2a38be;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #111;
+  text-align: left;
+}
+.subrrayado {
+  text-decoration: underline;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.ubicacion {
+  padding: 0px;
+  font-size: 10px;
+}
+
+.ubicacion p {
+  font-size: 10px;
+}
+
+.right {
+  float: right;
+}
+
+.footer-card p {
+  line-height: 1px;
+}
+
+.text-tag {
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.tag {
+  background-color: #111;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 40px;
+  justify-content: center;
+}
+
+ .section-title p {
+   margin: 0;
+}

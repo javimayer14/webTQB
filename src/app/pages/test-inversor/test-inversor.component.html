@@ -11,6 +11,9 @@
   <div class="row justify-content-center">
     <button class="btn btn-primary" (click)="test = true">Comenzar</button>
   </div>
+  <div class="arco">
+    <img class="arco-img" src="assets/img/Test_Arco.png" alt="" />
+  </div>
 </div>
 <div class="test" *ngIf="test && !ending">
   <div class="numbers row justify-content-md-center">
@@ -45,7 +48,7 @@
         <div class="product-item-content">
           <div>
             <h4 class="p-mb-1" class="question-title">
-              {{ product.question }}
+              {{ pageActual + 1 }}. {{ product.question }}
             </h4>
             <form
               #myForm="ngForm"

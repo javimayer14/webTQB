@@ -9,7 +9,7 @@ export class CountriesService {
 
   getCountries() {
     return this.http
-      .get('https://restcountries.eu/rest/v2/lang/es')
+      .get('https://restcountries.eu/rest/v2')
       .pipe(
         map((resp: any[]) =>
           resp.map((country) => ({
