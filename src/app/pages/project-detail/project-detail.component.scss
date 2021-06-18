@@ -1,3 +1,4 @@
+/*
 .info {
   background-color: #ebebeb;
   padding: 30px 30px;
@@ -100,4 +101,99 @@
 
  .section-title p {
    margin: 0;
+}
+*/
+.title {
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 42px;
+  text-align: center;
+  color: #2A38BE;
+}
+
+.subtitle {
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #FF199E;
+}
+
+.body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+
+  padding-top: 100px;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
+.btn-primary {
+  background: #2a38be;
+  padding: 20px;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #111;
+  text-align: left;
+}
+.subrrayado {
+  text-decoration: underline;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.ubicacion {
+  padding: 0px;
+  font-size: 10px;
+}
+
+.ubicacion p {
+  font-size: 10px;
+}
+
+.right {
+  float: right;
+}
+
+.footer-card p {
+  line-height: 1px;
+}
+
+.text-tag {
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.tag {
+  background-color: #111;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 40px;
+  justify-content: center;
+}
+
+.member {
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: 16px;
+  text-align: justify;
+  font-family: "Gotham book", sans-serif;
+  line-height: 25px;
+  color: #000;
 }

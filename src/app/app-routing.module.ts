@@ -20,7 +20,8 @@ const routes: Routes = [
   },
   {
     path: 'projectDetail',
-    component: ProjectDetailComponent, canActivate:[AuthGuard]
+    //component: ProjectDetailComponent, canActivate:[AuthGuard]
+    component: ProjectDetailComponent,
   },
   {
     path: 'login',
@@ -41,7 +42,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy',anchorScrolling:'enabled',scrollPositionRestoration:'top' })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      relativeLinkResolution: 'legacy',
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'top',
+    }),
+  ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
