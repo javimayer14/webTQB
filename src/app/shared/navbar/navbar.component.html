@@ -5,10 +5,9 @@
   (scroll)="onWindowScroll($event)"
 >
   <div class="">
-    <div class="row ">
-      <div class="col-2 ">
+    <div class="row justify-content-between" style="width: 100%">
+      <div class="col-4 text-center">
         <img
-        class="pull-right"
           [src]="
             isNegative ? 'assets/img/logo-negative.png' : 'assets/img/logo.png'
           "
@@ -16,16 +15,16 @@
         />
       </div>
 
-      <div class="col-8">
-        <nav class="nav-menu d-none d-lg-block pull-right">
+      <div class="col-4">
+        <nav class="nav-menu d-none d-lg-block text-center">
           <ul style="padding-top: 10px">
             <li routerLink="/wiki">WikiBridge</li>
             <li routerLink="/commandments">10 Mandamientos</li>
           </ul>
         </nav>
       </div>
-      <div class="col-2">
-        <nav class="nav-menu  d-lg-block ">
+      <div class="col-4">
+        <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li *ngIf="!isAuthenticated" class="active" >
               <button routerLink="login" class="btn btn-primary btn-sm">

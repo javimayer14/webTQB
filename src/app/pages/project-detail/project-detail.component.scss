@@ -107,7 +107,7 @@
   font-family: "Gotham Rounded", sans-serif;
   font-size: 42px;
   text-align: center;
-  color: #2A38BE;
+  color: #2a38be;
 }
 
 .subtitle {
@@ -116,7 +116,7 @@
   text-align: center;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #FF199E;
+  color: #ff199e;
 }
 
 .body {
@@ -136,6 +136,9 @@
 .btn-primary {
   background: #2a38be;
   padding: 20px;
+  @media (max-width: 760px) {
+    margin: auto;
+  }
 }
 
 .team .member .member-info span {
@@ -196,4 +199,11 @@
   font-family: "Gotham book", sans-serif;
   line-height: 25px;
   color: #000;
+}
+
+.downloadIMG {
+  @media (max-width: 760px) {
+    width: 100%;
+    margin-top: 15px;
+  }
 }

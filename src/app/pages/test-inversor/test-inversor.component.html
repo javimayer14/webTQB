@@ -16,13 +16,13 @@
   </div>
 </div>
 <div class="test" *ngIf="test && !ending">
-  <div class="numbers row justify-content-md-center">
+  <div class="numbers row justify-content-center">
     <button
       pButton
       pRipple
       *ngFor="let number of [1, 2, 3, 4, 5, 6, 7]"
       type="button"
-      class="p-button-rounded question"
+      class="p-button-rounded questionButton question"
       [ngClass]="{
         'p-button-outlined': number > pageActual + 1,
         question: number <= pageActual + 1,
@@ -30,9 +30,8 @@
       }"
       [disabled]="number > pageActual + 1"
       (click)="pageActual = number - 1"
-    >
-      {{ number }}
-    </button>
+      [label]="number"
+    ></button>
   </div>
   <p-carousel
     [value]="questions"
@@ -57,8 +56,8 @@
             >
               <div class="row justify-content-center">
                 <div
-                  class="col-12 col-md-2"
                   *ngFor="let option of product.options; let i = index"
+                  class="col-12 col-md-2"
                 >
                   <div class="form-check options">
                     <input
@@ -67,9 +66,12 @@
                       [value]="i + 1"
                       type="radio"
                       name="flexRadioDefault"
-                      id="flexRadioDefault1"
+                      [id]="'flexRadioDefault' + i"
                     />
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <label
+                      class="form-check-label"
+                      [for]="'flexRadioDefault' + i"
+                    >
                       {{ option }}
                     </label>
                   </div>
