@@ -79,15 +79,23 @@ h1 {
 .carousel-item .number {
   font-size: 100px;
   padding: 70px;
+  @media (max-width: 450px) {
+    font-size: 60px;
+
+  }
 }
 
 .carousel-item p {
   font-size: 15px;
   padding: 25px;
 }
-
+ 
 .carousel-item h1 {
   font-size: 55px;
+  @media (max-width: 450px) {
+    font-size: 30px;
+
+  }
 }
 .carousel-item {
   height: 700px;

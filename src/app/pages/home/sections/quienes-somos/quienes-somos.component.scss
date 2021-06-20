@@ -63,7 +63,10 @@
   margin-bottom: 0px;
   margin-top: 0px;
   height: 120px;
-  @media (max-width: 800px) {
+  @media (max-width: 450px) {
+    height: 150px;
+    margin: 10px;
+
   }
  
 
@@ -79,10 +82,16 @@
   padding: 25px;
   color: white;
   align-content: center;
+  @media (max-width: 450px) {
+    font-size: 10px;
+  }
 }
 
 .carousel-item h1 {
   font-size: 65px;
+  @media (max-width: 450px) {
+    font-size: 30px;
+  }
 }
 .carousel-item {
 }
