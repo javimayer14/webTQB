@@ -41,13 +41,13 @@ export class NavbarComponent implements OnInit {
   onWindowScroll(e) {
     console.log('e');
     let element = document.querySelector('#header');
-    let topbar = document.querySelector('#topbar');
+    //let topbar = document.querySelector('#topbar');
     if (window.pageYOffset > element.clientHeight) {
-      topbar.classList.add('topbar-scrolled');
+      //topbar.classList.add('topbar-scrolled');
       element.classList.add('header-scrolled');
       this.isNegative = true;
     } else {
-      topbar.classList.remove('topbar-scrolled');
+      //topbar.classList.remove('topbar-scrolled');
       element.classList.remove('header-scrolled');
       this.isNegative = false;
     }

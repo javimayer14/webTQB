@@ -12,10 +12,9 @@
   button {
     text-align: center;
     margin: 10px;
-    @media (max-width:760px) {
+    @media (max-width: 760px) {
       margin: 5px;
     }
-    
   }
 }
 .product-item {
@@ -36,6 +35,11 @@
   font-size: 28pt;
   text-align: center;
   margin: 5px;
+  @media (max-width: 760px) {
+    font-size: 15pt;
+    padding-bottom: 15pt;
+
+  }
 }
 
 .options {
@@ -61,6 +65,9 @@
 }
 .numbers {
   padding-top: 15vh;
+  @media (max-width: 760px) {
+    padding-top: 5vh;
+  }
 }
 
 .btn {
@@ -108,12 +115,11 @@
   width: 110px;
   border-radius: 50%;
   font-size: 72pt;
-  @media (max-width:760px) {
+  @media (max-width: 760px) {
     width: 35px;
     height: 35px;
     font-size: 12pt;
     margin: 5px;
-    
   }
 }
 .question {
@@ -122,7 +128,6 @@
   border-radius: 50%;
 }
 .actualQuestion {
-
   color: #000;
   .button-seccion {
     margin: 70px;
@@ -146,5 +151,5 @@
 
 .buttonBack {
   background-color: #606060;
-  color: #A3A3A2;
+  color: #a3a3a2;
 }

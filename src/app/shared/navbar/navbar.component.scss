@@ -13,14 +13,18 @@
   transition: all 0.5s;
   z-index: 997;
   //padding: 25px 0;
-  top: 40px;
+  //top: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   color: #ffffff;
 }
 
 #header.header-scrolled {
   background: #fff;
   top: 0;
+  padding-top: 0;
   padding: 15px;
+
   color: #222222;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   @media (max-width: 450px) {
@@ -357,7 +361,9 @@
 }
 
 .visible {
-  position: unset;
+  position: sticky;
+  top: 0;
+  //background-color: #ffffff;
   color: #222222 !important;
   padding-top: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
