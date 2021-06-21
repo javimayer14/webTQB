@@ -80,7 +80,16 @@
             </form>
             <div class="row justify-content-center button-seccion">
               <button
-                class="btn btn-primary btn-sm"
+                class="col-10 col-md-2 btn  btn-sm buttonBack"
+                (click)="
+                pageActual = pageActual - 1
+                "
+                [disabled]="pageActual ==0"
+              >
+                Volver a la pregunta anterior
+              </button>
+              <button
+                class=" col-10 col-md-2 btn btn-primary btn-sm"
                 (click)="
                   pageActual == 6 ? endTest() : (pageActual = pageActual + 1)
                 "
