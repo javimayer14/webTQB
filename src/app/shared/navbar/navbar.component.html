@@ -24,14 +24,14 @@
         </nav>
       </div>
       <div class="col-4">
-        <nav class="nav-menu d-none d-lg-block">
+        <nav class="nav-menu ">
           <ul>
-            <li *ngIf="!isAuthenticated" class="active" >
-              <button routerLink="login" class="btn btn-primary btn-sm">
+            <li *ngIf="!isAuthenticated" class="active d-none d-lg-block" >
+              <button routerLink="login" class="btn btn-primary btn-sm ">
                 Ingresar
               </button>
             </li>
-            <li *ngIf="isAuthenticated" class="active" >
+            <li *ngIf="isAuthenticated" class="active d-none d-lg-block" >
               <button (click)="logOut()" class="btn btn-primary btn-sm">
                 Salir
               </button>
