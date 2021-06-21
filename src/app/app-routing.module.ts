@@ -9,6 +9,7 @@ import { CommandmentsComponent } from './pages/commandments/commandments.compone
 import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { FooterSeccionComponent } from './shared/footer-seccion/footer-seccion.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'changePassword',
     component: ChangePasswordComponent,
+  },
+  {
+    path: 'prueba',
+    component: FooterSeccionComponent,
   },
 
 ];

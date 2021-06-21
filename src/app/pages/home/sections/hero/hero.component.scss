@@ -34,9 +34,8 @@
 
 #hero h1 {
   margin: 0;
-  font-size: 48px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 80px;
   //font-size: 96pt;
   font-size: 57pt;
   color: #222222;
@@ -287,4 +286,11 @@ a.float + div.label-container {
 a.float:hover + div.label-container{
   visibility: visible;
   opacity: 1;
+}
+
+.title{
+  width: 100%;
+}
+
+.container{
 }
