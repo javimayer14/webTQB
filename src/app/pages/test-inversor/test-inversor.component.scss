@@ -12,6 +12,10 @@
   button {
     text-align: center;
     margin: 10px;
+    @media (max-width:760px) {
+      margin: 5px;
+    }
+    
   }
 }
 .product-item {
@@ -83,7 +87,8 @@
   }
 }
 .description {
-  text-align: center;
+  text-align: justify;
+  padding: 10px;
   color: #ffffff;
   max-width: 800px;
   margin: auto;
@@ -103,6 +108,13 @@
   width: 110px;
   border-radius: 50%;
   font-size: 72pt;
+  @media (max-width:760px) {
+    width: 35px;
+    height: 35px;
+    font-size: 12pt;
+    margin: 5px;
+    
+  }
 }
 .question {
   background-color: #2a38be;
@@ -110,7 +122,6 @@
   border-radius: 50%;
 }
 .actualQuestion {
-  font-size: 72pt;
 
   color: #000;
   .button-seccion {
@@ -131,4 +142,9 @@
 .p-button.p-button-outlined {
   color: #2a38be;
   border: 3px solid;
+}
+
+.buttonBack {
+  background-color: #606060;
+  color: #A3A3A2;
 }

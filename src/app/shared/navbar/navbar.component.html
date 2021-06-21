@@ -9,7 +9,7 @@
       <div class="col-4 text-center">
         <img
           [src]="
-            isNegative ? 'assets/img/logo-negative.png' : 'assets/img/logo.png'
+            (isNegative || visible) ? 'assets/img/logo-negative.png' : 'assets/img/logo.png'
           "
           [routerLink]="['/']"
         />
