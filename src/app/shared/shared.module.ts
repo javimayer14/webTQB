@@ -9,6 +9,6 @@ import { FooterSeccionComponent } from './footer-seccion/footer-seccion.componen
 @NgModule({
   declarations: [FooterComponent, NavbarComponent, FooterSeccionComponent],
   imports: [CommonModule, PrimengModule,RouterModule],
-  exports: [FooterComponent, NavbarComponent],
+  exports: [FooterComponent, NavbarComponent,FooterSeccionComponent],
 })
 export class SharedModule {}
