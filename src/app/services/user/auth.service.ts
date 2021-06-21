@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../../classes/user';
+import swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +13,11 @@ import { User } from '../../classes/user';
 export class AuthService {
   private _usuario: User;
   private _token: String;
-  constructor(private http: HttpClient) { }
+  private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+  data: Observable<any>;
+
+  constructor(private http: HttpClient,   private router: Router,
+    ) { }
 
   public get usuario(): User {
     if (this._usuario != null) {
@@ -86,4 +94,36 @@ export class AuthService {
     sessionStorage.removeItem("usuario");
     sessionStorage.removeItem("token");
   }
+
+  changePassword(form){
+    var url = 'http://localhost:8080/api/user/change-password';
+    this.data = this.http.post(url, form, {
+      headers: this.agregarAutorizacionHeader(),
+    });
+    console.log(form);
+    this.data.subscribe((data) => {
+      this.router.navigate(['/login']);
+      swal.fire(
+        'Generacion usuario',
+        'el usuario fue creado con exito',
+        'success'
+      );
+    }, err => {
+      if (err.status == 400) {
+        swal.fire('Error', 'Password incorrecto', "error");
+      }
+      if (err.status == 500) {
+        swal.fire('Error ', 'Error en el servidor', "error");
+      }
+    });
+  }
+
+  private agregarAutorizacionHeader() {
+    let token = this.token;
+    if (token != null) {
+      return this.httpHeaders.append('Authorization', 'Bearer ' + token);
+    }
+    return this.httpHeaders;
+  }
+
 }

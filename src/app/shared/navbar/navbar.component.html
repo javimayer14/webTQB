@@ -15,16 +15,16 @@
         />
       </div>
 
-      <div class="col-4">
-        <nav class="nav-menu d-none d-lg-block text-center">
+      <div class="col-5">
+        <nav class="nav-menu d-none d-lg-block pull-right">
           <ul style="padding-top: 10px">
             <li routerLink="/wiki">WikiBridge</li>
             <li routerLink="/commandments">10 Mandamientos</li>
           </ul>
         </nav>
       </div>
-      <div class="col-4">
-        <nav class="nav-menu ">
+      <div class="col-3 ">
+        <nav class="nav-menu text-center">
           <ul>
             <li *ngIf="!isAuthenticated" class="active d-none d-lg-block" >
               <button routerLink="login" class="btn btn-primary btn-sm ">
