@@ -8,6 +8,7 @@ import { ProjectDetailComponent } from './pages/project-detail/project-detail.co
 import { CommandmentsComponent } from './pages/commandments/commandments.component';
 import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component';
 import { AuthGuard } from './guards/auth-guard.guard';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,11 @@ const routes: Routes = [
     path: 'wiki',
     component: WikiBridgeComponent,
   },
+  {
+    path: 'changePassword',
+    component: ChangePasswordComponent,
+  },
+
 ];
 
 @NgModule({

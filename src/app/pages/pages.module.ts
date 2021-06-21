@@ -21,6 +21,7 @@ import { PrimengModule } from '../primeng/primeng.module';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { CommandmentsComponent } from './commandments/commandments.component';
 import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
     ProjectDetailComponent,
     CommandmentsComponent,
     WikiBridgeComponent,
+    ChangePasswordComponent,
 
   ],
   imports: [
