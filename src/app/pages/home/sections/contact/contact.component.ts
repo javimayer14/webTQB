@@ -70,7 +70,7 @@ export class ContactComponent implements OnInit {
       this.router.navigate(['/login']);
       swal.fire(
         'Generacion usuario',
-        'el usuario fue creado con exito',
+        'el usuario fué creado con éxito',
         'success'
       );
     });
