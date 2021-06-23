@@ -22,8 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'projectDetail',
-    //component: ProjectDetailComponent, canActivate:[AuthGuard]
-    component: ProjectDetailComponent,
+    component: ProjectDetailComponent, canActivate:[AuthGuard]
+    //component: ProjectDetailComponent,
   },
   {
     path: 'login',
