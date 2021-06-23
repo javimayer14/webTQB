@@ -47,8 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   public saveDataUsuario(form) {
-    var url = 'http://localhost:8080/api/user';
-    //var url = 'https://the-quality-bridge.herokuapp.com/api/user';
+    var url = this.authService.urlProd + 'user';
     let postData = new FormData();
 
     this.validateForm(form);

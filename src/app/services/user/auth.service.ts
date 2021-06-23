@@ -15,6 +15,9 @@ export class AuthService {
   private _token: String;
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
   data: Observable<any>;
+  urlLocal = 'http://localhost:8080/api/';
+  urlProd = 'https://the-quality-bridge.herokuapp.com/api/';
+
 
   constructor(private http: HttpClient,   private router: Router,
     ) { }
@@ -41,8 +44,7 @@ export class AuthService {
   }
 
   login(usuario: User): Observable<any> {
-    const urlEndpoint = "http://localhost:8080/oauth/token";
-    //const urlEndpoint = "https://the-quality-bridge.herokuapp.com/oauth/token";
+    const urlEndpoint = this.urlProd + "oauth/token";
     const credenciales = btoa('angularApp' + ':' + '12345');
 
     const httpHeaders = new HttpHeaders({
@@ -97,9 +99,7 @@ export class AuthService {
   }
 
   changePassword(form){
-    var url = 'http://localhost:8080/api/user/change-password';
-    //var url = 'https://the-quality-bridge.herokuapp.com/api/user/change-password';
-
+    var url = this.urlProd + 'user/change-password';
     this.data = this.http.post(url, form, {
       headers: this.agregarAutorizacionHeader(),
     });
