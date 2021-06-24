@@ -5,8 +5,8 @@
     <h3>Todos tenemos un estilo. ¿Cuál es el tuyo?</h3>
   </div>
   <p style="text-align: center">
-    Responde 7 preguntas y conoce cual es tu aversión al riesgo y cómo eso
-    define qué tipo de inversor eres.
+    Responde 7 preguntas, conoce cual es tu aversión al riesgo y cómo eso define
+    qué tipo de inversor eres.
   </p>
   <div class="row justify-content-center">
     <button class="btn btn-primary" (click)="test = true">Comenzar</button>
@@ -80,16 +80,14 @@
             </form>
             <div class="row justify-content-center button-seccion">
               <button
-                class="col-10 col-md-2 btn  btn-sm buttonBack"
-                (click)="
-                pageActual = pageActual - 1
-                "
-                [disabled]="pageActual ==0"
+                class="col-10 col-md-2 btn btn-sm buttonBack"
+                (click)="pageActual = pageActual - 1"
+                [disabled]="pageActual == 0"
               >
                 Volver a la pregunta anterior
               </button>
               <button
-                class=" col-10 col-md-2 btn btn-primary btn-sm"
+                class="col-10 col-md-2 btn btn-primary btn-sm"
                 (click)="
                   pageActual == 6 ? endTest() : (pageActual = pageActual + 1)
                 "
@@ -105,7 +103,7 @@
   </p-carousel>
 </div>
 
-<div class="test" *ngIf="test && ending">
+<div class="test" *ngIf="true || (test && ending)">
   <p class="type-title">Tu estilo</p>
   <div class="row justify-content-center">
     <div *ngIf="aguila">
@@ -126,14 +124,26 @@
   </div>
 
   <div class="barValue row justify-content-center">
-    <div class="col-3 col-md-2" style="text-align: right">
-      <label>Conservador</label>
-    </div>
     <div class="col-6 col-md-5">
       <p-progressBar [value]="barValue" [showValue]="false"></p-progressBar>
     </div>
-    <div class="col-3 col-md-2">
+  </div>
+
+  <div class="barValue row justify-content-center" style="text-align: center">
+    <div class="col-1">
+      <label>Muy conservador</label>
+    </div>
+    <div class="col-1">
+      <label>Conservador</label>
+    </div>
+    <div class="col-1">
+      <label>Equilibrado</label>
+    </div>
+    <div class="col-1">
       <label>Arriesgado</label>
+    </div>
+    <div class="col-1">
+      <label>Muy arriesgado</label>
     </div>
   </div>
 
@@ -142,4 +152,3 @@
 </div>
 
 <app-footer-seccion></app-footer-seccion>
-
