@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   public saveDataUsuario(form) {
-    var url = 'http://localhost:8080/api/user';
+    var url = this.authService.urlProd + 'api/user';
     let postData = new FormData();
 
     this.validateForm(form);
@@ -70,7 +70,7 @@ export class ContactComponent implements OnInit {
       this.router.navigate(['/login']);
       swal.fire(
         'Generacion usuario',
-        'el usuario fue creado con exito',
+        'el usuario fué creado con éxito',
         'success'
       );
     });
