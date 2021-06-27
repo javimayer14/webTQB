@@ -20,7 +20,7 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   public downloadFile() {
-    var url = this.authService.urlLocal + 'api/user/download-PDF/1';
+    var url = this.authService.urlProd + 'api/user/download-PDF/1';
     this.data = this.http.get(url, {
       headers: this.agregarAutorizacionHeader(), responseType: 'blob'
     });
