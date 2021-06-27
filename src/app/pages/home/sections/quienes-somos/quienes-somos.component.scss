@@ -42,7 +42,10 @@
 }
 
 .quienes-somos-2 {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/assets/img/1x/todos.png");
+  background: #ffffff;
+  background-image: url("/assets/img/1x/todos.png");
+  background-image: url("/assets/img/1x/todos.png")
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   //background: url("/assets/img/1x/todos.png");
   background-repeat: no-repeat;
   //background-position: bottom center;
@@ -66,10 +69,7 @@
   @media (max-width: 450px) {
     height: 150px;
     margin: 10px;
-
   }
- 
-
 }
 .carousel-item .number {
   font-size: 100px;
@@ -116,13 +116,13 @@ section {
   padding-top: 140px;
 }
 
-.frase{
+.frase {
   font-size: 10px;
 }
 
-.prueba{
+.prueba {
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 .carousel-inner p {
   margin-top: 20px;
