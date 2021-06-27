@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   public saveDataUsuario(form) {
-    var url = this.authService.urlProd + 'api/user';
+    var url = this.authService.urlLocal + 'api/user';
     let postData = new FormData();
 
     this.validateForm(form);

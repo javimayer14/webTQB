@@ -33,12 +33,18 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div
-        class="row d-flex justify-content-center"
+        class="row d-flex justify-content-center modal-body"
         data-aos="fade-up"
         data-aos-delay="100"
       >
+      <div class="col-lg-12 text-center">
+        <h2>Presentar mi proyecto</h2>
+      </div>
+      <br>
+
         <div class="col-lg-6">
           <form
+            (ngSubmit)="saveDataUsuario(form)"
             #form="ngForm"
             role="form"
             class="php-email-form form"
@@ -46,6 +52,7 @@
             <div class="form-row">
               <div class="col form-group">
                 <input
+                  [(ngModel)]="presentProjectForm.name"
                   type="text"
                   name="name"
                   class="form-control"
@@ -54,12 +61,13 @@
                   data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars"
                 />
-                <div class="error">Se requiere nombre</div>
+                <div *ngIf="wrongName" class="error">Se requiere nombre</div>
 
                 <div class="validate"></div>
               </div>
               <div class="col form-group">
                 <input
+                  [(ngModel)]="presentProjectForm.lastName"
                   type="text"
                   class="form-control"
                   name="lastName"
@@ -68,7 +76,7 @@
                   data-rule="lastName"
                   data-msg="Please enter a valid email"
                 />
-                <div class="error">Se requiere apellido</div>
+                <div *ngIf="wrongLastName" class="error">Se requiere apellido</div>
 
                 <div class="validate"></div>
               </div>
@@ -76,6 +84,7 @@
             <div class="form-row">
               <div class="col form-group">
                 <input
+                  [(ngModel)]="presentProjectForm.email"
                   type="email"
                   class="form-control"
                   name="email"
@@ -84,39 +93,47 @@
                   data-rule="email"
                   data-msg="Please enter a valid email"
                 />
-                <div class="error">Correo no válido</div>
+                <div *ngIf="wrongEmail" class="error">Correo no válido</div>
                 <div class="validate"></div>
               </div>
             </div>
             <div class="form-row">
               <div class="col form-group">
-                <p-calendar
-                  placeholder="Fecha de nacimiento"
-                  dateFormat="dd/mm/yy"
-                  appendTo="body"
-                  name="birthdate"
-                  [yearNavigator]="true"
-                  yearRange="1920:2021"
-                >
-                </p-calendar>
+              <textarea 
+              [(ngModel)]="presentProjectForm.desc"
+              placeholder="Contanos de que se trata" 
+              class="form-control" 
+              id="desc"  
+              rows="3"></textarea>
               </div>
+            </div>
+            <div class="form-row">
               <div class="col form-group">
                 <input
-                  type="text"
-                  class="form-control"
-                  name="phone"
-                  id="phone"
-                  placeholder="Telefono"
-                  data-rule="email"
-                  data-msg="Please enter a valid email"
-                  pattern="[0-9_-]{1,25}"
-                />
-                <div class="validate"></div>
+                [(ngModel)]="presentProjectForm.file"
+                type="file" 
+                (change)="onFileSelected($event)" 
+                class="" 
+                id="validatedCustomFile" 
+                required type="file" 
+                >
+
+              <!-- <div class="custom-file">
+                <input                  
+                  [(ngModel)]="presentProjectForm.file"
+                  type="file" 
+                  (change)="onFileSelected($event)" 
+                  class="custom-file-input" 
+                  id="validatedCustomFile" 
+                  required>
+                <label class="custom-file-label" for="validatedCustomFile">Cargar pdf</label>
+                <div class="invalid-feedback">Example invalid custom file feedback</div>
+              </div> -->
               </div>
             </div>
             <br />
             <div class="text-center">
-              <button class="btn btn-primary" type="submit">Enviar</button>
+              <button [disabled]="wrongValidate" class="btn btn-primary" type="submit">Enviar</button>
             </div>
           </form>
         </div>
