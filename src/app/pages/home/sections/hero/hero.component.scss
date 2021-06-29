@@ -28,7 +28,7 @@
 
 @media (max-width: 992px) {
   #hero .container {
-    padding-top: 58px;
+    padding-top: px;
   }
 }
 
@@ -110,15 +110,15 @@
 
 @media (max-width: 768px) {
   #hero {
-    height: 100vh;
+    height: 115vh;
   }
   #hero h1 {
-    font-size: 28px;
+    font-size: 39px;
     line-height: 36px;
   }
   #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 20px;
     margin-bottom: 30px;
   }
   #hero .btn-get-started,

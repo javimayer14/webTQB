@@ -1,11 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from './../../services/user/auth.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import swal from 'sweetalert2';
+
+declare var $: any;
 
 @Component({
   selector: 'app-test-inversor',
   templateUrl: './test-inversor.component.html',
   styleUrls: ['./test-inversor.component.scss'],
 })
+
+
 export class TestInversorComponent implements OnInit {
+  formResult = false;
   test = false;
   ending = false;
   lobo = false; //1
@@ -58,12 +67,12 @@ export class TestInversorComponent implements OnInit {
       options: [
         'Mantener el capital invertido con una rentabilidad mínima.',
         'Tener una renta apenas por encima a la de un plazo fijo, aunque esté sujeta a una variación de mercado.',
-        'Obtener una ganancia significativa, aceptando posibles pérdidas de capital.',
+        'la posibilidad de obtener ganancias, aceptando posibles pérdidas de capital',
       ],
     },
     {
       question:
-        'En caso de que el proyecto en el que inverstiste pase un por una situación de stress que cambie algunas condiciones iniciales, ¿qué harías?',
+        'En caso de que el proyecto en el que invertiste pase por una situación de stress que cambie negativamente las condiciones iniciales ¿qué harías?',
       options: [
         'Saldría completante del proyecto.',
         'Saldría parcialmente del proyecto.',
@@ -85,15 +94,28 @@ export class TestInversorComponent implements OnInit {
       question:
         'Si tuvieras que elegir el tipo de inversión que mejor te identifique, ¿qué elegirías?',
       options: [
-        'Acciones.',
-        'Bonos.',
-        'Operaciones Negociables.',
+        'Plazo Fijo.',
+        'Obligaciones Negociables.',
         'Real Estate.',
+        'Acciones.',
         'Criptomoneda.',
       ],
     },
   ];
-  constructor() {}
+
+  data: Observable<any>;
+  wrongEmail = false;
+  wrongName = false;
+  wrongValidate = false;
+
+  resultTestForm = {
+    email: null, 
+    name: null,
+  };
+  private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+  constructor(     public http: HttpClient,
+    public authService: AuthService) {}
 
   ngOnInit(): void {}
 
@@ -167,6 +189,47 @@ export class TestInversorComponent implements OnInit {
       default:
         break;
     }
-    this.ending = true;
+    this.formResult = true;
+  }
+
+
+  sendResult(form){
+
+    var url = this.authService.urlProd + 'api/user/result-test';
+    this.resultTestForm.email = form.value.email;
+    this.resultTestForm.name = form.value.name;
+    //this.validateForm(form);
+
+    // if(this.checkEmailVoid()){
+    //   return;
+    // }
+    this.data = this.http.post(url, this.resultTestForm, {
+      headers: this.agregarAutorizacionHeader(),
+    });
+    this.data.subscribe((data) => {
+    });
+    this.formResult = false;
+    this.ending = true
+  }
+
+  private agregarAutorizacionHeader() {
+    let token = this.authService.token;
+    if (token != null) {
+      return this.httpHeaders.append('Authorization', 'Bearer ' + token);
+    }
+  }
+
+
+  checkEmailVoid(){
+    if (this.resultTestForm.email == null) {
+      swal.fire('Error', 'email vacio', "error");
+      return;
+    }
+    return false;
+  }
+
+  prueba(){
+    console.log("prueba");
+    $("#myModal").modal('show');
   }
 }

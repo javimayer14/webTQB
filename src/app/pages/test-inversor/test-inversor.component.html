@@ -1,6 +1,7 @@
 <app-navbar visible="true"></app-navbar>
 
-<div class="main" *ngIf="!test">
+<div class="main" *ngIf="!test" data-aos="fade-up" data-aos-delay="200">
+
   <div class="section-title">
     <h3>Todos tenemos un estilo. ¿Cuál es el tuyo?</h3>
   </div>
@@ -15,24 +16,8 @@
     <img class="arco-img" src="assets/img/Test_Arco.png" alt="" />
   </div>
 </div>
-<div class="test" *ngIf="test && !ending">
-  <div class="numbers row justify-content-center">
-    <button
-      pButton
-      pRipple
-      *ngFor="let number of [1, 2, 3, 4, 5, 6, 7]"
-      type="button"
-      class="p-button-rounded questionButton question"
-      [ngClass]="{
-        'p-button-outlined': number > pageActual + 1,
-        question: number <= pageActual + 1,
-        actualQuestion: number == pageActual + 1
-      }"
-      [disabled]="number > pageActual + 1"
-      (click)="pageActual = number - 1"
-      [label]="number"
-    ></button>
-  </div>
+<div class="test" *ngIf="test && !ending && !formResult" data-aos="fade-up" data-aos-delay="200">
+ 
   <p-carousel
     [value]="questions"
     [page]="pageActual"
@@ -96,6 +81,25 @@
                 {{ pageActual == 6 ? "Finalizar" : "Siguiente" }}
               </button>
             </div>
+
+            <div class="numbers row justify-content-center">
+              <button
+                pButton
+                pRipple
+                *ngFor="let number of [1, 2, 3, 4, 5, 6, 7]"
+                type="button"
+                class="p-button-rounded questionButton question"
+                [ngClass]="{
+                  'p-button-outlined': number > pageActual + 1,
+                  question: number <= pageActual + 1,
+                  actualQuestion: number == pageActual + 1
+                }"
+                [disabled]="number > pageActual + 1"
+                (click)="pageActual = number - 1"
+                [label]="number"
+              ></button>
+            </div>
+
           </div>
         </div>
       </div>
@@ -103,7 +107,56 @@
   </p-carousel>
 </div>
 
-<div class="test" *ngIf="test && ending">
+<div class ="container" *ngIf="formResult" data-aos="fade-up" data-aos-delay="200">
+  <h2 class="result-email text-center">Dejanos tu email para obtener el resultado del test</h2>
+  <br>
+<form
+(ngSubmit)="sendResult(form)"
+  #form="ngForm"
+  role="form"
+  class="php-email-form form"
+>
+  <div class="form-row">
+    <div class="col form-group">
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        id="name"
+        placeholder="*Nombre"
+        data-rule="minlen:4"
+        data-msg="Please enter at least 4 chars"
+      />
+      <div *ngIf="wrongName" class="error">Se requiere nombre</div>
+
+      <div class="validate"></div>
+    </div>
+
+    <div class="col form-group">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        placeholder="*E-mail"
+        data-rule="email"
+        data-msg="Please enter a valid email"
+      />
+      <div *ngIf="wrongEmail" class="error">Correo no válido</div>
+      <div class="validate"></div>
+    </div>
+  </div>
+
+
+
+  <br />
+  <div class="text-center">
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </div>
+</form>
+</div>
+
+<div class="test" *ngIf="test && ending && !formResult" data-aos="fade-up" data-aos-delay="200">
   <p class="type-title">Tu estilo</p>
   <div class="row justify-content-center">
     <div *ngIf="aguila">
@@ -150,5 +203,6 @@
   <p class="description">{{ description }}</p>
   <app-shared-test></app-shared-test>
 </div>
+
 
 <app-footer-seccion></app-footer-seccion>
