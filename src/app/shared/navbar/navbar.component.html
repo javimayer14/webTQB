@@ -20,6 +20,7 @@
           <ul style="padding-top: 10px">
             <li routerLink="/wiki">WikiBridge</li>
             <li routerLink="/commandments">10 Mandamientos</li>
+            <li [routerLink]="['/']" fragment="proyectos">Proyectos</li>
           </ul>
         </nav>
       </div>
@@ -88,11 +89,6 @@
       <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
       10 mandamientos del inversor
     </li>
-    <li>
-      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-      Portal de Contenidos/Blog
-    </li>
-
     <li [routerLink]="['/wiki']">
       <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
       WikiBridge
