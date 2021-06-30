@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { Router } from '@angular/router';
+import { SpinnerService } from './services/spinner.service'; 
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'webTQB';
+
+  constructor(public spinnerService: SpinnerService){
+
+  }
 
   ngOnInit() {
     AOS.init({

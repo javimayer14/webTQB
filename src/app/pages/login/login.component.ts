@@ -3,6 +3,7 @@ import { AuthService } from '../../services/user/auth.service';
 import swal from 'sweetalert2'
 import { User } from '../../classes/user';
 import { Router } from '@angular/router';
+import { SpinnerService } from '../../services/spinner.service'; 
 
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   titulo: string = "Por favor Sing In !";
   user: User;
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, public spinnerService: SpinnerService) {
     this.user = new User();
   }
 
@@ -24,9 +25,11 @@ export class LoginComponent implements OnInit {
 
 
   logIn(): void {
+    this.spinnerService.show();
     console.log("USER: " + this.user);
     if (this.user.username == null || this.user.password == null) {
       swal.fire('Error Login', 'Username o Password vacio', "error");
+      this.spinnerService.hide();
       return;
     }
     this.authService.login(this.user).subscribe(response => {
@@ -37,10 +40,14 @@ export class LoginComponent implements OnInit {
       let usuario = this.authService.usuario;
       this.router.navigate(['/']);
       swal.fire('Ya estás en movimiento: Sesión iniciada con éxito', 'Te invitamos a recorrer todo el contenido para expandir tus oportunidades', "success");
+      this.spinnerService.hide();
+
     }, err => {
       if (err.status == 400) {
         swal.fire('Error Login', 'Username o Password incorrecto', "error");
       }
+      this.spinnerService.hide();
     });
+
   }
 }

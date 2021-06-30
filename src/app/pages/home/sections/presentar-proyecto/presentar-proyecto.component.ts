@@ -4,6 +4,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from '../../../../services/user/auth.service';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
+import { SpinnerService } from '../../../../services/spinner.service'; 
+
 
 @Component({
   selector: 'app-presentar-proyecto',
@@ -30,7 +32,8 @@ export class PresentarProyectoComponent implements OnInit {
   constructor(
     private router: Router,
     public http: HttpClient,
-    public authService: AuthService
+    public authService: AuthService,
+    public spinnerService: SpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -40,8 +43,7 @@ export class PresentarProyectoComponent implements OnInit {
     this.presentProjectForm.file = event.target.files[0];
   }
   public saveDataUsuario(form) {
-
-
+    this.spinnerService.show();
     var url = this.authService.urlProd + 'api/user/present-proyect';
     this.presentProjectForm.email = form.value.email;
     this.presentProjectForm.name = form.value.name;
@@ -49,6 +51,7 @@ export class PresentarProyectoComponent implements OnInit {
     this.validateForm(form);
 
     if(this.checkEmailVoid()){
+      this.spinnerService.hide();
       return;
     }
     let testData:FormData = new FormData();
@@ -64,16 +67,16 @@ export class PresentarProyectoComponent implements OnInit {
     });
     console.log(this.presentProjectForm);
     this.data.subscribe((data) => {
-      console.log("PRESENT:" +data);
-
-      console.log(form.value);
       swal.fire(
         '',
         'Tu proyecto se cargó correctamente y será evaluado por el equipo de inversores de The Quality Bridge. Pronto te estaremos contactando',
         'success'
-      );
+        );
+        this.spinnerService.hide();
+        window.location.reload();
+    },err =>{
+      this.spinnerService.hide();
     });
-    console.log('holass');
   }
 
   private agregarAutorizacionHeader() {

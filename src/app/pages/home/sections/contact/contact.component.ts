@@ -5,6 +5,7 @@ import { AuthService } from '../../../../services/user/auth.service';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
+import { SpinnerService } from '../../../../services/spinner.service'; 
 
 @Component({
   selector: 'app-contact',
@@ -31,7 +32,8 @@ export class ContactComponent implements OnInit {
     private router: Router,
     public http: HttpClient,
     public authService: AuthService,
-    private countriesService: CountriesService
+    private countriesService: CountriesService, 
+    public spinnerService: SpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -47,9 +49,9 @@ export class ContactComponent implements OnInit {
   }
 
   public saveDataUsuario(form) {
+    this.spinnerService.show();
     var url = this.authService.urlProd + 'api/user';
     let postData = new FormData();
-
     this.validateForm(form);
 
     this.generateUserForm.email = form.value.email;
@@ -73,13 +75,15 @@ export class ContactComponent implements OnInit {
         'Muchas gracias por tu interés en sumarte a la comunidad de inversores. Te enviamos un correo para contarte cómo seguir',
         'success'
       );
+      this.spinnerService.hide();
     }, err => {
       if (err.status == 409) {
         swal.fire('Error Login', 'El email ingresado ya se encuentra registrado', "error");
       }
+      this.spinnerService.hide();
     });
-    console.log('holass');
   }
+
   getCountries() {
     this.countriesService.getCountries().subscribe((countries) => {
       console.log(countries);

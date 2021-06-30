@@ -2,6 +2,14 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+
+<div *ngIf="spinnerService.isLoading" class ="overlay">
+    <div  class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" style="color: #2a38be">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+</div>
 <app-navbar visible="true"></app-navbar>
 
 <div class="wrapper fadeInDown">
@@ -12,6 +20,9 @@
         <div class="fadeIn first logo">
             <img src="../../assets/img/logo.png" id="icon" alt="User Icon" />
         </div>
+
+
+
 
         <!-- Login Form -->
         <form method="POST">
