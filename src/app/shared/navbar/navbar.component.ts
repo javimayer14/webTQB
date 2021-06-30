@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
 
   logOut(): void {
     this.authService.logOut();
-    swal.fire('LogOut', 'Has cerrado sesion con exito !', 'success');
+    swal.fire('Sesión cerrada con éxito', 'Te esperamos pronto para facilitarte nuevos puentes y expandir tus oportunidades', 'success');
     this.router.navigate(['/login']);
   }
 

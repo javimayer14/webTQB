@@ -68,8 +68,8 @@ export class PresentarProyectoComponent implements OnInit {
 
       console.log(form.value);
       swal.fire(
-        'Presentación de proyecto',
-        'Tu proyecto se cargó correctamente y será evaluado',
+        '',
+        'Tu proyecto se cargó correctamente y será evaluado por el equipo de inversores de The Quality Bridge. Pronto te estaremos contactando',
         'success'
       );
     });

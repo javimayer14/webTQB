@@ -70,7 +70,7 @@ export class ContactComponent implements OnInit {
       this.router.navigate(['/login']);
       swal.fire(
         'Generacion usuario',
-        'el usuario fué creado con éxito',
+        'Muchas gracias por tu interés en sumarte a la comunidad de inversores. Te enviamos un correo para contarte cómo seguir',
         'success'
       );
     });
