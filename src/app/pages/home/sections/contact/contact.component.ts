@@ -73,6 +73,10 @@ export class ContactComponent implements OnInit {
         'Muchas gracias por tu interés en sumarte a la comunidad de inversores. Te enviamos un correo para contarte cómo seguir',
         'success'
       );
+    }, err => {
+      if (err.status == 409) {
+        swal.fire('Error Login', 'El email ingresado ya se encuentra registrado', "error");
+      }
     });
     console.log('holass');
   }
