@@ -67,7 +67,7 @@ export class TestInversorComponent implements OnInit {
       options: [
         'Mantener el capital invertido con una rentabilidad mínima.',
         'Tener una renta apenas por encima a la de un plazo fijo, aunque esté sujeta a una variación de mercado.',
-        'la posibilidad de obtener ganancias, aceptando posibles pérdidas de capital',
+        'La posibilidad de obtener ganancias, aceptando posibles pérdidas de capital.',
       ],
     },
     {
@@ -159,32 +159,32 @@ export class TestInversorComponent implements OnInit {
         this.lobo = true;
         this.barValue = 100;
         this.description =
-          'Te gusta meterte en donde hay más riesgo pero sos sigiloso. Con una mirada perspicaz, una vez que estas decidido no hay quien te pare. Tomás riesgo para obtener una gran recomensa';
+          'Te gusta meterte en donde hay más riesgo, pero a la vez sos sigiloso. Con una mirada perspicaz, una vez que estás decidido no hay quien te frene. Tomás riesgo para obtener una gran recompensa';
         break;
       case 1:
         this.aguila = true;
         this.barValue = 75;
 
         this.description =
-          'Tomas la distancia necesaria para evaluar desde lejos y lanzarte rápidamente hacia el foco. Preparas todo para el momento justo. Haces una medición precisa para obtener lo que querés.';
+          'Tomas la distancia necesaria para evaluar desde lejos y lanzarte rápidamente hacia donde enfocas. Preparas todo para el momento justo. Haces una medición precisa para obtener lo que quieres';
         break;
       case 2:
         this.puma = true;
         this.barValue = 50;
         this.description =
-          'Sabes cuando pasar a la acción y cuando replegarte. Sos agresivo pero cuidadoso y sabes pasar desapercibido si es lo que crees necesario. Tienes tus momentos y estas muy atento al contexto que te rodea';
+          'Sabes cuándo pasar a la acción y cuando replegarte. Sos agresivo pero cuidadoso y sabes pasar desapercibido si es lo que crees necesario. Tienes tus momentos y estás muy atento al contexto que te rodea.';
         break;
       case 3:
         this.oso = true;
         this.barValue = 25;
         this.description =
-          'Encuentras el momento justo para todo. No siempre se necesita estar en acción sino que sabes que los procesos son largos y ya va a llegar el momento. Puedes tolerar no abalazarte sobre una gran oportunidad porque sabes que aparecerán otras. ';
+          'Encuentras el momento justo para todo. No siempre se necesita estar en acción sino que sabes que los procesos son largos y ya va a llegar el momento. Puedes tolerar no abalazarte sobre una gran oportunidad porque sabes que aparecerán otras.';
         break;
       case 4:
         this.buho = true;
         this.barValue = 0;
         this.description =
-          'Cuidadoso pero certero. Aprovechas las pocas oportunidades que se presentan porque sabes que son únicas. Cada movimiento es muy pensado. Eres obsesivo por mantener las siutaciones bajo control.';
+          'Cuidadoso pero certero. Aprovechas las pocas oportunidades que se presentan porque sabes que son únicas. Cada movimiento está rigurosamente pensado. Eres obsesivo por mantener las situaciones bajo control.';
         break;
       default:
         break;

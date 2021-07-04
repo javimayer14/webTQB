@@ -10,12 +10,12 @@ export class QuienesSomosComponent implements OnInit {
     {
       title: 'Conexión',
       icon: 'fa fa-usb',
-      text: 'El mundo de los negocios presenta oportunidades. ¿Quienes la aprovechan? Los que están conectados y saben lo que pasa. Los que están con quienes tienen que estar.',
+      text: 'El mundo de los negocios presenta oportunidades. ¿Quiénes la aprovechan? Los que están conectados y saben lo que pasa. Los que están con quienes tienen que estar.',
     },
     {
       title: 'Movimiento',
       icon: 'bi bi-arrow-left-right',
-      text: ' ¿Quienes están mejor conectados? Los que no paran de moverse. Moverte permite aumentar la calidad de los vínculos, llevándote a estar dónde hay que estar.',
+      text: ' ¿Quiénes están mejor conectados? Los que no paran de moverse. Moverte permite aumentar la calidad de los vínculos, llevándote a estar dónde hay que estar.',
     },
   ];
   constructor() {}
