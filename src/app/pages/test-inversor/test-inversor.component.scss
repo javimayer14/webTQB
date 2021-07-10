@@ -181,9 +181,22 @@
 
   }
 
-  .disp{
-    @media (max-width: 500px) {
-      display: none;
+  @media (max-width:450px) {
+    font-size: 5px;
+
+  }
+
+  #disp{
+    @media (min-width: 0px) and (max-width: 450px) {
+      display: none !important;
       }
   }
+
+  // .cate{
+  //   display: none;
+  //   @media (min-width: 0px) and (max-width: 450px){
+  //     display: block;
+  //     font-size: 8px; s
+  //     }
+  // }
 }
