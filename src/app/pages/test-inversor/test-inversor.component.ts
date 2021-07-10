@@ -11,8 +11,6 @@ declare var $: any;
   templateUrl: './test-inversor.component.html',
   styleUrls: ['./test-inversor.component.scss'],
 })
-
-
 export class TestInversorComponent implements OnInit {
   formResult = false;
   test = false;
@@ -109,13 +107,12 @@ export class TestInversorComponent implements OnInit {
   wrongValidate = false;
 
   resultTestForm = {
-    email: null, 
+    email: null,
     name: null,
   };
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  constructor(     public http: HttpClient,
-    public authService: AuthService) {}
+  constructor(public http: HttpClient, public authService: AuthService) {}
 
   ngOnInit(): void {}
 
@@ -126,29 +123,98 @@ export class TestInversorComponent implements OnInit {
     let osoCount = 0;
     let buhoCount = 0;
     for (let index = 0; index < 7; index++) {
-
-      switch (this['q' + index]) {
-  
+      switch (index) {
         case 1:
-          buhoCount++;
-          break;
-        case 2:
-          osoCount++;
-          break;
+          switch (this['q' + index]) {
+            case 1:
+              buhoCount++;
+              break;
+            case 2:
+              osoCount++;
+              break;
+            case 3:
+              pumaCount++;
+              break;
+            case 4:
+              aguilaCount++;
+              loboCount++;
+              break;
+            default:
+              break;
+          }
         case 3:
-          pumaCount++;
-          break;
+          switch (this['q' + index]) {
+            case 1:
+              buhoCount++;
+              osoCount++;
+              break;
+            case 2:
+              pumaCount++;
+              break;
+            case 3:
+              aguilaCount++;
+              loboCount++;
+              break;
+            default:
+              break;
+          }
         case 4:
-          aguilaCount++;
-          break;
+          switch (this['q' + index]) {
+            case 1:
+              buhoCount++;
+              osoCount++;
+              break;
+            case 2:
+              pumaCount++;
+              break;
+            case 3:
+              aguilaCount++;
+              break;
+            case 4:
+              loboCount++;
+              break;
+            default:
+              break;
+          }
         case 5:
-          loboCount++;
-          break;
-        default:
-          break;
-
-    }
-
+          switch (this['q' + index]) {
+            case 1:
+              buhoCount++;
+              osoCount++;
+              break;
+            case 2:
+              pumaCount++;
+              break;
+            case 3:
+              aguilaCount++;
+              break;
+            case 4:
+              loboCount++;
+              break;
+            default:
+              break;
+          }
+        case 6:
+          switch (this['q' + index]) {
+            case 1:
+              buhoCount++;
+              break;
+            case 2:
+              osoCount++;
+              break;
+            case 3:
+              pumaCount++;
+              break;
+            case 4:
+              aguilaCount++;
+              break;
+            case 4:
+              loboCount++;
+              break;
+            default:
+              break;
+          }
+      }
     }
     console.log('LOBO', loboCount);
     console.log('AGUILA', aguilaCount);
@@ -196,9 +262,7 @@ export class TestInversorComponent implements OnInit {
     this.formResult = true;
   }
 
-
-  sendResult(form){
-
+  sendResult(form) {
     var url = this.authService.urlProd + 'api/user/result-test';
     this.resultTestForm.email = form.value.email;
     this.resultTestForm.name = form.value.name;
@@ -210,10 +274,9 @@ export class TestInversorComponent implements OnInit {
     this.data = this.http.post(url, this.resultTestForm, {
       headers: this.agregarAutorizacionHeader(),
     });
-    this.data.subscribe((data) => {
-    });
+    this.data.subscribe((data) => {});
     this.formResult = false;
-    this.ending = true
+    this.ending = true;
   }
 
   private agregarAutorizacionHeader() {
@@ -223,17 +286,16 @@ export class TestInversorComponent implements OnInit {
     }
   }
 
-
-  checkEmailVoid(){
+  checkEmailVoid() {
     if (this.resultTestForm.email == null) {
-      swal.fire('Error', 'email vacio', "error");
+      swal.fire('Error', 'email vacio', 'error');
       return;
     }
     return false;
   }
 
-  prueba(){
-    console.log("prueba");
-    $("#myModal").modal('show');
+  prueba() {
+    console.log('prueba');
+    $('#myModal').modal('show');
   }
 }

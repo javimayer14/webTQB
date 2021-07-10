@@ -1,7 +1,6 @@
 <app-navbar visible="true"></app-navbar>
 
 <div class="main" *ngIf="!test" data-aos="fade-up" data-aos-delay="200">
-
   <div class="section-title">
     <h3>Todos tenemos un estilo. ¿Cuál es el tuyo?</h3>
   </div>
@@ -16,8 +15,12 @@
     <img class="arco-img" src="assets/img/Test_Arco.png" alt="" />
   </div>
 </div>
-<div class="test" *ngIf="test && !ending && !formResult" data-aos="fade-up" data-aos-delay="200">
- 
+<div
+  class="test"
+  *ngIf="test && !ending && !formResult"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
   <p-carousel
     [value]="questions"
     [page]="pageActual"
@@ -99,7 +102,6 @@
                 [label]="number"
               ></button>
             </div>
-
           </div>
         </div>
       </div>
@@ -107,58 +109,68 @@
   </p-carousel>
 </div>
 
-<div class ="container" *ngIf="formResult" data-aos="fade-up" data-aos-delay="200">
-  <h2 class="result-email text-center">Dejanos tu email para obtener el resultado del test</h2>
-  <br>
-<form
-(ngSubmit)="sendResult(form)"
-  #form="ngForm"
-  role="form"
-  class="php-email-form form"
+<div
+  class="container"
+  *ngIf="formResult"
+  data-aos="fade-up"
+  data-aos-delay="200"
 >
-  <div class="form-row">
-    <div class="col form-group">
-      <input
-      [(ngModel)]="resultTestForm.name"
-        type="text"
-        name="name"
-        class="form-control"
-        id="name"
-        placeholder="*Nombre"
-        data-rule="minlen:4"
-        data-msg="Please enter at least 4 chars"
-      />
-      <div *ngIf="wrongName" class="error">Se requiere nombre</div>
-
-      <div class="validate"></div>
-    </div>
-
-    <div class="col form-group">
-      <input
-      [(ngModel)]="resultTestForm.email"
-        type="email"
-        class="form-control"
-        name="email"
-        id="email"
-        placeholder="*E-mail"
-        data-rule="email"
-        data-msg="Please enter a valid email"
-      />
-      <div *ngIf="wrongEmail" class="error">Correo no válido</div>
-      <div class="validate"></div>
-    </div>
-  </div>
-
-
-
+  <h2 class="result-email text-center">
+    Dejanos tu email para obtener el resultado del test
+  </h2>
   <br />
-  <div class="text-center">
-    <button class="btn btn-primary" type="submit">Enviar</button>
-  </div>
-</form>
+  <form
+    (ngSubmit)="sendResult(form)"
+    #form="ngForm"
+    role="form"
+    class="php-email-form form"
+  >
+    <div class="form-row">
+      <div class="col form-group">
+        <input
+          [(ngModel)]="resultTestForm.name"
+          type="text"
+          name="name"
+          class="form-control"
+          id="name"
+          placeholder="*Nombre"
+          data-rule="minlen:4"
+          data-msg="Please enter at least 4 chars"
+        />
+        <div *ngIf="wrongName" class="error">Se requiere nombre</div>
+
+        <div class="validate"></div>
+      </div>
+
+      <div class="col form-group">
+        <input
+          [(ngModel)]="resultTestForm.email"
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          placeholder="*E-mail"
+          data-rule="email"
+          data-msg="Please enter a valid email"
+        />
+        <div *ngIf="wrongEmail" class="error">Correo no válido</div>
+        <div class="validate"></div>
+      </div>
+    </div>
+
+    <br />
+    <div class="text-center">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
 </div>
 
-<div class="test" *ngIf="test && ending && !formResult" data-aos="fade-up" data-aos-delay="200">
+<div
+  class="test"
+  *ngIf="test && ending && !formResult"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
   <p class="type-title">Tu estilo</p>
   <div class="row justify-content-center">
     <div *ngIf="aguila">
@@ -184,7 +196,10 @@
     </div>
   </div>
 
-  <div class="barValue row justify-content-center disp" style="text-align: center">
+  <div
+    class="barValue row justify-content-center disp"
+    style="text-align: center"
+  >
     <div class="col-1">
       <label class="categoria-reult">Muy conservador</label>
     </div>
@@ -205,6 +220,5 @@
   <p class="description">{{ description }}</p>
   <app-shared-test></app-shared-test>
 </div>
-
 
 <app-footer-seccion></app-footer-seccion>

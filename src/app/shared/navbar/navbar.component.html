@@ -9,7 +9,9 @@
       <div class="col-4 text-center">
         <img
           [src]="
-            (isNegative || visible) ? 'assets/img/logo-negative.png' : 'assets/img/logo.png'
+            isNegative || visible
+              ? 'assets/img/logo-negative.png'
+              : 'assets/img/logo.png'
           "
           [routerLink]="['/']"
         />
@@ -24,15 +26,15 @@
           </ul>
         </nav>
       </div>
-      <div class="col-3 ">
+      <div class="col-3">
         <nav class="nav-menu text-center">
           <ul>
-            <li *ngIf="!isAuthenticated" class="active d-none d-lg-block" >
-              <button routerLink="/login" class="btn btn-primary btn-sm ">
+            <li *ngIf="!isAuthenticated" class="active d-none d-lg-block">
+              <button routerLink="/login" class="btn btn-primary btn-sm">
                 Ingresar
               </button>
             </li>
-            <li *ngIf="isAuthenticated" class="active d-none d-lg-block" >
+            <li *ngIf="isAuthenticated" class="active d-none d-lg-block">
               <button (click)="logOut()" class="btn btn-primary btn-sm">
                 Salir
               </button>
@@ -62,25 +64,33 @@
 >
   <ul class="navbar-options">
     <li [class.active]="activeFragment === 'quienes-somos-1'">
-      <p [routerLink]="['/']" fragment="quienes-somos-1">
+      <p
+        [routerLink]="['/']"
+        fragment="quienes-somos-1"
+        (click)="display = false"
+      >
         <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
         ¿Qué es The Quality Bridge?
       </p>
     </li>
     <li [class.active]="activeFragment === 'miembros'">
-      <p [routerLink]="['/']" fragment="miembros">
+      <p [routerLink]="['/']" fragment="miembros" (click)="display = false">
         <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
         La comunidad: ¿Por qué ser parte?
       </p>
     </li>
     <li [class.active]="activeFragment === 'proyectos'">
-      <p [routerLink]="['/']" fragment="proyectos">
+      <p [routerLink]="['/']" fragment="proyectos" (click)="display = false">
         <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
         Proyectos
       </p>
     </li>
     <li>
-      <p [routerLink]="['/testInversor']" routerLinkActive="active">
+      <p
+        [routerLink]="['/testInversor']"
+        routerLinkActive="active"
+        (click)="display = false"
+      >
         <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
         Test: ¿Qué tipo de inversor eres?
       </p>
