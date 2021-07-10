@@ -40,8 +40,7 @@
   font-size: 60pt;
   color: #222222;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-family: "Gotham Rounded", sans-serif;
+  font-family: "Gotham", sans-serif;
 }
 
 #hero h1 span {
@@ -147,6 +146,13 @@
   min-width: 300px;
   height: 80px;
   margin-bottom: 10px;
+  @media (max-width: 450px) {
+    min-width: 275px;
+    height: 75px;
+    margin-bottom: 10px;
+    font-size: 14px;
+
+  }
 }
 
 .btn-secondary{
@@ -155,6 +161,12 @@
   min-width: 300px;
   height: 80px;
   margin-bottom: 10px;
+  @media (max-width: 450px) {
+    min-width: 275px;
+    height: 75px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
 
 }
 
@@ -291,7 +303,11 @@ a.float:hover + div.label-container{
 .title{
   margin-top: 100px !important;
   width: 100%;
+
 }
 
-.container{
+@media (max-width: 450px) {
+  .title{
+  margin-top: 0px !important;
+  }
 }

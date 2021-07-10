@@ -31,10 +31,11 @@ h6 {
 
 //color buttons
 
-.btn-secundary {
+.btn-secondary {
   background-color: #191919;
   color: #fff;
 }
+
 
 section {
   padding: 60px 0;
@@ -211,6 +212,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-primary:hover{
+  background-color: #39ace7 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #302f2f !important;
+  color: #000000 !important
 }
 
 

@@ -200,6 +200,14 @@
     text-align: justify;
   }
 
+  @media (max-width: 450px) {
+  .optional{
+    display: none;
+    }
+    .text-quienes-somos{
+      margin: 0px;
+    }
+  }
 
 
 }
