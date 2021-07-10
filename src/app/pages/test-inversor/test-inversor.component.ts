@@ -17,11 +17,11 @@ export class TestInversorComponent implements OnInit {
   formResult = false;
   test = false;
   ending = false;
-  lobo = false; //1
-  aguila = false; //2
+  lobo = false; //5
+  aguila = false; //4
   puma = false; //3
-  oso = false; //4
-  buho = false; //5
+  oso = false; //2
+  buho = false; //1
   barValue = 0;
   description = '';
   q0;
@@ -126,25 +126,29 @@ export class TestInversorComponent implements OnInit {
     let osoCount = 0;
     let buhoCount = 0;
     for (let index = 0; index < 7; index++) {
+
       switch (this['q' + index]) {
+  
         case 1:
-          loboCount++;
+          buhoCount++;
           break;
         case 2:
-          aguilaCount++;
+          osoCount++;
           break;
         case 3:
           pumaCount++;
           break;
         case 4:
-          osoCount++;
+          aguilaCount++;
           break;
         case 5:
-          buhoCount++;
+          loboCount++;
           break;
         default:
           break;
-      }
+
+    }
+
     }
     console.log('LOBO', loboCount);
     console.log('AGUILA', aguilaCount);

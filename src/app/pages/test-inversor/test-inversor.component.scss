@@ -89,9 +89,7 @@
   margin: 0;
   margin-top: 30px;
   color: #ffffff;
-  @media (max-width: 500px) {
-    font-size: 12px;
-  }
+
 }
 .description {
   text-align: justify;
@@ -176,3 +174,16 @@
   .result-email{
     margin: 50px;
   }
+.categoria-reult{
+  font-size: 10px;
+  @media (max-width:750px) {
+    font-size: 7px;
+
+  }
+
+  .disp{
+    @media (max-width: 500px) {
+      display: none;
+      }
+  }
+}
