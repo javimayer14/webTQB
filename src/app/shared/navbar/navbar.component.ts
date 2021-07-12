@@ -36,6 +36,9 @@ export class NavbarComponent implements OnInit {
     swal.fire('Sesión cerrada con éxito', 'Te esperamos pronto para facilitarte nuevos puentes y expandir tus oportunidades', 'success');
     this.router.navigate(['/login']);
   }
+  goToBlog(){
+    window.location.href = "https://www.thequalitybridgeblog.com";
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {

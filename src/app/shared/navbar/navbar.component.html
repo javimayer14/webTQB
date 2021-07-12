@@ -23,6 +23,7 @@
             <li routerLink="/wiki">WikiBridge</li>
             <li routerLink="/commandments">10 Mandamientos</li>
             <li [routerLink]="['/']" fragment="proyectos">Proyectos</li>
+            <li (click)="goToBlog()" >Blog</li>
           </ul>
         </nav>
       </div>
@@ -102,6 +103,10 @@
     <li [routerLink]="['/wiki']">
       <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
       WikiBridge
+    </li>
+    <li (click)="goToBlog()">
+      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      Blog
     </li>
   </ul>
 </p-sidebar>
