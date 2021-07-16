@@ -164,10 +164,10 @@
     </div>
   </form>
 </div>
-
 <div
   class="test"
   *ngIf="test && ending && !formResult"
+
   data-aos="fade-up"
   data-aos-delay="200"
 >
@@ -191,13 +191,18 @@
   </div>
 
   <div class="barValue row justify-content-center">
-    <div class="col-6 col-md-5">
+    <div style="font-size: 12px; justify-content: center;" class="col-3 col-md-3 text-center d-flex d-sm-none">
+      Muy conservador
+    </div>
+    <div class="col-6 col-md-6">
       <p-progressBar [value]="barValue" [showValue]="false"></p-progressBar>
     </div>
-    
+    <div style="font-size: 12px; justify-content: center;" class="col-3 col-md-3 text-center d-flex d-sm-none ">
+      Muy arriesgado
+    </div>
   </div>
 
-  <div class="barValue row justify-content-center" id="disp" style="text-align: center">
+  <div class="barValue row justify-content-center d-none d-sm-flex" id="disp" style="text-align: center">
     <div class="col-1">
       <label class="categoria-reult">Muy conservador</label>
     </div>
@@ -216,7 +221,7 @@
   </div>
 
   <p class="description">{{ description }}</p>
-  <app-shared-test></app-shared-test>
+  <!-- <app-shared-test></app-shared-test> -->
 </div>
 
 <app-footer-seccion></app-footer-seccion>

@@ -112,8 +112,8 @@
     height: 115vh;
   }
   #hero h1 {
-    font-size: 39px;
-    line-height: 36px;
+    font-size: 45px;
+    line-height: 38px;
   }
   #hero h2 {
     font-size: 15px;
@@ -251,6 +251,11 @@ body{
 	display:table;
   visibility: hidden;
   z-index: 5;
+  @media (max-width: 450px) {
+    font-size: 12px;
+    bottom:25px;
+    right:90px;
+  }
 }
 
 .label-text{
@@ -281,6 +286,12 @@ body{
 	text-align:center;
   box-shadow: 2px 2px 3px #999;
   z-index: 5;
+  @media (max-width: 450px) {
+    width:60px;
+    height:60px;
+    bottom:15px;
+    right:15px;
+  }
 
 }
 
@@ -303,11 +314,10 @@ a.float:hover + div.label-container{
 .title{
   margin-top: 100px !important;
   width: 100%;
-
-}
-
-@media (max-width: 450px) {
-  .title{
-  margin-top: 0px !important;
+  @media (max-width: 450px) {
+    margin-top: 0px !important;
   }
+
 }
+
+

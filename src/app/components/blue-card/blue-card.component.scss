@@ -1,5 +1,6 @@
 $width: 215px;
 
+
 .container_row {
   display: grid;
 }
@@ -30,18 +31,36 @@ $width: 215px;
     color: aliceblue;
     font-size: 120px;
     text-align: center;
+    @media (max-width: 450px) {
+      font-size: 25px;
+      width:100px
+    }
+    
   }
 
   .number {
     color: #2a38be;
     font-size: 120px;
     text-align: center;
+    @media (max-width: 450px) {
+      font-size: 40px;
+    }
   }
 
   .subtitle {
     color: aliceblue;
     font-size: 20px;
     text-align: center;
+    @media (max-width: 450px) {
+      font-size: 10px;
+
+    }
+  }
+
+  @media (max-width: 450px) {
+    height: 150px;
+    width:100px;
+
   }
   /* 10px between elements */
 }
@@ -52,4 +71,9 @@ $width: 215px;
   //margin: 5px 10px; /* 10px between elements */
   margin: -10px 20px;
   z-index: 1;
+  @media (max-width: 450px) {
+    height: 150px;
+    width:100px;
+    margin: -2px 15px;
+  }
 }

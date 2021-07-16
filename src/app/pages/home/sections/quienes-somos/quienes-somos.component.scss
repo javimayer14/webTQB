@@ -127,3 +127,9 @@ section {
 .carousel-inner p {
   margin-top: 20px;
 }
+
+.mobile-disable{
+  @media (max-width: 750px) {
+    display:none;
+  }
+}
