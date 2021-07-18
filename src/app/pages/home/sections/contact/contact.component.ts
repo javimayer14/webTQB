@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
   public saveDataUsuario(form) {
     this.spinnerService.show();
     // var url = this.authService.urlProd + 'api/user';
-    var url = this.authService.urlLocal + 'api/user';
+    var url = this.authService.urlProd + 'api/user';
 
     let postData = new FormData();
     this.validateForm(form);

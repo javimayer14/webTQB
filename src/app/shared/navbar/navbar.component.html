@@ -80,12 +80,7 @@
         La comunidad: ¿Por qué ser parte?
       </p>
     </li>
-    <li [class.active]="activeFragment === 'proyectos'">
-      <p [routerLink]="['/']" fragment="proyectos" (click)="display = false">
-        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-        Proyectos
-      </p>
-    </li>
+
     <li>
       <p
         [routerLink]="['/testInversor']"
@@ -96,17 +91,31 @@
         Test: ¿Qué tipo de inversor eres?
       </p>
     </li>
-    <li [routerLink]="['/commandments']">
-      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-      10 mandamientos del inversor
-    </li>
     <li [routerLink]="['/wiki']">
       <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
       WikiBridge
     </li>
+    <li [routerLink]="['/commandments']">
+      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      10 mandamientos del inversor
+    </li>
+    <li [class.active]="activeFragment === 'proyectos'">
+      <p [routerLink]="['/']" fragment="proyectos" (click)="display = false">
+        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+        Proyectos
+      </p>
+    </li>
     <li (click)="goToBlog()">
       <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
       Blog
+    </li>
+    <li *ngIf="!isAuthenticated" [routerLink]="['/login']">
+      <i  class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      Ingresar
+    </li>
+    <li *ngIf="isAuthenticated" (click)="logOut()">
+      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+      Salir
     </li>
   </ul>
 </p-sidebar>
