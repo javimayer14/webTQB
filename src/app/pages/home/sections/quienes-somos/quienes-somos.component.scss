@@ -114,6 +114,9 @@ span .carousel-control-next-icon {
 
 section {
   padding-top: 50px;
+  @media (max-width: 450px) {
+    padding-top: 0px;
+  }
 }
 
 .frase {

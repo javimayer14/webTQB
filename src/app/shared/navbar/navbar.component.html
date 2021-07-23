@@ -8,6 +8,7 @@
     <div class="row justify-content-between" style="width: 100%">
       <div class="col-4 text-center">
         <img
+        class="sortable"
           [src]="
             isNegative || visible
               ? 'assets/img/logo-negative.png'
@@ -23,7 +24,7 @@
             <li routerLink="/wiki">WikiBridge</li>
             <li routerLink="/commandments">10 Mandamientos</li>
             <li [routerLink]="['/']" fragment="proyectos">Proyectos</li>
-            <li (click)="goToBlog()" >Blog</li>
+            <li (click)="goToBlog()" >TheQualityBlog</li>
           </ul>
         </nav>
       </div>
@@ -107,7 +108,7 @@
     </li>
     <li (click)="goToBlog()">
       <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-      Blog
+      TheQualityBlog
     </li>
     <li *ngIf="!isAuthenticated" [routerLink]="['/login']">
       <i  class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>

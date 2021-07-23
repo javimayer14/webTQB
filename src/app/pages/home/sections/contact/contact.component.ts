@@ -71,9 +71,9 @@ export class ContactComponent implements OnInit {
       console.log(data);
 
       console.log(form.value);
-      this.router.navigate(['/login']);
+      //this.router.navigate(['/login']);
       swal.fire(
-        'Generacion usuario',
+        'Formulario completado exitosamente',
         'Muchas gracias por tu interés en sumarte a la comunidad de inversores. Te enviamos un correo para contarte cómo seguir',
         'success'
       );
