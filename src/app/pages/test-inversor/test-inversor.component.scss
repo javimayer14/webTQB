@@ -38,14 +38,13 @@
   @media (max-width: 760px) {
     font-size: 15pt;
     padding-bottom: 15pt;
-
   }
 }
 
 .options {
   color: #ffffff;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   @media (max-width: 769px) {
     text-align: center;
   }
@@ -89,7 +88,6 @@
   margin: 0;
   margin-top: 30px;
   color: #ffffff;
-
 }
 .description {
   text-align: justify;
@@ -113,7 +111,7 @@
   width: 65px;
   border-radius: 50%;
   font-size: 25pt;
-  justify-content: center;    
+  justify-content: center;
   @media (max-width: 760px) {
     width: 40px;
     height: 40px;
@@ -127,7 +125,6 @@
 }
 .actualQuestion {
   color: #000;
-
 }
 .button-seccion {
   margin: 30px;
@@ -137,7 +134,6 @@
   }
 }
 
-
 .arco {
   text-align: center;
 }
@@ -145,7 +141,7 @@
   height: 50%;
   width: 50%;
   margin: auto;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .p-button.p-button-outlined {
@@ -158,46 +154,44 @@
   color: #a3a3a2;
 }
 
-.modal-content{
+.modal-content {
   width: 100%;
   border-radius: 1rem;
-  }
+}
 
-  .title{
-    margin: 30px;
-  }
+.title {
+  margin: 30px;
+}
 
-  .btn{
-    margin-top: 0px;
-  }
+.btn {
+  margin-top: 0px;
+}
 
-  .result-email{
-    margin: 50px;
-  }
-.categoria-reult{
+.result-email {
+  margin: 50px;
+}
+.categoria-reult {
   font-size: 10px;
-  @media (max-width:750px) {
+  @media (max-width: 750px) {
     font-size: 7px;
-
   }
 
-  @media (max-width:450px) {
+  @media (max-width: 450px) {
     font-size: 5px;
-
   }
 
-  #disp{
+  #disp {
     @media (min-width: 0px) and (max-width: 450px) {
       display: none !important;
-      }
+    }
   }
 
-.prueba{
-  font-size: 4px;
-  text-align: center;
-  justify-content: center;
-  align-self: center;
-}
+  .prueba {
+    font-size: 4px;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+  }
   // .cate{
   //   display: none;
   //   @media (min-width: 0px) and (max-width: 450px){
