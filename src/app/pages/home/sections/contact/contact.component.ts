@@ -5,7 +5,7 @@ import { AuthService } from '../../../../services/user/auth.service';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
-import { SpinnerService } from '../../../../services/spinner.service'; 
+import { SpinnerService } from '../../../../services/spinner.service';
 
 @Component({
   selector: 'app-contact',
@@ -32,9 +32,9 @@ export class ContactComponent implements OnInit {
     private router: Router,
     public http: HttpClient,
     public authService: AuthService,
-    private countriesService: CountriesService, 
+    private countriesService: CountriesService,
     public spinnerService: SpinnerService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getCountries();
@@ -67,23 +67,30 @@ export class ContactComponent implements OnInit {
       headers: this.agregarAutorizacionHeader(),
     });
     console.log(this.generateUserForm);
-    this.data.subscribe((data) => {
-      console.log(data);
+    this.data.subscribe(
+      (data) => {
+        console.log(data);
 
-      console.log(form.value);
-      //this.router.navigate(['/login']);
-      swal.fire(
-        'Formulario completado exitosamente',
-        'Muchas gracias por tu interés en sumarte a la comunidad de inversores. Te enviamos un correo para contarte cómo seguir',
-        'success'
-      );
-      this.spinnerService.hide();
-    }, err => {
-      if (err.status == 409) {
-        swal.fire('Error Login', 'El email ingresado ya se encuentra registrado', "error");
+        console.log(form.value);
+        //this.router.navigate(['/login']);
+        swal.fire(
+          'Formulario completado exitosamente',
+          'Muchas gracias por tu interés en sumarte a la comunidad de inversores. Te enviamos un correo para contarte cómo seguir',
+          'success'
+        );
+        this.spinnerService.hide();
+      },
+      (err) => {
+        if (err.status == 409) {
+          swal.fire(
+            'Error Login',
+            'El email ingresado ya se encuentra registrado',
+            'error'
+          );
+        }
+        this.spinnerService.hide();
       }
-      this.spinnerService.hide();
-    });
+    );
   }
 
   getCountries() {
@@ -102,9 +109,7 @@ export class ContactComponent implements OnInit {
     return re.test(String(email).toLowerCase());
   }
 
-
   validateForm(form) {
-
     this.wrongEmail = false;
     this.wrongLastName = false;
     this.wrongName = false;
@@ -125,5 +130,3 @@ export class ContactComponent implements OnInit {
     }
   }
 }
-
-

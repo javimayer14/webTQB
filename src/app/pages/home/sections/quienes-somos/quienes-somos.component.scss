@@ -1,6 +1,7 @@
 .title {
   text-align: center;
   font-family: "Gotham Book", sans-serif;
+  //font-family: "Roboto", sans-serif;
   margin: 15px;
   font-size: 32px;
   font-weight: 700;
@@ -10,14 +11,17 @@
 }
 
 .subtitle {
-  font-family: "Gotham Book", sans-serif;
+  //font-family: "Gotham Book", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   text-align: center;
   font-weight: 700;
 }
 
 .body {
-  font-family: "Gotham Book", sans-serif;
+  //font-family: "Gotham Book", sans-serif;
+  font-family: "Roboto", sans-serif;
+
   font-size: 19px;
   text-align: center;
   opacity: 1;
@@ -134,8 +138,8 @@ section {
   margin-top: 20px;
 }
 
-.mobile-disable{
+.mobile-disable {
   @media (max-width: 750px) {
-    display:none;
+    display: none;
   }
 }
