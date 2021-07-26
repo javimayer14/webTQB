@@ -213,12 +213,20 @@
 
 
   @media (max-width: 450px) {
-  .optional{
-    display: none;
-    }
     .text-quienes-somos{
       margin: 0px;
     }
+    .footer-links{
+      margin-top: 10px !important;
+      margin-bottom: 10px !important;
+    }
+    .dir{
+      margin: 25px;
+    }
+    p{
+      margin-top: 0px !important;
+    }
+
   }
 
 
