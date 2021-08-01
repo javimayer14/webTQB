@@ -22,6 +22,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { CommandmentsComponent } from './commandments/commandments.component';
 import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { WebinarComponent } from './home/sections/webinar/webinar.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     CommandmentsComponent,
     WikiBridgeComponent,
     ChangePasswordComponent,
+    WebinarComponent,
 
   ],
   imports: [
