@@ -205,31 +205,33 @@
     justify-items: center;
   }
 
-
-  a.social-link{
-    color:#2a38be !important;
+  a.social-link {
+    color: #2a38be !important;
     font-size: 20px;
   }
 
-
   @media (max-width: 450px) {
-    .text-quienes-somos{
+    .text-quienes-somos {
       margin: 0px;
     }
-    .footer-links{
+    .footer-links {
       margin-top: 10px !important;
       margin-bottom: 10px !important;
     }
-    .dir{
+    .dir {
       margin: 25px;
     }
-    p{
+    p {
       margin-top: 0px !important;
     }
-
   }
+}
+.footer-text i {
+  margin: 10px;
+}
 
-
-
-
+@media (max-width: 450px) {
+  .address {
+    margin-top: 25px !important;
+  }
 }

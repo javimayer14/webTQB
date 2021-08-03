@@ -176,3 +176,20 @@
 	label {
 		font-size: 12px;
 	}
+.option{
+	@media (max-width: 600px) {
+		margin-top: 15px;
+	}
+}
+
+#wrap {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+#content {
+    float: left;
+    position: relative;
+    left: -50%;
+}
