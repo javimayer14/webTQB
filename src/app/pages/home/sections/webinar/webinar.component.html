@@ -3,7 +3,7 @@
     <div class="row align-items-center" data-aos="fade-up" data-aos-delay="100">
       <div class="col-lg-12">
         <p class="novedad" style="margin: 0px 0px 0px 35px">
-          <i class="bi bi-star" style="color: yellow;"></i> novedad
+          <i class="bi bi-star" style="color: yellow"></i> novedad
         </p>
       </div>
     </div>
@@ -21,8 +21,19 @@
         />
       </div>
       <div class="col-lg-2 text-center eco">
+        <h5>
+          <span class="numeral">#</span>
+          <a
+            href=""
+            class="typewrite"
+            data-period="2000"
+            data-type='[ "Economía", "RealEstate", "Finanzas", "MercadoLocal", "MercadoInternacional" ]'
+          >
+            <span class="wrap"></span>
+          </a>
+        </h5>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 text-right">
         <img src="assets/img/BLOG_MANOS.jpg" class="img-hands" alt="" />
       </div>
     </div>
@@ -32,7 +43,13 @@
           Aquí encontrarás contenido clave, material e informacion de interés
           sobre el ecosistema de inversiones para continuar en movimiento
         </p>
-        <button (click)="goToBlog()" type="button" class="btn btn-primary degrade">Ingresar</button>
+        <button
+          (click)="goToBlog()"
+          type="button"
+          class="btn btn-primary degrade"
+        >
+          Ingresar
+        </button>
       </div>
       <div class="col-lg-6">
         <img src="assets/img/BLOG_MOCKUP.png" class="img-fluid" alt="" />
@@ -43,13 +60,17 @@
       <div class="col-lg-3 streaming">
         <div class="col-lg-12 eco row align-items-center">
           <td class="circle"></td>
-          <td class="">STREAMING</td>
+          <td class="str">STREAMING</td>
         </div>
       </div>
     </div>
     <div class="row" data-aos="fade-up" data-aos-delay="300">
       <div class="col-lg-3 texto-superior-izquierdo">
-        <p class="webinar-title">WEBINARS</p>
+        <div class="col-lg-12 text-center ">
+            <!-- <span class="circle-webinar ">.</span> -->
+            <p class="webinar-title"  style="display:inline">WEBINARS</p>
+        </div>
+
         <p class="webinar-text">
           Conoce nuestros ciclos de webinars para ampliar tu visión como
           inversor:
@@ -161,7 +182,8 @@
             <br />
             Súmate al reporte semanal de The Quality Bridge. Únete a nuestro
             grupo de telegram o listas de Whatsapp y recibe todos los viernes
-            tres noticias de impacto con un análisis
+            tres noticias de impacto con un análisis realizado por nuestros
+            especialistas.
           </p>
         </div>
 
