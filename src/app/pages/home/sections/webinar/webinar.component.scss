@@ -96,7 +96,13 @@
   font-weight: bold;
   font-family: "Gotham Rounded";
   margin-top: 0px;
+  margin-bottom: 30px;
   color: white;
+  padding-left: 15px;
+
+  @media (max-width: 450px) {
+    padding-left: 0px;
+  }
 }
 .webinar-text {
   font-size: 15px;
@@ -162,14 +168,19 @@
     animation: fade 1.5s infinite 1000ms;
   }
 
-  .circle-webinar {
+  .circle-wb {
     background: red;
     border-radius: 50%;
     animation: fade 1.5s infinite 1000ms;
     width: 15px;
     height: 15px;
-    color: red;
-    font-size: 12px;
+    margin-top: 20px;
+    margin-right: 10px;
+    display: none;
+    @media (max-width: 450px) {
+      display: block;
+      
+    }
   }
 
 
@@ -202,4 +213,10 @@
 
   .webi p {
     display: inline
+  }
+
+  .centrar{
+    @media (max-width: 450px) {
+      justify-content:center
+    }
   }
