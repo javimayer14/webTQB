@@ -63,9 +63,7 @@ export class ContactComponent implements OnInit {
     this.generateUserForm.birthDate = form.value.birthDate;
     this.generateUserForm.phone = form.value.phone;
 
-    this.data = this.http.post(url, this.generateUserForm, {
-      headers: this.agregarAutorizacionHeader(),
-    });
+    this.data = this.http.post(url, this.generateUserForm);
     console.log(this.generateUserForm);
     this.data.subscribe(
       (data) => {
