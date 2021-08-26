@@ -20,9 +20,10 @@
   </div>
 </section>
 
-<div class ="container">
+<div [hidden]="IsmodelShow" data-target="#modal" class ="container">
 
 <div
+  #closeModal
   class="modal fade bd-example-modal-lg"
   tabindex="-1"
   role="dialog"
@@ -132,7 +133,7 @@
             </div>
             <br />
             <div class="text-center">
-              <button [disabled]="wrongValidate" class="btn btn-primary" type="submit"   >Enviar</button>
+              <button [disabled]="wrongValidate"  class="btn btn-primary" type="submit"  >Enviar</button>
             </div>
           </form>
         </div>

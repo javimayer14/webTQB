@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  ViewChild, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from '../../../../services/user/auth.service';
@@ -21,6 +21,7 @@ export class PresentarProyectoComponent implements OnInit {
   wrongLastName = false;
   wrongName = false;
   wrongValidate = false;
+  IsmodelShow = false;
 
   presentProjectForm = {
     email: null,
@@ -36,7 +37,15 @@ export class PresentarProyectoComponent implements OnInit {
     public spinnerService: SpinnerService
   ) { }
 
+@ViewChild('closeModal') private closeModal: ElementRef;
+public hideModel() {
+        this.closeModal.nativeElement.click();      
+}
+
   ngOnInit(): void {
+  }
+  prueba(){
+    this.IsmodelShow = true;
   }
   onFileSelected(event){
     console.log("event" + event.target.files[0]);
@@ -73,7 +82,8 @@ export class PresentarProyectoComponent implements OnInit {
         'success'
         );
         this.spinnerService.hide();
-        window.location.reload();
+        this.hideModel();
+        //window.location.reload();
     },err =>{
       this.spinnerService.hide();
     });
