@@ -18,7 +18,7 @@
         />
       </div>
 
-      <div class="col-5">
+      <div class="col-4">
         <nav class="nav-menu d-none d-lg-block pull-right">
           <ul style="padding-top: 10px">
             <li routerLink="/wiki">WikiBridge</li>
@@ -28,12 +28,17 @@
           </ul>
         </nav>
       </div>
-      <div class="col-3">
+      <div class="col-4">
         <nav class="nav-menu text-center">
           <ul>
             <li *ngIf="!isAuthenticated" class="active d-none d-lg-block">
               <button routerLink="/login" class="btn btn-primary btn-sm">
                 Ingresar
+              </button>
+            </li>
+            <li *ngIf="!isAuthenticated" class="active d-none d-lg-block">
+              <button routerLink="/login" class="btn btn-primary btn-sm">
+                Únete
               </button>
             </li>
             <li *ngIf="isAuthenticated" class="active d-none d-lg-block">
@@ -43,7 +48,7 @@
             </li>
             <li>
               <div
-                class="icon"
+                class="col-1 icon float-right"
                 style="font-size: 32px"
                 (click)="display = true"
               >

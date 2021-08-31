@@ -81,6 +81,9 @@ align-self: center;
 align-content: center;
 align-items: center;
 justify-content: center;
+vertical-align: bottom;
+margin: auto;
+
 }
 .tag{
   background-color: #111;
@@ -89,6 +92,10 @@ justify-content: center;
   position: absolute;
   top:40px;
   justify-content: center;
+  vertical-align: bottom;
+  padding: 10px;
+
+
   @media (max-width: 450px) {
     top:20px;
     font-size: 12px;
