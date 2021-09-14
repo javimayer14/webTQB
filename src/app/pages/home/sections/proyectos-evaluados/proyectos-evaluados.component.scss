@@ -1,7 +1,8 @@
 .title {
-  font-family: "Gotham Rounded", sans-serif;
-  font-size: 42px;
+  font-family: "Gotham Book", sans-serif;
+  font-size: 32px;
   text-align: center;
+  font-weight: 700;
 }
 
 .subtitle {
@@ -104,4 +105,14 @@ margin: auto;
   }
 }
 
+.section-title p {
+  margin-top: 0px;
+  font-size: 19px;
+}
+.description-proyect{
+  text-align: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
 
