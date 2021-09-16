@@ -248,4 +248,21 @@ input[type='checkbox'] {
 	  padding: 20px;
   }
 
+
+.aviso{
+	border:1px solid #2a38be;
+	border-radius: 3px;
+	margin: 20px;
+	padding: 15px;
+	@media (max-width: 450px) {
+		padding: 30px;
+	
+	  }
+  }
+
+.aviso p{
+	font-size: 10px;
+	font-family: "Roboto", "sans-serif";
+  }
+
   
