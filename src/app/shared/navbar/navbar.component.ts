@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/services/user/auth.service';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-navbar',
@@ -37,7 +38,12 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   goToBlog(){
-    window.location.href = "https://www.thequalitybridgeblog.com";
+    window.open("https://www.thequalitybridgeblog.com", '_blank');
+  }
+
+  closeMenu(){
+    this.display=false;
+    console.log("prueba");
   }
 
   @HostListener('window:scroll', ['$event'])

@@ -346,6 +346,27 @@ body{
   box-shadow: 1px 1px 1px #999;
   z-index: 5;
 }
+
+.my-float-alert{
+  text-align: center;
+  position:fixed;
+  z-index: 6;
+  width: 100%;
+  bottom: 0px;
+  background-color: #2a38be;
+  border-color: #3b8af2;
+  color: #fff;
+  font-family: "Gotham book", sans-serif;
+  box-shadow: 1px 1px 1px #999;
+
+
+}
+
+.unete-link{
+  color:#fff;
+  text-decoration: underline
+}
+
 a.float + div.label-container {
   visibility: hidden;
   opacity: 0;
@@ -366,4 +387,12 @@ a.float:hover + div.label-container{
 
 }
 
+#showMe {
+  animation: cssAnimation 0s 20s forwards;
+  opacity: 0; 
+}
+
+@keyframes cssAnimation {
+  to   { opacity: 1; }
+}
 

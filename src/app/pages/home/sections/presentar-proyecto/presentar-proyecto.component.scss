@@ -5,3 +5,29 @@
 width: 100%;
 border-radius: 1rem;
 }
+
+.close{
+	margin: 20px;
+}
+
+.title-modal{
+	margin-bottom: 30px;
+}
+
+.btn-primary{
+	background-color: #2a38be;
+}
+
+.btn-primary:hover{
+	background-color: #3b8af2;
+}
+
+.hidden{
+	display: none;
+}
+
+.input-file{
+	@media (max-width: 450px) {
+		width: 80%;
+	  }
+	}

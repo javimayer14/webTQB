@@ -1,4 +1,5 @@
 <section id="presentar-proyecto" class="presentar-proyecto">
+  
   <div class="container" data-aos="fade-up">
     <div class="row" data-aos="fade-up" data-aos-delay="100">
       <div class="col-lg-6 ">
@@ -30,14 +31,19 @@
   aria-labelledby="myLargeModalLabel"
   aria-hidden="true"
 >
+
+
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
+      <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
       <div
         class="row d-flex justify-content-center modal-body"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-      <div class="col-lg-12 text-center">
+      <div class="col-lg-12 text-center title-modal">
         <h2>Presentar mi proyecto</h2>
       </div>
       <br>
@@ -113,9 +119,10 @@
                 [(ngModel)]="presentProjectForm.file"
                 type="file" 
                 (change)="onFileSelected($event)" 
-                class="" 
+                class="input-file" 
                 id="validatedCustomFile" 
                 required type="file" 
+                title = "Ningún archivo"
                 >
 
               <!-- <div class="custom-file">
@@ -131,6 +138,7 @@
               </div> -->
               </div>
             </div>
+
             <br />
             <div class="text-center">
               <button [disabled]="wrongValidate"  class="btn btn-primary" type="submit"  >Enviar</button>

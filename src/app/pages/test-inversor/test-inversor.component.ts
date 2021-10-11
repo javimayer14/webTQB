@@ -227,7 +227,7 @@ export class TestInversorComponent implements OnInit {
     switch (maxValue) {
       case 0:
         this.lobo = true;
-        this.barValue = 100;
+        this.barValue = 95;
         this.description =
           'Te gusta meterte en donde hay más riesgo, pero a la vez sos sigiloso. Con una mirada perspicaz, una vez que estás decidido no hay quien te frene. Tomás riesgo para obtener una gran recompensa';
         break;
@@ -252,7 +252,7 @@ export class TestInversorComponent implements OnInit {
         break;
       case 4:
         this.buho = true;
-        this.barValue = 0;
+        this.barValue = 10;
         this.description =
           'Cuidadoso pero certero. Aprovechas las pocas oportunidades que se presentan porque sabes que son únicas. Cada movimiento está rigurosamente pensado. Eres obsesivo por mantener las situaciones bajo control.';
         break;

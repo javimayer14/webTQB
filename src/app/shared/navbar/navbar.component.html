@@ -1,31 +1,28 @@
-<header
-  id="header"
-  class="fixed-top sombra"
-  [ngClass]="{ visible: visible }"
-  (scroll)="onWindowScroll($event)"
->
+<header id="header" class="fixed-top sombra" [ngClass]="{ visible: visible }" (scroll)="onWindowScroll($event)">
   <div class="">
     <div class="row justify-content-between" style="width: 100%">
       <div class="col-4 text-center">
-        <img
-        class="sortable"
-          [src]="
+        <img class="sortable" [src]="
             isNegative || visible
               ? 'assets/img/logo-negative.png'
               : 'assets/img/logo.png'
-          "
-          [routerLink]="['/']"
-        />
+          " [routerLink]="['/']" />
       </div>
 
       <div class="col-4">
         <nav class="nav-menu d-none d-lg-block pull-right">
           <ul style="padding-top: 10px">
-            <li routerLink="/wiki" target="_blank">WikiBridge</li>
-            <li routerLink="/commandments">10 Mandamientos</li>
-            <li routerLink="/test">Test</li>
+            <a href="/wiki">WikiBridge</a>
+            <a href="/commandments">Mandamientos</a>
+            <a href="/testInversor">Test</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="/" (click)="goToBlog()">TheQualityBlog</a>
+
+            <!-- <li routerLink="/wiki" target="_blank">WikiBridge</li>
+            <li routerLink="/commandments">Mandamientos</li>
+            <li routerLink="/testInversor">Test</li>
             <li [routerLink]="['/']" fragment="proyectos">Proyectos</li>
-            <li (click)="goToBlog()" >TheQualityBlog</li>
+            <li (click)="goToBlog()" >TheQualityBlog</li> -->
           </ul>
         </nav>
       </div>
@@ -38,9 +35,11 @@
               </button>
             </li> -->
             <li class="active d-none d-lg-block">
-              <button  [routerLink]="['/']" fragment="contact" class="btn btn-primary btn-sm">
-                Únete
-              </button>
+              <a href="#contact">
+                <button class="btn btn-primary btn-sm">
+                  Únete
+                </button>
+              </a>
             </li>
             <!-- <li *ngIf="isAuthenticated" class="active d-none d-lg-block">
               <button (click)="logOut()" class="btn btn-primary btn-sm">
@@ -48,11 +47,7 @@
               </button>
             </li> -->
             <li>
-              <div
-                class="col-1 icon float-right"
-                style="font-size: 32px"
-                (click)="display = true"
-              >
+              <div class="col-1 icon float-right" style="font-size: 32px" (click)="display = true">
                 <i class="fa fa-bars" aria-hidden="true"></i>
               </div>
             </li>
@@ -62,66 +57,35 @@
     </div>
   </div>
 </header>
-<p-sidebar
-  styleClass="sidebar"
-  [(visible)]="display"
-  position="right"
-  [style]="{ width: '25em' }"
-  [transitionOptions]="'0.20s'"
-  [ngStyle]="{ backgroundColor: 'var(--blue-500)' }"
->
+<p-sidebar styleClass="sidebar" [(visible)]="display" position="right" [style]="{ width: '25em' }"
+  [transitionOptions]="'0.20s'" [ngStyle]="{ backgroundColor: 'var(--blue-500)' }">
   <ul class="navbar-options">
     <li [class.active]="activeFragment === 'quienes-somos-1'">
-      <p
-        [routerLink]="['/']"
-        fragment="quienes-somos-1"
-        (click)="display = false"
-      >
-        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-        ¿Qué es The Quality Bridge?
-      </p>
-    </li>
-    <li [class.active]="activeFragment === 'miembros'">
-      <p [routerLink]="['/']" fragment="miembros" (click)="display = false">
-        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-        La comunidad: ¿Por qué ser parte?
-      </p>
-    </li>
+      <a (click)="closeMenu()" href="#quienes-somos-1" class="menu-item"> ¿Qué es The Quality Bridge?</a>
 
+    </li>
     <li>
-      <p
-        [routerLink]="['/testInversor']"
-        routerLinkActive="active"
-        (click)="display = false"
-      >
-        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-        Test: ¿Qué tipo de inversor eres?
-      </p>
+      <a (click)="closeMenu()" href="#miembros" class="menu-item"> La comunidad: ¿Por qué ser parte?</a>
     </li>
-    <li [routerLink]="['/wiki']">
-      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-      WikiBridge
+    <li>
+      <a href="/testInversor" class="menu-item">Test: ¿Qué tipo de inversor eres?</a>
     </li>
-    <li [routerLink]="['/commandments']">
-      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-      10 mandamientos del inversor
+    <li>
+      <a href="/wiki" class="menu-item">WikiBridge</a>
     </li>
-    <li [class.active]="activeFragment === 'proyectos'">
-      <p [routerLink]="['/']" fragment="proyectos" (click)="display = false">
-        <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
-        Proyectos
-      </p>
+    <li>
+      <a href="/commandments" class="menu-item">Mandamientos</a>
     </li>
-    <li (click)="goToBlog()">
-      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+    <li>
+      <a (click)="closeMenu()" href="#proyectos" class="menu-item">Proyectos</a>
+    </li>
+    <li (click)="goToBlog()" class="menu-item">
       TheQualityBlog
     </li>
-    <li *ngIf="!isAuthenticated" [routerLink]="['/login']">
-      <i  class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+    <li *ngIf="!isAuthenticated" [routerLink]="['/login']" class="menu-item">
       Ingresar
     </li>
-    <li *ngIf="isAuthenticated" (click)="logOut()">
-      <i class="fa fa-arrow-right arrow-icon" aria-hidden="true"></i>
+    <li *ngIf="isAuthenticated" (click)="logOut()" class="menu-item">
       Salir
     </li>
   </ul>

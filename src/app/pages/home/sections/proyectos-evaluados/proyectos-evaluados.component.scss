@@ -124,12 +124,26 @@ margin: auto;
 .description-proyect{
   text-align: left;
   color: #2a38be !important;
-  font-size: 15px !important ;
+  font-size: 14px !important ;
   font-weight: bold;
-  margin-bottom: 30px;
+  font-family: "Roboto", "sans-serif";
+
 }
 
 .end{
-  position: absolute;
   bottom: 20px;
 }
+
+.subtitle-card{
+  font-size: 20px !important;
+  font-family: "Roboto", "sans-serif";
+  margin-top: 40px;
+  font-weight: bold;
+  color: #111 !important;
+
+}
+
+.btn-block{
+  margin-bottom: 10px;
+}
+

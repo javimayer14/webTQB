@@ -9,7 +9,7 @@ export class CountriesService {
 
   getCountries() {
     return this.http
-      .get('https://restcountries.eu/rest/v2')
+      .get('https://restcountries.com/v2/all')
       .pipe(
         map((resp: any[]) =>
           resp.map((country) => ({
@@ -22,3 +22,4 @@ export class CountriesService {
       );
   }
 }
+//get('https://restcountries.eu/rest/v2')
