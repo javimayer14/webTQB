@@ -196,7 +196,9 @@
     position: relative;
     left: -50%;
 }
-
+.right{
+	text-align: right;
+  }
 input[type='checkbox'] {
 	/* remove browser chrome */
 	-webkit-appearance: none;
@@ -253,17 +255,41 @@ input[type='checkbox'] {
 .aviso{
 	border:1px solid #2a38be;
 	border-radius: 3px;
-	margin: 20px;
-	padding: 15px;
+	margin: 10px;
+	padding: px;
 	@media (max-width: 450px) {
-		padding: 30px;
+		padding: 15px;
 	
 	  }
   }
 
 .aviso p{
-	font-size: 10px;
+	font-size: 15px;
 	font-family: "Roboto", "sans-serif";
+	text-align: center;
+	@media (max-width: 450px) {
+		font-size: 10px;
+		padding: 5px;
+		margin: 5px;
+
+	  }
   }
 
-  
+  .contact-img{
+	  height: 100px;
+	  margin: 20px;
+	  padding: 15px;
+
+
+  }
+
+  .change{
+	@media (max-width: 750px) {
+		display: none;
+	
+	  }
+  }
+
+
+
+
