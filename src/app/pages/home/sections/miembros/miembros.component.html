@@ -1,22 +1,19 @@
-<div class="main" id="miembros">
-  <p class="main-title">¿Por qué ser miembro?</p>
+<section id="miembros" class="team section-bg"  >
+<div class="main" >
+  <p class="main-title" data-aos="fade-up" data-aos-delay="100">¿Por qué ser miembro?</p>
   <br />
   <div class="row justify-content-md-center">
-    <div *ngFor="let blueCard of blueCards" class=" align-self-center" data-aos="fade-up" data-aos-delay="100">
+    <div *ngFor="let blueCard of blueCards" class=" align-self-center" data-aos="fade-up" data-aos-delay="200">
       <app-blue-card [title]="blueCard.title" [subtitle]="blueCard.subtitle"></app-blue-card>
     </div>
   </div>
-
-  <div class="row justify-content-center unete">
+  <div class="row justify-content-center unete" data-aos="fade-up" data-aos-delay="300">
     <a href="#contact">
       <button class="btn btn-primary btn-sm">
         Únete sin cargo
       </button>
-
     </a>
   </div>
-  
-
   <br />
 
   <!-- <div class="row">
@@ -42,5 +39,5 @@
     </div>
   </div> -->
 </div>
-<app-webinar></app-webinar>
 
+</section>

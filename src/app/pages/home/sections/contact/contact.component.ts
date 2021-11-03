@@ -77,6 +77,7 @@ export class ContactComponent implements OnInit {
           'success'
         );
         this.spinnerService.hide();
+        form.reset();
       },
       (err) => {
         if (err.status == 409) {
