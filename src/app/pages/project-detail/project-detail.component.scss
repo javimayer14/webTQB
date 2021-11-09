@@ -115,18 +115,24 @@
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 40px;
   color: #ff199e;
+  @media (max-width: 650px) {
+    font-size: 15px;
+  }
 }
 
 .body {
   font-family: "Gotham Book", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   width: 90%;
   margin: auto;
-
   padding-top: 100px;
+  @media (max-width: 650px) {
+    font-size: 10px;
+
+  }
 }
 .col-centered {
   float: none;
@@ -155,20 +161,23 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  margin: 10px;
 }
 
 .ubicacion {
-  padding: 0px;
+  padding: 5px;
   font-size: 10px;
+  text-align: left;
+
 }
 
 .ubicacion p {
   font-size: 10px;
 }
 
-.right {
-  float: right;
-}
+.right{
+	text-align: right;
+  }
 
 .footer-card p {
   line-height: 1px;
@@ -191,19 +200,65 @@
 
 .member {
   margin-bottom: 0;
+  @media (max-width: 1000px) {
+    display: none;
+
+  }
 }
 
 .description {
   font-size: 16px;
   text-align: justify;
-  font-family: "Gotham book", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 25px;
   color: #000;
+  @media (max-width: 500px) {
+    font-size: 11px;
+
+  }
+}
+
+.cont{
+  background-color: #ececec;
+  padding: 50px;
+  font-family: "Gotham Book", sans-serif;
+  @media (max-width: 500px) {
+    padding: 20px;
+
+  }
 }
 
 .downloadIMG {
-  @media (max-width: 760px) {
-    width: 100%;
-    margin-top: 15px;
-  }
+  height: 100%;
+}
+
+a{
+  color: #2a38be;
+}
+a:hover{
+  color: #449bec;
+}
+
+.header-img{
+  width: 100%;
+}
+.desc-md{
+margin-bottom: 30px;
+margin-top: 30px;
+display: none;
+@media (max-width: 1000px) {
+display: block;
+}
+}
+
+.info-md{
+  margin-top: 30px;
+
+  @media (max-width: 500) {
+    font-size: 10px !important;
+    }
+}
+
+.title-project{
+  color: #2a38be;
 }
