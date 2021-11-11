@@ -107,7 +107,9 @@
   font-family: "Gotham Rounded", sans-serif;
   font-size: 42px;
   text-align: center;
-  color: #2a38be;
+  color: #FFF;
+  padding: 20px;
+  background-color: #111;
 }
 
 .subtitle {
@@ -115,8 +117,8 @@
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  margin: 40px;
-  color: #ff199e;
+  margin-bottom: 40px;
+  color: #2a38be;
   @media (max-width: 650px) {
     font-size: 15px;
   }
@@ -149,7 +151,7 @@
 
 .team .member .member-info span {
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: #111;
   text-align: left;
@@ -229,7 +231,12 @@
 }
 
 .downloadIMG {
-  height: 100%;
+  height: 80%;
+  text-align: left !important;
+  @media (max-width: 500px) {
+    padding: 50px;
+
+  }
 }
 
 a{
@@ -261,4 +268,24 @@ display: block;
 
 .title-project{
   color: #2a38be;
+}
+
+.member-title{
+margin-bottom: 30px !important;
+}
+
+member-info{
+  font-size: 30px !important;
+}
+
+.ubicacion{
+  font-size: 14px;
+}
+
+.link-pdf{
+  font-size: 11px;
+  text-align: center !important;
+  line-height : 15px;
+
+
 }
