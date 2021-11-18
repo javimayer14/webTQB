@@ -21,7 +21,7 @@ const routes: Routes = [
     component: TestInversorComponent,
   },
   {
-    path: 'projectDetail',
+    path: 'Sanmartin630',
     //component: ProjectDetailComponent, canActivate:[AuthGuard]
     component: ProjectDetailComponent,
   },

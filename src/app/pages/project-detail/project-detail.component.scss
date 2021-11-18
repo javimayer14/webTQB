@@ -109,7 +109,6 @@
   text-align: center;
   color: #FFF;
   padding: 20px;
-  background-color: #111;
 }
 
 .subtitle {
@@ -117,7 +116,9 @@
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+
   color: #2a38be;
   @media (max-width: 650px) {
     font-size: 15px;
@@ -167,7 +168,6 @@
 }
 
 .ubicacion {
-  padding: 5px;
   font-size: 10px;
   text-align: left;
 
@@ -222,7 +222,8 @@
 
 .cont{
   background-color: #ececec;
-  padding: 50px;
+  padding: 60px;
+  font-size: 17px;
   font-family: "Gotham Book", sans-serif;
   @media (max-width: 500px) {
     padding: 20px;
@@ -288,4 +289,23 @@ member-info{
   line-height : 15px;
 
 
+}
+
+.title{
+  background-color: #111;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+}
+
+section{
+  padding-top: 0px;
+}
+
+.flag{
+  margin-left: -7px;
+  margin-bottom: 5px;
+}
+.member-info{
+  padding-bottom: 0px !important;
 }
