@@ -232,10 +232,9 @@
 }
 
 .downloadIMG {
-  height: 80%;
   text-align: left !important;
   @media (max-width: 500px) {
-    padding: 50px;
+    padding: 15px;
 
   }
 }
@@ -287,6 +286,7 @@ member-info{
   font-size: 11px;
   text-align: center !important;
   line-height : 15px;
+  margin: 15px;
 
 
 }
@@ -314,4 +314,49 @@ section{
 
 .carousel-control-next, .carousel-control-prev{
   opacity: 1 !important;
+}
+
+.img{
+	width: 100%;
+}
+.modal-content{
+width: 100%;
+border-radius: 1rem;
+}
+
+.close{
+	margin: 20px;
+}
+
+.title-modal{
+	margin-bottom: 30px;
+}
+
+.btn-primary{
+	background-color: #2a38be;
+  font-size: 14px;
+  margin: 5px;
+
+}
+
+.btn-primary:hover{
+	background-color: #3b8af2;
+}
+
+.input-file{
+	@media (max-width: 450px) {
+		width: 80%;
+	  }
+	}
+
+.btn-secondary{
+	background-color: #222222 !important;
+  padding: 20px;
+  font-size: 14px;
+margin: 5px;
+}
+
+.btn-secondary:hover{
+	background-color: rgba(74, 74, 74, 0.8) !important;
+
 }

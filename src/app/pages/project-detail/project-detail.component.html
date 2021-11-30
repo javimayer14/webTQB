@@ -151,21 +151,15 @@
             <br />
             <br />
             <br />
-            <div class="row ">
-              <div class="col-md-8">
+            <div class="row d-flex justify-content-center">
               <button class="btn btn-sm btn-primary">¿Quieres conocer la obra? Contáctate para visitarla</button>
+              <button class="btn btn-sm btn-secondary" type="submit"  data-toggle="modal"   data-target=".bd-example-modal-lg"
+              >Me interesa conocer más</button>
             </div>
-              <div class="col-md-1 d-flex align-items-center justify-content-center">
+            <div class="row d-flex justify-content-center">
                 <a class="link-pdf" href="https://www.thequalitybridgeblog.com/ProyectoSanMartin630.pdf" target="_blank">
-
-                <img  class="downloadIMG" src="/assets/img/pdf-4.png" alt="" />
-                </a>
-              </div>
-              <div class="col-md-3 d-flex align-items-center justify-content-center">
-                <a class="link-pdf" href="https://www.thequalitybridgeblog.com/ProyectoSanMartin630.pdf" target="_blank">
+                  <img  class="downloadIMG" src="/assets/img/pdf-4.png" alt="" />
                   Conoce las unidades modelo</a>
-              </div>
-
             </div>
             </div>
           </div>
@@ -173,6 +167,123 @@
       </div>
     </div>
   </section>
+</div>
+
+<div
+  #closeModal
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+
+
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div
+        class="row d-flex justify-content-center modal-body"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+      <div class="col-lg-12 text-center title-modal">
+        <h2>Contacto</h2>
+      </div>
+      <br>
+
+        <div class="col-lg-6">
+          <form
+            (ngSubmit)="saveDataUsuario(form)"
+            #form="ngForm"
+            role="form"
+            class="php-email-form form"
+          >
+            <div class="form-row">
+              <div class="col form-group">
+                <input
+                  [(ngModel)]="contactProyectForm.name"
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  placeholder="*Nombre"
+                  data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars"
+                />
+                <div *ngIf="wrongName" class="error">Se requiere nombre</div>
+
+                <div class="validate"></div>
+              </div>
+              <div class="col form-group">
+                <input
+                  [(ngModel)]="contactProyectForm.lastName"
+                  type="text"
+                  class="form-control"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="*Apellido"
+                  data-rule="lastName"
+                  data-msg="Please enter a valid email"
+                />
+                <div *ngIf="wrongLastName" class="error">Se requiere apellido</div>
+
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+                <input
+                  [(ngModel)]="contactProyectForm.email"
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="*E-mail"
+                  data-rule="email"
+                  data-msg="Please enter a valid email"
+                />
+                <div *ngIf="wrongEmail" class="error">Correo no válido</div>
+                <div class="validate"></div>
+              </div>
+              <div class="col form-group">
+                <input
+                  [(ngModel)]="contactProyectForm.telefono"
+                  type="text"
+                  class="form-control"
+                  name="telefono"
+                  id="telefono"
+                  placeholder="*Telefono"
+                  data-rule="telefono"
+                  data-msg="Please enter a phone"
+                />
+                <div *ngIf="wrongTelefono" class="error">Telefono</div>
+
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col form-group">
+              <textarea 
+              [(ngModel)]="contactProyectForm.desc"
+              placeholder="Observaciónes (opcional)" 
+              class="form-control" 
+              id="desc"  
+              rows="3"></textarea>
+              </div>
+            </div>
+
+            <br />
+            <div class="text-center">
+              <button [disabled]="wrongValidate"  class="btn btn-primary" type="submit"  >Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- <app-shared-test
   compartir="Compartir proyecto con un colega"
