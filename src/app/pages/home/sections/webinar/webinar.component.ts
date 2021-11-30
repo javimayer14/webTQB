@@ -13,7 +13,8 @@ export class WebinarComponent implements OnInit {
     this.prueba();
   }
   goToBlog(){
-    window.location.href = "https://www.thequalitybridgeblog.com";
+    let url="https://www.thequalitybridgeblog.com";
+    window.open(url, "_blank");
   }
 
   typingCallback(that) {
