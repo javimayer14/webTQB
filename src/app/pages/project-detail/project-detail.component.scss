@@ -283,7 +283,7 @@ member-info{
 }
 
 .link-pdf{
-  font-size: 11px;
+  font-size: 16px;
   text-align: center !important;
   line-height : 15px;
   margin: 15px;
@@ -362,14 +362,14 @@ margin: 5px;
 }
 
 .section-video{
-  background-color: #191919;
+  background-color: #EBEBEB;
 }
 
 .video-title{
-  color: #FFF;
+  color: #191919;
 }
 .section-carrousel{
-  background-color: #EBEBEB;
+  background-color: #FFF;
 }
 section {
   padding: 110px 0;
@@ -382,7 +382,7 @@ section {
 .section-title{
   text-align: center;
   padding-bottom: 30px;
-  color: #FFF;
+  color: #191919;
   font-size: 32px;
   font-family: "Roboto", sans-serif;
 }
@@ -394,14 +394,25 @@ section-title-secondary{
   font-size: 32px;
   font-family: "Roboto", sans-serif;
 }
-
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.section-carrousel .carousel-control-next-icon, .carousel-control-prev-icon {
   width: 70px;
   height: 70px;
 }
+.top-car .carousel-control-prev-icon {
+  width: 20px;
+  height: 20px;
+}
 
-.carousel-indicators li{
+.section-carrousel .container .carousel-indicators li{
   height: 30px;
   border-radius: 50px;
   background-color: #FFF
+}
+
+.hand-img{
+  height: 75px;
+}
+
+.mapa{
+  height: 170px;
 }
