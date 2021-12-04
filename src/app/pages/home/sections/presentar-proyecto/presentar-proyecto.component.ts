@@ -53,6 +53,7 @@ public hideModel() {
   }
   public saveDataUsuario(form) {
     this.spinnerService.show();
+    this.hideModel();
     var url = this.authService.urlProd + 'api/user/present-proyect';
     this.presentProjectForm.email = form.value.email;
     this.presentProjectForm.name = form.value.name;
@@ -82,7 +83,6 @@ public hideModel() {
         'success'
         );
         this.spinnerService.hide();
-        this.hideModel();
         //window.location.reload();
     },err =>{
       this.spinnerService.hide();
