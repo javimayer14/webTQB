@@ -70,6 +70,15 @@ public hideModel() {
       file = this.presentProjectForm.file
       testData.append('file', file, "prueba");
     }
+    if(this.presentProjectForm.file == null){
+      swal.fire(
+        '',
+        'Debe adjuntar pdf con la descripción del proyecto',
+        'error'
+        );
+        this.spinnerService.hide();
+        return;
+    }
 
     console.log("testDAta: " + testData);
     this.data = this.http.post(url, testData, {
@@ -82,7 +91,6 @@ public hideModel() {
         'Tu proyecto se cargó correctamente y será evaluado por el equipo de inversores de The Quality Bridge. Pronto te estaremos contactando',
         'success'
         );
-        this.spinnerService.hide();
         //window.location.reload();
     },err =>{
       this.spinnerService.hide();
