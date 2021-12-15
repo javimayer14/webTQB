@@ -75,6 +75,7 @@ export class ProjectDetailComponent implements OnInit {
 
   public saveDataUsuario(form) {
     this.spinnerService.show();
+    this.hideModel();
     var url = this.authService.urlProd + 'api/user/contact-proyect';
     this.contactProyectForm.email = form.value.email;
     this.contactProyectForm.name = form.value.name;
@@ -97,7 +98,6 @@ export class ProjectDetailComponent implements OnInit {
         'success'
         );
         this.spinnerService.hide();
-        this.hideModel();
         //window.location.reload();
     },err =>{
       this.spinnerService.hide();

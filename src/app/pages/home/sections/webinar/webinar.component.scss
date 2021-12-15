@@ -164,7 +164,8 @@
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    margin-right: 5px;
+    margin: 3px;
+    margin-left: 30px;
     animation: fade 1.5s infinite 1000ms;
   }
 
@@ -271,4 +272,10 @@
 
     width: 40px;
     height: 40px;
+  }
+
+  .movie-hidden{
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
