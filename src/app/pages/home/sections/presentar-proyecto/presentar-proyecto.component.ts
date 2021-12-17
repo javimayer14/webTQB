@@ -53,6 +53,7 @@ public hideModel() {
   }
   public saveDataUsuario(form) {
     this.spinnerService.show();
+    this.hideModel();
     var url = this.authService.urlProd + 'api/user/present-proyect';
     this.presentProjectForm.email = form.value.email;
     this.presentProjectForm.name = form.value.name;
@@ -69,6 +70,15 @@ public hideModel() {
       file = this.presentProjectForm.file
       testData.append('file', file, "prueba");
     }
+    if(this.presentProjectForm.file == null){
+      swal.fire(
+        '',
+        'Debe adjuntar pdf con la descripción del proyecto',
+        'error'
+        );
+        this.spinnerService.hide();
+        return;
+    }
 
     console.log("testDAta: " + testData);
     this.data = this.http.post(url, testData, {
@@ -81,8 +91,6 @@ public hideModel() {
         'Tu proyecto se cargó correctamente y será evaluado por el equipo de inversores de The Quality Bridge. Pronto te estaremos contactando',
         'success'
         );
-        this.spinnerService.hide();
-        this.hideModel();
         //window.location.reload();
     },err =>{
       this.spinnerService.hide();
