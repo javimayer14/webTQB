@@ -12,319 +12,50 @@
       </p>
       <br />
       <div class="title row container">
-        <a class="letters" href="/wiki#A">A</a>
-        <a class="letters" href="/wiki#B">B</a>
-        <a class="letters" href="/wiki#C">C</a>
-        <a class="letters" href="/wiki#D">D</a>
-        <a class="letters" href="/wiki#E">E</a>
-        <a class="letters" href="/wiki#F">F</a>
-        <a class="letters" href="/wiki#G">G</a>
-        <a class="letters" href="/wiki#H">H</a>
-        <a class="letters" href="/wiki#I">I</a> 
-        <a class="letters" href="/wiki#J">J</a>
-        <a class="letters" href="/wiki#K">K</a>
-        <a class="letters" href="/wiki#L">L</a>
-        <a class="letters" href="/wiki#M">M</a>
-        <a class="letters" href="/wiki#N">N</a>
-        <a class="letters" href="/wiki#O">O</a>
-        <a class="letters" href="/wiki#P">P</a>
-        <a class="letters" href="/wiki#Q">Q</a>
-        <a class="letters" href="/wiki#R">R</a>
-        <a class="letters" href="/wiki#S">S</a>
-        <a class="letters" href="/wiki#T">T</a>
-        <a class="letters" href="/wiki#U">U</a>
-        <a class="letters" href="/wiki#V">V</a>
-        <a class="letters" href="/wiki#W">W</a>
-        <a class="letters" href="/wiki#X">X</a>
-        <a class="letters" href="/wiki#Y">Y</a>
-        <a class="letters" href="/wiki#Z">Z</a>
+        <a class="letters" (click)="setLetter('a')">A</a>
+        <a class="letters" (click)="setLetter('b')">B</a>
+        <a class="letters" (click)="setLetter('c')">C</a>
+        <a class="letters" (click)="setLetter('d')">D</a>
+        <a class="letters" (click)="setLetter('e')">E</a>
+        <a class="letters" (click)="setLetter('f')">F</a>
+        <a class="letters" (click)="setLetter('g')">G</a>
+        <a class="letters" (click)="setLetter('h')">H</a>
+        <a class="letters" (click)="setLetter('i')">I</a>
+        <a class="letters" (click)="setLetter('j')">J</a>
+        <a class="letters" (click)="setLetter('k')">K</a>
+        <a class="letters" (click)="setLetter('l')">L</a>
+        <a class="letters" (click)="setLetter('m')">M</a>
+        <a class="letters" (click)="setLetter('n')">N</a>
+        <a class="letters" (click)="setLetter('o')">O</a>
+        <a class="letters" (click)="setLetter('p')">P</a>
+        <a class="letters" (click)="setLetter('q')">Q</a>
+        <a class="letters" (click)="setLetter('r')">R</a>
+        <a class="letters" (click)="setLetter('s')">S</a>
+        <a class="letters" (click)="setLetter('t')">T</a>
+        <a class="letters" (click)="setLetter('u')">U</a>
+        <a class="letters" (click)="setLetter('v')">V</a>
+        <a class="letters" (click)="setLetter('w')">W</a>
+        <a class="letters" (click)="setLetter('x')">X</a>
+        <a class="letters" (click)="setLetter('y')">Y</a>
+        <a class="letters" (click)="setLetter('z')">Z</a>
       </div>
-
-      <h1 id="A" class="word-title">A</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Activo</h3>
+      <div>
+        <input
+          type="text"
+          placeholder="Buscar..."
+          class="buscar"
+          name="filterWiki"
+          [(ngModel)]="filterWiki"
+        />
+      </div>
+      <h1 id="A" class="word-title">
+        {{ filterWiki.toUpperCase().charAt(0) }}
+      </h1>
+      <div class="boxWord" *ngFor="let wiki of wikiInfo | filter: filterWiki">
+        <h3 class="word-sub-title">{{ wiki.title }}</h3>
         <div class="square">
           <p>
-            Es un derecho que se posee generalmente en forma de documentos
-            (bonos) o bienes inmuebles (propiedades).
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Ahorro</h3>
-        <div class="square">
-          <p>
-            Apartar una suma de dinero del total de los ingresos de una persona
-            para cumplir con objetivos futuros. Es lo que guardo hoy, para
-            invertir mañana.
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Apalancamiento</h3>
-        <div class="square">
-          <p>
-            Es la relación entre crédito y capital propio invertido en una
-            operación financiera. Si invierto más dinero propio que prestado,
-            estoy menos apalancado y por el contrario, si invierto más con
-            dinero prestado que con el propio estoy más apalancado.
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Aversión al Riesgo</h3>
-        <div class="square">
-          <p>
-            Actitud de rechazo que experimenta un inversor ante el riesgo
-            financiero, en concreto, ante la posibilidad de sufrir pérdidas en
-            el valor de sus activos. El grado de aversión al riesgo determina el
-            perfil del inversor (se suele distinguir entre conservador, medio,
-            arriesgado) y debe ser el punto de partida para elegir un producto
-            de inversión.
-          </p>
-        </div>
-      </div>
-      <h1 id="B" class="word-title">B</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Blockchain</h3>
-        <div class="square">
-          <p>
-            Significa “cadena de bloques” : es un sistema digital por el cual se
-            pueden hacer transacciones seguras entre personas en todo el mundo
-            sin necesidad de intermediarios. Es una tecnología que apunta a la
-            descentralización como medida de seguridad. Se trata de bases de
-            registros y datos distribuidos y compartidos con la función de crear
-            un índice global para todas las transacciones que se generan en un
-            determinado mercado. Funciona como un libro-razón, sólo que de forma
-            pública, compartida y universal, que crea consenso y confianza en la
-            comunicación directa entre dos partes, o sea, sin la intermediación
-            de terceros. Su sistema es inviolable
-          </p>
-        </div>
-      </div>
-      <h1 id="C" class="word-title">C</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Capital</h3>
-        <div class="square">
-          <p>
-            Es el total de recursos físicos y financieros que posee una entidad
-            económica, obtenidos mediante aportes de los socios o accionistas,
-            para generar beneficios o ganancias
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Comunidad de inversores</h3>
-        <div class="square">
-          <p>
-            Es un conjunto de personas que conforman un grupo orientado a llevar
-            adelante inversiones de forma comunitaria, es decir, que los
-            intereses individuales estén reforzados por la solidez comunitaria,
-            a manera de sociedad
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Criptodivisas</h3>
-        <div class="square">
-          <p>
-            También llamadas criptomonedas, son dinero digital. Las más
-            conocidas son Bitcoin y Ethereum, pero existen muchas otras
-            disponibles en el mercado, incluso se siguen creando nuevas. Su uso
-            es cada vez más extendido, así como la cantidad de usuarios es cada
-            día mayor en número y en volumen de dinero operado en el mercado
-            global
-          </p>
-        </div>
-      </div>
-      <h1 id="D" class="word-title">D</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Deuda</h3>
-        <div class="square">
-          <p>
-            La deuda es una obligación que tiene una persona física o jurídica
-            para cumplir sus compromisos de pago
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Diversificación financiera</h3>
-        <div class="square">
-          <p>
-            Es el proceso mediante el cual los individuos o sociedades reducen
-            el riesgo de sus inversiones a traves de la colocación de sus
-            recursos en títulos con características diversas
-          </p>
-        </div>
-      </div>
-      <h1 id="E" class="word-title">E</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Estrategias de inversión</h3>
-        <div class="square">
-          <p>
-            Determina en qué activos debe invertir un individuo según sus
-            objetivos, necesidades y capital disponible
-          </p>
-        </div>
-      </div>
-
-      <h1 id="F" class="word-title">F</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Flipping</h3>
-        <div class="square">
-          <p>
-            Es un término utilizado principalmente en USA para describir la
-            compra de un activo generador de ingresos y revenderlo rapidamente
-            con fines de lucro. Aunque se puede aplicar a cualquier activo, el
-            término se utiliza con mayor frecuencia en el negocio de
-            inmuebles/bienes raíces. Flipping houses se utiliza como sinónimo de
-            fix and flip.
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Flipper</h3>
-        <div class="square">
-          <p>
-            Se refiere a aquel que compra una casa a bajo costo, la remodela y
-            luego la vende. Es quien se dedica al negocio del flipping o fix and
-            flip y lo lleva adelante en todo su proceso.
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Flix & Flip</h3>
-        <div class="square">
-          <p>
-            Se refiere al negocio de comprar casas en USA para su posterior
-            remodelación y reventa, en un corto lapso de tiempo (normalmente
-            entre 4 y 6 meses) para obtener el mayor margen de ganancia posible.
-          </p>
-        </div>
-      </div>
-      <h1 id="G" class="word-title">G</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Ganancia</h3>
-        <div class="square">
-          <p>
-            Es básicamente un mayor grado de ingresos sobre los gastos
-            realizados en una inversión
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Ganancia bruta</h3>
-        <div class="square">
-          <p>
-            Es la diferencia entre los ingresos totales de una compañía o venta
-            de sus productos y servicios, y los costos directos asociados con la
-            venta de esos productos y/o servicios. La ganancia bruta se
-            determina tomando los ingresos de las ventas totales y restando el
-            costo de los artículos.
-          </p>
-        </div>
-      </div>
-      <h1 id="I" class="word-title">I</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Interés</h3>
-        <div class="square">
-          <p>
-            Es el lucro obtenido a partir de un capital, la ganancia o utilidad
-            que se puede sacar sobre una inversión o bien aportado
-          </p>
-        </div>
-      </div>
-      <h1 id="L" class="word-title">L</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Liquidez</h3>
-        <div class="square">
-          <p>
-            Es la capacidad que tiene un individuo, empresa o entidad para
-            obtener dinero para sus obligaciones a corto plazo
-          </p>
-        </div>
-      </div>
-      <h1 id="R" class="word-title">R</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Real Estate</h3>
-        <div class="square">
-          <p>
-            Se refiere a bienes inmuebles o bienes raíces, es decir, invertir en
-            bienes de posición fija, ya sea para construcción o adquisición de
-            inmuebles como para su revalorización y/o obtención de renta
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Renta Fija</h3>
-        <div class="square">
-          <p>
-            Una renta es fija porque el rendimiento obtenido es siempre el
-            mismo, ya sea de forma mensual, semestral, anual, étc. Por ejemplo
-            el arrendamiento de una vivienda o el interés obtenido por un
-            préstamo otorgado
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Renta Variable</h3>
-        <div class="square">
-          <p>
-            Es un tipo de inversión en la que la recuperación del capital y la
-            rentabilidad no están garantizados; puede ser nula o mucho mayor a
-            la renta fija. Un claro ejemplo son las acciones en bolsa.
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Riesgo de inversión</h3>
-        <div class="square">
-          <p>
-            La inversión es más riesgosa cuando más variable es el rendimiento
-            que podemos esperar de la misma. En este sentido, riesgo es sinónimo
-            de volatilidad
-          </p>
-        </div>
-      </div>
-      <div class="boxWord">
-        <h3 class="word-sub-title">
-          ROI (retorno sobre la inversión, por sus siglas en inglés)
-        </h3>
-        <div class="square">
-          <p>
-            Es un indicador que permite saber cuánto dinero ganó o perdió una
-            empresa en relación a todas las inversiones realizadas (proyectos,
-            anuncios, entrenamientos, étc.) El Roi se obtiene mediante la
-            siguiente fórmula: (Ganancia - Inversión ) / Inversión. Si el
-            resultado es menor a 0, la inversión tiene retorno negativo; caso
-            contrario, el retorno es positivo y por lo tanto hay utilidades
-          </p>
-        </div>
-      </div>
-      <h1 id="S" class="word-title">S</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Stablecoin</h3>
-        <div class="square">
-          <p>
-            Es un tipo de criptomoneda que siempre tiene un precio estable. Este
-            tipo de criptomonedas se crean para enfrentar el escenario inestable
-            del mercado criptográfico y garantizar un terreno estable para
-            todos. Dos ejemplos de stablecoins son Tether y Dai
-          </p>
-        </div>
-      </div>
-      <h1 id="T" class="word-title">T</h1>
-      <div class="boxWord">
-        <h3 class="word-sub-title">Token</h3>
-        <div class="square">
-          <p>
-            Es una unidad de valor que una organización crea para gobernar su
-            modelo de negocio y dar más poder a sus usuarios para interactuar
-            con sus productos, al tiempo que facilita la distribución y reparto
-            de beneficios entre todos sus accionistas. Es, por lo tanto, más que
-            una moneda ya que tiene más usos, además de ser seguro ya que la
-            mayoría de los tokens se asientan sobre el protocolo inviolable de
-            la tecnología blockchain
+            {{ wiki.info }}
           </p>
         </div>
       </div>
@@ -332,4 +63,3 @@
   </div>
 </section>
 <app-footer></app-footer>
-
