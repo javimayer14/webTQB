@@ -18,6 +18,13 @@ export class PipePipe implements PipeTransform {
         }
       }
     }
+    if(resultadoWiki.length === 0) {
+      resultadoWiki.push({
+        id:0,
+        title:"Error",
+        info:`No se encontraron resultados para "${arg}", por favor proba con otra palabra`
+      })
+    }
     return resultadoWiki;
   }
 }
