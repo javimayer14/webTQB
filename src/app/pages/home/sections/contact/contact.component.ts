@@ -7,7 +7,7 @@ import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
 import { SpinnerService } from '../../../../services/spinner.service';
 
-declare var gtag;
+declare var gtag_report_conversion;
 
 @Component({
   selector: 'app-contact',
@@ -110,7 +110,7 @@ export class ContactComponent implements OnInit {
     return re.test(String(email).toLowerCase());
   }
   sendEvent() {
-    gtag('config', 'G-JJ03QQT937', {
+    gtag_report_conversion('config', 'G-JJ03QQT937', {
       eventCategory: 'formularios',
       eventLabel: 'enviar_formulario',
       eventAction: 'CTA',
