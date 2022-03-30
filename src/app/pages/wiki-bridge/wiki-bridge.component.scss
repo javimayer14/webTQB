@@ -1,3 +1,17 @@
+.buscar {
+  width: 85%;
+  margin: 5%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid #ccc !important;
+  transition: 0.5s;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buscar:focus {
+  border: 3px solid var(--blue-700) !important;
+}
 .title-principal {
   text-align: center;
   font-family: "Gotham Book", sans-serif;
@@ -6,127 +20,124 @@
   font-weight: 700;
 }
 .title {
-    text-align: center;
-    font-family: "Gotham Book", sans-serif;
-    margin: 15px;
-    font-size: 32px;
-    font-weight: 700;
-  }
-  
-  .subtitle {
-    font-family: "Gotham Book", sans-serif;
-    font-size: 20px;
-    text-align: center;
-    font-weight: 700;
-  }
-  
-  .body {
-    font-family: "Gotham Book", sans-serif;
-    font-size: 19px;
-    text-align: center;
-    opacity: 1;
+  text-align: center;
+  font-family: "Gotham Book", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 32px;
+  font-weight: 700;
+  justify-content: center;
+}
 
+.subtitle {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
 
-  }
-  
-  .square {
-    background-color: #2a38be;
+.body {
+  font-family: "Gotham Book", sans-serif;
+  font-size: 19px;
+  text-align: center;
+  opacity: 1;
+}
+
+.square {
+  background-color: #2a38be;
+  margin: auto;
+  font-size: 15pt;
+  opacity: 1;
+  p {
+    width: 90%;
     margin: auto;
-    font-size: 15pt;
-    opacity: 1;
-    p {
-      width: 90%;
-      margin: auto;
-      text-align: center;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      color: #ffffff;
-      @media (min-width: 700px) {
-        padding: 30px;
-      }
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+    @media (min-width: 700px) {
+      padding: 30px;
     }
   }
-  
-  .quienes-somos-2 {
-    background: url("/assets/img/1x/todos.png");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-.commandments{
-//     background-image: url('/assets/img/1x/Proyectos_Arco.png');
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-position: bottom center;
-// }  
-background-color: #CCC
-}
-h1{
-    padding: 15px;
 }
 
-.span-description{
+.quienes-somos-2 {
+  background: url("/assets/img/1x/todos.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.commandments {
+  //     background-image: url('/assets/img/1x/Proyectos_Arco.png');
+  //     background-repeat: no-repeat;
+  //     background-attachment: fixed;
+  //     background-position: bottom center;
+  // }
+  background-color: #ccc;
+}
+h1 {
+  padding: 15px;
+}
+
+.span-description {
   color: #2a38be;
   font-weight: bold;
 }
-.letters{
-    color: #2a38be;
-    margin:7px;
+.letters {
+  color: #2a38be;
+  margin: 7px;
+  cursor: pointer;
+}
+.letters:hover {
+  background-color: #2a39be;
+  color: #fff;
 }
 
-.word-title{
-    text-align: left;
-    color: #2a38be;
-    margin: 0px;
-    padding: 0px
-
+.word-title {
+  text-align: left;
+  color: #2a38be;
+  margin: 0px;
+  padding: 0px;
 }
 
-.word-sub-title{
-    text-align: left;
-    margin: 5px 25px 25px 0px;
-    color: #2a38be;
+.word-sub-title {
+  text-align: left;
+  margin: 5px 25px 25px 0px;
+  color: #2a38be;
+}
 
-}
-.boxWord{
-    margin: 25px 25px 75px 0px;
-}
 
 .back-to-top {
-    position: fixed;
-    display: none;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-  }
-  
-  .back-to-top i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    background: #106eea;
-    color: #fff;
-    transition: all 0.4s;
-  }
-  
-  .back-to-top i:hover {
-    background: #3284f1;
-    color: #fff;
-  }
-  .image-wpp{
-      height: 50px;
-      width: 50px;
-  }
-  .phone{
-    position: absolute; 
-    bottom: 0;  }
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
 
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #106eea;
+  color: #fff;
+  transition: all 0.4s;
+}
 
-
-
-    
+.back-to-top i:hover {
+  background: #3284f1;
+  color: #fff;
+}
+.image-wpp {
+  height: 50px;
+  width: 50px;
+}
+.phone {
+  position: absolute;
+  bottom: 0;
+}

@@ -23,6 +23,8 @@ import { CommandmentsComponent } from './commandments/commandments.component';
 import { WikiBridgeComponent } from './wiki-bridge/wiki-bridge.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { WebinarComponent } from './home/sections/webinar/webinar.component';
+import { PipePipe } from './wiki-bridge/pipes/pipe.pipe';
+import { LetterPipe } from './wiki-bridge/pipes/letter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { WebinarComponent } from './home/sections/webinar/webinar.component';
     WikiBridgeComponent,
     ChangePasswordComponent,
     WebinarComponent,
+    PipePipe,
+    LetterPipe,
 
   ],
   imports: [
