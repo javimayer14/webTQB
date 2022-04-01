@@ -109,14 +109,14 @@ export class ContactComponent implements OnInit {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
-  sendEvent() {
+  /*sendEvent() {
     gtag_report_conversion('config', 'G-JJ03QQT937', {
       eventCategory: 'formularios',
       eventLabel: 'enviar_formulario',
       eventAction: 'CTA',
       eventValue: 10
     });
-  }
+  }*/
   validateForm(form) {
     this.wrongEmail = false;
     this.wrongLastName = false;
