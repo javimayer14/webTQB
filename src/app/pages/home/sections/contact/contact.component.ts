@@ -7,6 +7,8 @@ import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
 import { SpinnerService } from '../../../../services/spinner.service';
 
+declare var gtag_report_conversion;
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -107,7 +109,14 @@ export class ContactComponent implements OnInit {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
-
+  /*sendEvent() {
+    gtag_report_conversion('config', 'G-JJ03QQT937', {
+      eventCategory: 'formularios',
+      eventLabel: 'enviar_formulario',
+      eventAction: 'CTA',
+      eventValue: 10
+    });
+  }*/
   validateForm(form) {
     this.wrongEmail = false;
     this.wrongLastName = false;

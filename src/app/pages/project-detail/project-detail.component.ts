@@ -5,17 +5,17 @@ import { AuthService } from '../../services/user/auth.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
-import { SpinnerService } from '../../services/spinner.service'; 
+import { SpinnerService } from '../../services/spinner.service';
 
-
+//https://script.google.com/macros/s/AKfycbxA5IdxvbXP3ieHW1UKb_V_5NLLllvfJ_1lypWD-ASiDnfvTO4pdcbqBpQadRmZaLQbmw/exec
 @Component({
   selector: 'app-project-detail',
   templateUrl: './project-detail.component.html',
-  styleUrls: ['./project-detail.component.scss']
+  styleUrls: ['./project-detail.component.scss'],
 })
 export class ProjectDetailComponent implements OnInit {
   data: Observable<any>;
-  private httpHeaders = new HttpHeaders({  });
+  private httpHeaders = new HttpHeaders({});
   fileUrl;
 
   wrongEmail = false;
@@ -30,38 +30,45 @@ export class ProjectDetailComponent implements OnInit {
     name: null,
     telefono: null,
     lastName: null,
-    desc:null,
-    file: File = null,
+    desc: null,
+    file: (File = null),
   };
 
-  constructor(    public http: HttpClient, public authService: AuthService, private sanitizer: DomSanitizer,     private router: Router,
-    public spinnerService: SpinnerService) { }
+  constructor(
+    public http: HttpClient,
+    public authService: AuthService,
+    private sanitizer: DomSanitizer,
+    private router: Router,
+    public spinnerService: SpinnerService
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public downloadFile() {
     var url = this.authService.urlProd + 'api/user/download-PDF/1';
     this.data = this.http.get(url, {
-      headers: this.agregarAutorizacionHeader(), responseType: 'blob'
+      headers: this.agregarAutorizacionHeader(),
+      responseType: 'blob',
     });
     this.data.subscribe((data) => {
-
       let dataType = data.type;
-            let binaryData = [];
-            binaryData.push(data);
-            let downloadLink = document.createElement('a');
-            downloadLink.href = window.URL.createObjectURL(new Blob(binaryData, {type: dataType}));
-            downloadLink.setAttribute('download', "proyecto-fix-&-flip.pdf");
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
+      let binaryData = [];
+      binaryData.push(data);
+      let downloadLink = document.createElement('a');
+      downloadLink.href = window.URL.createObjectURL(
+        new Blob(binaryData, { type: dataType })
+      );
+      downloadLink.setAttribute('download', 'proyecto-fix-&-flip.pdf');
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
 
-      console.log("DOWNLOAD:" +data);
+      console.log('DOWNLOAD:' + data);
 
       const blob = new Blob([data], { type: 'application/octet-stream' });
 
-      this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(blob));
-
+      this.fileUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+        window.URL.createObjectURL(blob)
+      );
     });
   }
 
@@ -72,8 +79,9 @@ export class ProjectDetailComponent implements OnInit {
     }
   }
 
-
   public saveDataUsuario(form) {
+    var emailUrl =
+      'https://script.google.com/macros/s/AKfycbxA5IdxvbXP3ieHW1UKb_V_5NLLllvfJ_1lypWD-ASiDnfvTO4pdcbqBpQadRmZaLQbmw/exec';
     this.spinnerService.show();
     this.hideModel();
     var url = this.authService.urlProd + 'api/user/contact-proyect';
@@ -83,29 +91,44 @@ export class ProjectDetailComponent implements OnInit {
     this.contactProyectForm.telefono = form.value.telefono;
     this.validateForm(form);
 
-    if(this.checkEmailVoid()){
+    if (this.checkEmailVoid()) {
       this.spinnerService.hide();
       return;
     }
-    let testData:FormData = new FormData();
-    this.data = this.http.post(url, this.contactProyectForm, {
+    let testData: FormData = new FormData();
+    let emailFormData: FormData = new FormData();
+    emailFormData.set('name', form.value.name);
+    emailFormData.set('lastname', form.value.lastName);
+    emailFormData.set('phone', form.value.telefono);
+    emailFormData.set('email', form.value.email);
+    emailFormData.set('comments', form.value.desc);
+    emailFormData.set('project', 'San Martin 630');
+
+    /*console.log('emailFormData', emailFormData.get("comments"));
+    console.log('emailUrl', emailUrl);*/
+
+    this.data = this.http.post(emailUrl, emailFormData);
+
+    /*this.data = this.http.post(url, this.contactProyectForm, {
       headers: this.agregarAutorizacionHeader(),
-    });
-    this.data.subscribe((data) => {
-      swal.fire(
-        '',
-        'Tus datos se cargaron correctamente. Pronto te estaremos contactando',
-        'success'
+    });*/
+    this.data.subscribe(
+      (data) => {
+        swal.fire(
+          '',
+          'Tus datos se cargaron correctamente. Pronto te estaremos contactando',
+          'success'
         );
         this.spinnerService.hide();
         //window.location.reload();
-    },err =>{
-      this.spinnerService.hide();
-    });
+      },
+      (err) => {
+        this.spinnerService.hide();
+      }
+    );
   }
 
   validateForm(form) {
-
     this.wrongEmail = false;
     this.wrongLastName = false;
     this.wrongName = false;
@@ -133,20 +156,15 @@ export class ProjectDetailComponent implements OnInit {
     return re.test(String(email).toLowerCase());
   }
 
-  checkEmailVoid(){
+  checkEmailVoid() {
     if (this.contactProyectForm.email == null) {
-      swal.fire('Error', 'email vacio', "error");
+      swal.fire('Error', 'email vacio', 'error');
       return;
     }
     return false;
   }
   @ViewChild('closeModal') private closeModal: ElementRef;
   public hideModel() {
-    this.closeModal.nativeElement.click();      
+    this.closeModal.nativeElement.click();
+  }
 }
-
-
-
-}
-
-

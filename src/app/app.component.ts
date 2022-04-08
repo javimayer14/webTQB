@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     public spinnerService: SpinnerService,
     private config: PrimeNGConfig
   ) {}
-
+  
   ngOnInit() {
     AOS.init({
       duration: 1000,
