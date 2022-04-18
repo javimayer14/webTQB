@@ -8,7 +8,7 @@ import { CountriesService } from '../../../../services/countries.service';
 import { SpinnerService } from '../../../../services/spinner.service';
 
 declare var gtag_report_conversion;
-
+//https://script.google.com/macros/s/AKfycbzsC-xxleE3zY7F61dfnI5qIDlUbynb1Oc0isxpjrG1YkqFM7FQxKnBjhEEyHK-iSWY/exec
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -54,8 +54,24 @@ export class ContactComponent implements OnInit {
     this.spinnerService.show();
     // var url = this.authService.urlProd + 'api/user';
     var url = this.authService.urlProd + 'api/user';
+    var emailUrl =
+      'https://script.google.com/macros/s/AKfycbzsC-xxleE3zY7F61dfnI5qIDlUbynb1Oc0isxpjrG1YkqFM7FQxKnBjhEEyHK-iSWY/exec';
+    let emailFormData: FormData = new FormData();
+    emailFormData.set('name', form.value.name);
+    emailFormData.set('lastName', form.value.lastName);
+    emailFormData.set('email', form.value.email);
+    emailFormData.set('country', form.value.country.name);
+    emailFormData.set('birthday', form.value.birthDate.toLocaleString());
+    emailFormData.set('phone', form.value.phone);
+    this.http.post<any>(emailUrl, emailFormData).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.error('There was an error!', error);
+      },
+    });
 
-    let postData = new FormData();
     this.validateForm(form);
 
     this.generateUserForm.email = form.value.email;
@@ -66,12 +82,12 @@ export class ContactComponent implements OnInit {
     this.generateUserForm.phone = form.value.phone;
 
     this.data = this.http.post(url, this.generateUserForm);
-    console.log(this.generateUserForm);
+    //console.log(this.generateUserForm);
     this.data.subscribe(
       (data) => {
         console.log(data);
 
-        console.log(form.value);
+        //console.log(form.value);
         //this.router.navigate(['/login']);
         swal.fire(
           'Formulario completado exitosamente',
