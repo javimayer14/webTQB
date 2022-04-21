@@ -7,7 +7,7 @@ import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
 import { SpinnerService } from '../../../../services/spinner.service';
 
-declare var gtag_report_conversion;
+declare var gtag;
 //https://script.google.com/macros/s/AKfycbzsC-xxleE3zY7F61dfnI5qIDlUbynb1Oc0isxpjrG1YkqFM7FQxKnBjhEEyHK-iSWY/exec
 @Component({
   selector: 'app-contact',
@@ -71,6 +71,16 @@ export class ContactComponent implements OnInit {
         console.error('There was an error!', error);
       },
     });
+
+    try {
+      gtag("config", "AW-308960790",{
+        'conversion-type':'suscripcion_comunidad'
+      })
+      console.log("GTAG WORK!")
+    } catch (error) {
+      console.log(error)
+    }
+
 
     this.validateForm(form);
 
