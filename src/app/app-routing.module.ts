@@ -10,6 +10,7 @@ import { WikiBridgeComponent } from './pages/wiki-bridge/wiki-bridge.component';
 import { AuthGuard } from './guards/auth-guard.guard';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 import { FooterSeccionComponent } from './shared/footer-seccion/footer-seccion.component';
+import { FlixAndFlipComponent } from './pages/flix-and-flip/flix-and-flip.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path: 'prueba',
     component: FooterSeccionComponent,
+  },
+  {
+    path: 'proyecto-fix&flip',
+    component: FlixAndFlipComponent,
   },
 
 ];

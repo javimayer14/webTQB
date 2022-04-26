@@ -25,6 +25,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { WebinarComponent } from './home/sections/webinar/webinar.component';
 import { PipePipe } from './wiki-bridge/pipes/pipe.pipe';
 import { LetterPipe } from './wiki-bridge/pipes/letter.pipe';
+import { FlixAndFlipComponent } from './flix-and-flip/flix-and-flip.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { LetterPipe } from './wiki-bridge/pipes/letter.pipe';
     WebinarComponent,
     PipePipe,
     LetterPipe,
+    FlixAndFlipComponent,
 
   ],
   imports: [
@@ -55,7 +58,8 @@ import { LetterPipe } from './wiki-bridge/pipes/letter.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    PrimengModule
+    PrimengModule,
+    ReactiveFormsModule
   ],
   exports: [HomeComponent],
 })
