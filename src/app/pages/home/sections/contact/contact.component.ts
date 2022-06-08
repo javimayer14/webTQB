@@ -7,8 +7,9 @@ import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
 import { SpinnerService } from '../../../../services/spinner.service';
 
-declare var gtag;
-//https://script.google.com/macros/s/AKfycbzsC-xxleE3zY7F61dfnI5qIDlUbynb1Oc0isxpjrG1YkqFM7FQxKnBjhEEyHK-iSWY/exec
+declare var gtag_report_conversion;
+// https://script.google.com/macros/s/AKfycbzrXc9r8lLMCdz48k6kF1iGWfGrbezrLxgVkJdW61WbuuDlehEnjHqw0Sgp1T8FKkIc/exec
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -51,6 +52,8 @@ export class ContactComponent implements OnInit {
   }
 
   public saveDataUsuario(form) {
+    var emailUrl = 
+    'https://script.google.com/macros/s/AKfycbzrXc9r8lLMCdz48k6kF1iGWfGrbezrLxgVkJdW61WbuuDlehEnjHqw0Sgp1T8FKkIc/exec';
     this.spinnerService.show();
     // var url = this.authService.urlProd + 'api/user';
     var url = this.authService.urlProd + 'api/user';
@@ -82,16 +85,25 @@ export class ContactComponent implements OnInit {
     }
 
 
-    this.validateForm(form);
+    let postData = new FormData();
+    //this.validateForm(form);
+    let emailFormData: FormData = new FormData();
 
-    this.generateUserForm.email = form.value.email;
-    this.generateUserForm.name = form.value.name;
-    this.generateUserForm.lastName = form.value.lastName;
-    this.generateUserForm.country = form.value.country;
-    this.generateUserForm.birthDate = form.value.birthDate;
-    this.generateUserForm.phone = form.value.phone;
+    emailFormData.set('name', form.value.name);
+    emailFormData.set('lastName', form.value.lastName);
+    emailFormData.set('email', form.value.email);
+    emailFormData.set('country', form.value.country);
+    emailFormData.set('birthday', form.value.birthDate);
+    emailFormData.set('phone', form.value.phone);
 
-    this.data = this.http.post(url, this.generateUserForm);
+    // this.generateUserForm.email = form.value.email;
+    // this.generateUserForm.name = form.value.name;
+    // this.generateUserForm.lastName = form.value.lastName;
+    // this.generateUserForm.country = form.value.country;
+    // this.generateUserForm.birthDate = form.value.birthDate;
+    // this.generateUserForm.phone = form.value.phone;
+
+    this.data = this.http.post(emailUrl, emailFormData);
     //console.log(this.generateUserForm);
     this.data.subscribe(
       (data) => {

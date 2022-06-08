@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-quienes-somos',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quienes-somos.component.scss'],
 })
 export class QuienesSomosComponent implements OnInit {
+  safeURL;
   services = [
     {
       title: 'Conexión',
@@ -18,7 +20,11 @@ export class QuienesSomosComponent implements OnInit {
       text: ' ¿Quiénes están mejor conectados? Los que no paran de moverse. Moverte permite aumentar la calidad de los vínculos, llevándote a estar dónde hay que estar.',
     },
   ];
-  constructor() {}
+  constructor(private _sanitizer: DomSanitizer) {
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/w9D_DxbD9Yg');
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }
