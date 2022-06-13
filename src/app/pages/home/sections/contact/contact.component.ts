@@ -7,7 +7,7 @@ import swal from 'sweetalert2';
 import { CountriesService } from '../../../../services/countries.service';
 import { SpinnerService } from '../../../../services/spinner.service';
 
-declare var gtag_report_conversion;
+declare var gtag;
 // https://script.google.com/macros/s/AKfycbzrXc9r8lLMCdz48k6kF1iGWfGrbezrLxgVkJdW61WbuuDlehEnjHqw0Sgp1T8FKkIc/exec
 
 @Component({
@@ -87,14 +87,14 @@ export class ContactComponent implements OnInit {
 
     let postData = new FormData();
     //this.validateForm(form);
-    let emailFormData: FormData = new FormData();
+    // let emailFormData: FormData = new FormData();
 
-    emailFormData.set('name', form.value.name);
-    emailFormData.set('lastName', form.value.lastName);
-    emailFormData.set('email', form.value.email);
-    emailFormData.set('country', form.value.country);
-    emailFormData.set('birthday', form.value.birthDate);
-    emailFormData.set('phone', form.value.phone);
+    // emailFormData.set('name', form.value.name);
+    // emailFormData.set('lastName', form.value.lastName);
+    // emailFormData.set('email', form.value.email);
+    // emailFormData.set('country', form.value.country);
+    // emailFormData.set('birthday', form.value.birthDate);
+    // emailFormData.set('phone', form.value.phone);
 
     // this.generateUserForm.email = form.value.email;
     // this.generateUserForm.name = form.value.name;
